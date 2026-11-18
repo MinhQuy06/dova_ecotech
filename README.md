@@ -151,19 +151,25 @@ Vì website sử dụng 100% HTML, CSS, JavaScript thuần và CDN không cần 
    ```
 3. Nhấn Enter để xác nhận các thiết lập mặc định. Website sẽ được xuất bản lập tức.
 
-### Đăng lên GitHub Pages
+### Đăng tự động lên GitHub Pages qua GitHub Actions (Đã cấu hình sẵn)
+Dự án đã được tích hợp sẵn workflow tự động hóa tại `.github/workflows/deploy.yml`. Mỗi khi bạn `git push` lên nhánh `main` hoặc `master`, GitHub Actions sẽ tự động kiểm tra và triển khai trang web.
+
+**Các bước kích hoạt một lần duy nhất trên GitHub:**
 1. Tạo một repository mới trên GitHub (ví dụ: `dova-ecotech`).
 2. Đẩy toàn bộ mã nguồn lên nhánh `main`:
    ```bash
    git init
    git add .
-   git commit -m "Khởi tạo website DOVA ECOTECH"
+   git commit -m "Khởi tạo website DOVA ECOTECH với GitHub Actions"
    git branch -M main
    git remote add origin https://github.com/your-username/dova-ecotech.git
    git push -u origin main
    ```
-3. Vào mục **Settings** của repository trên GitHub -> Chọn thẻ **Pages** -> Tại mục **Branch** chọn `main` và thư mục `/ (root)` -> Nhấn **Save**.
-4. Website của bạn sẽ hoạt động tại: `https://your-username.github.io/dova-ecotech/`.
+3. Truy cập vào kho chứa trên GitHub -> Chọn tab **Settings** -> Chọn mục **Pages** (ở cột bên trái).
+4. Tại mục **Build and deployment** -> Ở phần **Source**, bấm chọn **GitHub Actions**.
+5. Ngay lập tức, GitHub Action sẽ tự động chạy trong tab **Actions** và xuất bản trang web của bạn tại địa chỉ:
+   `https://your-username.github.io/dova-ecotech/`
+6. Từ lần sau, bất kỳ thay đổi nào bạn push lên `main`, website sẽ tự động cập nhật trong vòng chưa đầy 30 giây!
 
 ---
 

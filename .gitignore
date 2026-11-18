@@ -1,0 +1,18 @@
+# Hệ điều hành & Thư mục tạm
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Trình soạn thảo & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / dependencies (nếu có phát sinh sau này)
+node_modules/
+package-lock.json
+
+# Scratch files
+scratch/

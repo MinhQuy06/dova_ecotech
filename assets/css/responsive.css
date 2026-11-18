@@ -67,7 +67,35 @@
 
   .tech-grid-split {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
+  }
+
+  .tech-explode-stage {
+    height: clamp(260px, 42vh, 340px);
+  }
+
+  .tech-interactive-wrapper {
+    padding: 1.5rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  .tech-layers-stack {
+    max-width: 100%;
+    height: auto;
+    gap: 0.85rem;
+  }
+
+  .layer-slice-item {
+    padding: 1rem 1.15rem;
+  }
+
+  .layer-slice-title {
+    font-size: 1.05rem;
+  }
+
+  .layer-slice-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
   }
 
   .journal-magazine-grid {
@@ -77,10 +105,12 @@
   .journal-hero-article {
     grid-column: span 6;
     grid-template-columns: 1fr;
+    max-height: none;
   }
 
   .journal-hero-img-box {
-    min-height: 280px;
+    min-height: 220px;
+    max-height: 300px;
   }
 
   .journal-grid-item {
@@ -245,6 +275,36 @@
 
   .product-canvas-holder {
     height: 300px;
+  }
+
+  .tech-interactive-wrapper {
+    padding: 1.25rem 1rem;
+    border-radius: 16px;
+  }
+
+  .tech-explode-stage {
+    height: 250px;
+  }
+
+  .layer-slice-item {
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+  }
+
+  .layer-slice-title {
+    font-size: 1rem;
+  }
+
+  .layer-slice-desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .layer-ping-wave {
+    top: 1rem;
+    right: 1.1rem;
+    width: 8px;
+    height: 8px;
   }
 }
 

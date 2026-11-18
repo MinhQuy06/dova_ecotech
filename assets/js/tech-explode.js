@@ -173,20 +173,56 @@
       }
     }
 
-    // 6. Tích hợp cuộn màn hình (GSAP ScrollTrigger Pinned Animation)
+    // 6. Tích hợp cuộn màn hình (GSAP ScrollTrigger Responsive)
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       const pinContainer = document.querySelector('.tech-interactive-wrapper');
       if (pinContainer) {
-        ScrollTrigger.create({
-          trigger: pinContainer,
-          start: 'top 20%',
-          end: '+=800',
-          pin: true,
-          scrub: 1.2,
-          onUpdate: (self) => {
-            applyExplode(self.progress);
-          }
-        });
+        if (typeof ScrollTrigger.matchMedia === 'function') {
+          ScrollTrigger.matchMedia({
+            // Desktop màn hình lớn & chiều cao thoáng (>= 720px): Pin dừng ngay dưới navbar (top 95px)
+            "(min-width: 993px) and (min-height: 720px)": function () {
+              return ScrollTrigger.create({
+                trigger: pinContainer,
+                start: 'top 95px',
+                end: '+=750',
+                pin: true,
+                pinSpacing: true,
+                scrub: 1.2,
+                anticipatePin: 1,
+                onUpdate: (self) => {
+                  applyExplode(self.progress);
+                }
+              });
+            },
+            // Điện thoại, tablet & màn hình thấp: KHÔNG PIN để người dùng lướt trang tự nhiên, không kẹt scroll, không che chữ
+            "(max-width: 992px), (max-height: 719px)": function () {
+              return ScrollTrigger.create({
+                trigger: pinContainer,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                pin: false,
+                scrub: 1.2,
+                onUpdate: (self) => {
+                  applyExplode(self.progress);
+                }
+              });
+            }
+          });
+        } else {
+          const isDesktopTall = window.innerWidth > 992 && window.innerHeight >= 720;
+          ScrollTrigger.create({
+            trigger: pinContainer,
+            start: isDesktopTall ? 'top 95px' : 'top 80%',
+            end: isDesktopTall ? '+=750' : 'bottom 20%',
+            pin: isDesktopTall,
+            pinSpacing: isDesktopTall,
+            scrub: 1.2,
+            anticipatePin: 1,
+            onUpdate: (self) => {
+              applyExplode(self.progress);
+            }
+          });
+        }
       }
     }
 

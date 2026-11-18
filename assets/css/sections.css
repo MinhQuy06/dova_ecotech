@@ -198,6 +198,7 @@
   height: auto;
   aspect-ratio: 4/3;
   object-fit: cover;
+  object-position: center 60%;
   transition: transform 1.2s var(--ease-smooth);
 }
 
@@ -412,20 +413,20 @@
    --------------------------------------------------------------------- */
 .tech-interactive-wrapper {
   position: relative;
-  border-radius: 20px;
+  border-radius: 24px;
   background: radial-gradient(circle at center, #23140C 0%, #150B07 100%);
   border: 1px solid rgba(176, 141, 87, 0.35);
   box-shadow: var(--shadow-lg);
-  padding: clamp(2rem, 5vw, 4rem);
-  overflow: hidden;
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+  overflow: visible;
   color: var(--ivory);
 }
 
 .tech-grid-split {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1.15fr 1fr;
   align-items: center;
-  gap: clamp(2rem, 5vw, 4.5rem);
+  gap: clamp(2rem, 4vw, 4rem);
 }
 
 .tech-explode-stage {
@@ -435,30 +436,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  touch-action: pan-y;
 }
 
 #tech-explode-canvas {
   width: 100%;
   height: 100%;
   display: block;
+  touch-action: pan-y;
 }
 
 /* Tech Stage DOM Fallback / Visual Layers */
 .tech-layers-stack {
   position: relative;
   width: 100%;
-  max-width: 420px;
-  height: 380px;
-  perspective: 1000px;
+  max-width: 480px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  gap: 1.1rem;
 }
 
 .layer-slice-item {
   position: relative;
-  padding: 1.25rem 1.5rem;
-  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  border-radius: 14px;
   background: rgba(43, 26, 18, 0.75);
   border: 1px solid rgba(176, 141, 87, 0.35);
   box-shadow: var(--shadow-md);
@@ -466,17 +468,24 @@
   cursor: pointer;
 }
 
+.layer-slice-item:hover {
+  border-color: var(--sand);
+  background: rgba(55, 33, 22, 0.82);
+}
+
 .layer-slice-item.active {
   border-color: var(--caramel-lt);
   box-shadow: 0 0 24px rgba(214, 154, 75, 0.4);
-  background: rgba(74, 44, 28, 0.85);
-  transform: scale(1.03);
+  background: rgba(74, 44, 28, 0.9);
+  transform: scale(1.02);
 }
 
 .layer-slice-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
   margin-bottom: 0.4rem;
 }
 
@@ -494,6 +503,10 @@
   color: var(--caramel-lt);
 }
 
+.layer-slice-item[data-layer="2"] .layer-slice-tag {
+  padding-right: 1.5rem;
+}
+
 .layer-slice-desc {
   font-size: 0.86rem;
   color: var(--aged);
@@ -502,14 +515,15 @@
 
 .layer-ping-wave {
   position: absolute;
-  top: 50%;
-  right: 20px;
-  width: 14px;
-  height: 14px;
+  top: 1.25rem;
+  right: 1.35rem;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--caramel-lt);
   box-shadow: 0 0 0 0 rgba(214, 154, 75, 0.7);
   animation: pingPulse 2s infinite cubic-bezier(0, 0, 0.2, 1);
+  pointer-events: none;
 }
 
 /* ---------------------------------------------------------------------
@@ -524,16 +538,17 @@
 .journal-hero-article {
   grid-column: span 12;
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: minmax(280px, 380px) 1.25fr;
   background-color: var(--ivory);
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--aged);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
   text-decoration: none;
   color: var(--chocolate);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  max-height: 420px;
 }
 
 .journal-hero-article:hover {
@@ -544,8 +559,10 @@
 
 .journal-hero-img-box {
   position: relative;
-  min-height: 380px;
-  background-color: var(--espresso);
+  height: 100%;
+  min-height: 300px;
+  max-height: 420px;
+  background-color: #171513;
   overflow: hidden;
 }
 
@@ -553,6 +570,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 60%;
   transition: transform var(--transition-slow);
 }
 

@@ -1,0 +1,459 @@
+/* =====================================================================
+   DOVA ECOTECH - DECOR.CSS
+   Soft UI styling, leaf decorations & 3D Layered Pop-out Showcase Block
+   ===================================================================== */
+
+/* -------------------------------------------------------------------
+   1. Soft UI Adjustments (Pills, Rounded Cards, Warm Shadows)
+   ------------------------------------------------------------------- */
+.btn:not(.btn-icon):not(.tier-btn) {
+  border-radius: 999px !important;
+  box-shadow: 0 8px 22px rgba(43, 26, 18, 0.16);
+  transition: transform 0.28s var(--ease-smooth), box-shadow 0.28s var(--ease-smooth), background 0.28s var(--ease-smooth) !important;
+}
+
+.btn:not(.btn-icon):not(.tier-btn):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(43, 26, 18, 0.24);
+}
+
+.card-cream,
+.card-dark,
+.product-viewer-wrap,
+.detail-photo-card,
+.collection-product-block {
+  border-radius: 28px !important;
+}
+
+.input-field,
+.select-field,
+.textarea-field {
+  border-radius: 20px !important;
+}
+
+/* -------------------------------------------------------------------
+   2. Decorative Green Leaves (SVG & PNG Fallback)
+   ------------------------------------------------------------------- */
+.decor-leaf-cluster {
+  position: absolute;
+  pointer-events: none;
+  z-index: 8;
+  user-select: none;
+  display: block;
+}
+
+.decor-leaf-cluster svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 6px 14px rgba(35, 20, 12, 0.22));
+}
+
+.decor-leaf {
+  transform-origin: 20% 80%;
+  animation: leafSway 7.5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.decor-leaf--alt {
+  transform-origin: 80% 80%;
+  animation: leafSwayAlt 8.5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes leafSway {
+  0% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(1.5deg);
+  }
+
+  100% {
+    transform: rotate(3.5deg);
+  }
+}
+
+@keyframes leafSwayAlt {
+  0% {
+    transform: rotate(3.5deg);
+  }
+
+  50% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+/* Section Specific Leaf Positions */
+.leaf-pos-hero-tr {
+  top: 40px;
+  right: -25px;
+  width: 130px;
+  height: 140px;
+}
+
+.leaf-pos-hero-bl {
+  bottom: 25px;
+  left: -20px;
+  width: 110px;
+  height: 120px;
+}
+
+.leaf-pos-story-tr {
+  top: -20px;
+  right: -15px;
+  width: 90px;
+  height: 95px;
+}
+
+.leaf-pos-card-corner {
+  bottom: -20px;
+  right: -20px;
+  width: 85px;
+  height: 85px;
+}
+
+/* -------------------------------------------------------------------
+   3. Pop-out Showcase Block (Section 04 Collection)
+   ------------------------------------------------------------------- */
+.popout-section-wrap {
+  width: 100%;
+  margin: 3.5rem 0 2rem;
+  position: relative;
+  overflow: visible;
+}
+
+.popout-card {
+  position: relative;
+  background: var(--mocha);
+  border-radius: 32px;
+  padding: clamp(2.5rem, 4.5vw, 4rem) clamp(2rem, 4vw, 3.8rem);
+  margin: 3.5rem 0;
+  overflow: hidden; /* Đảm bảo không tràn ảnh ra ngoài mép thẻ */
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr;
+  gap: clamp(2rem, 3.5vw, 3.5rem);
+  align-items: center;
+  box-shadow: 0 28px 70px rgba(26, 15, 10, 0.35);
+  border: 1px solid rgba(201, 162, 122, 0.22);
+  color: var(--ivory);
+}
+
+.popout-card--bifold {
+  background: linear-gradient(145deg, #533320 0%, #3a2215 100%);
+  border-color: rgba(201, 162, 122, 0.18);
+}
+
+.popout-card-left {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.popout-badge-gender {
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sand);
+  background: rgba(201, 162, 122, 0.16);
+  border: 1px solid rgba(201, 162, 122, 0.38);
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.popout-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.3rem, 3.8vw, 3.4rem);
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.popout-tier {
+  font-family: var(--font-label);
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--caramel-lt);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.popout-tier::before {
+  content: "•";
+  color: var(--sand);
+}
+
+.popout-desc {
+  color: var(--parchment);
+  font-size: 1.02rem;
+  line-height: 1.68;
+  max-width: 440px;
+  margin: 0.2rem 0 1rem;
+}
+
+.popout-btn {
+  border-radius: 999px !important;
+  padding: 0.95rem 2.4rem !important;
+  font-weight: 600;
+  font-family: var(--font-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  background: linear-gradient(135deg, var(--caramel-lt), var(--caramel)) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 12px 28px rgba(181, 113, 47, 0.42) !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: transform 0.28s var(--ease-smooth), box-shadow 0.28s var(--ease-smooth) !important;
+}
+
+.popout-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(181, 113, 47, 0.55) !important;
+}
+
+/* Right Visual Staging Column */
+.popout-visual-col {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Layer 1: Splash background (Căn vừa trong thẻ, blend screen không lộ viền đen) */
+.popout-layer-splash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135%;
+  height: 135%;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  opacity: 0.95;
+  object-fit: contain;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Layer 2: Wallet Layer (Đưa vào trong thẻ, nghiêng -6 độ, bóng đổ mềm) */
+.popout-layer-wallet {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 500px;
+  transform: translate(0, 0) rotate(-6deg);
+  filter: drop-shadow(0 26px 40px rgba(18, 10, 6, 0.72));
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+
+.popout-layer-wallet img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layer 3: Foreground Decor (Hạt cà phê / Lá nằm gọn gàng góc dưới thẻ) */
+.popout-layer-front {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  z-index: 6;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.popout-layer-front svg {
+  filter: drop-shadow(0 8px 18px rgba(18, 10, 6, 0.55));
+}
+
+/* Concept Render Corner Badge */
+.popout-concept-tag {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.5rem;
+  z-index: 7;
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(235, 218, 203, 0.82);
+  background: rgba(26, 15, 10, 0.72);
+  border: 1px solid rgba(201, 162, 122, 0.28);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+/* Bifold Placeholder Box */
+.popout-placeholder-box {
+  width: 100%;
+  min-height: 320px;
+  border: 2px dashed rgba(201, 162, 122, 0.4);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(43, 26, 18, 0.35);
+  position: relative;
+  z-index: 3;
+}
+
+.popout-placeholder-box .placeholder-tag {
+  font-family: var(--font-label);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--sand);
+  background: rgba(201, 162, 122, 0.15);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.popout-placeholder-box p {
+  color: var(--parchment);
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 320px;
+}
+
+/* -------------------------------------------------------------------
+   4. Studio Photo Featured Card (Used on mini-zip.html)
+   ------------------------------------------------------------------- */
+.studio-photo-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 16px 40px rgba(43, 26, 18, 0.18);
+  background: #FDFBF8;
+  border: 1px solid rgba(176, 141, 87, 0.22);
+}
+
+.studio-photo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.studio-photo-card .studio-concept-badge {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  background: rgba(26, 15, 10, 0.75);
+  border: 1px solid rgba(201, 162, 122, 0.3);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------
+   5. Mobile Responsiveness (< 800px)
+   ------------------------------------------------------------------- */
+@media (max-width: 800px) {
+  .popout-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.2rem 1.4rem;
+    margin: 2.5rem 0;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .popout-visual-col {
+    min-height: 270px;
+    margin-top: 0.5rem;
+  }
+
+  .popout-layer-splash {
+    width: 125%;
+    height: 125%;
+  }
+
+  .popout-layer-wallet {
+    width: 100%;
+    max-width: 310px;
+    transform: translate(0, 0) rotate(-4deg) !important;
+    filter: drop-shadow(0 20px 32px rgba(18, 10, 6, 0.65));
+  }
+
+  .popout-layer-front {
+    bottom: 5px;
+    right: 8px;
+    transform: scale(0.75);
+  }
+
+  .popout-concept-tag {
+    bottom: 0.85rem;
+    right: 0.85rem;
+    font-size: 0.68rem;
+    padding: 0.25rem 0.65rem;
+  }
+
+  .leaf-pos-hero-tr {
+    width: 80px;
+    height: 85px;
+    right: -10px;
+    top: 20px;
+  }
+
+  .leaf-pos-hero-bl {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------
+   6. Accessibility: Reduced Motion
+   ------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+
+  .decor-leaf,
+  .decor-leaf--alt {
+    animation: none !important;
+  }
+
+  .popout-layer-wallet,
+  .popout-layer-splash,
+  .popout-layer-front {
+    transform: none !important;
+    transition: none !important;
+  }
+}

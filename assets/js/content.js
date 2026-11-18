@@ -65,7 +65,7 @@ const DOVA_CONTENT = {
         badge: "Chương 01",
         title: "Ý tưởng từ ly cà phê thường nhật",
         description: "Hành trình bắt đầu từ những buổi sáng bên tách cà phê đậm đà. Nhận thấy lượng bã cà phê khổng lồ bị loại bỏ mỗi ngày sau khi pha chế, đội ngũ sáng lập DOVA tự hỏi: Tại sao không khai thác kết cấu sợi tự nhiên của bã cà phê để tạo nên một chất liệu mới mẻ, mang hơi thở ấm áp của đất trời vào những vật dụng cầm tay hàng ngày?",
-        image: "assets/img/story/chapter-01.svg",
+        image: "assets/img/story/coffee-concept.jpg",
         imageAlt: "Ý tưởng khởi nguồn DOVA ECOTECH từ bã cà phê"
       },
       {
@@ -73,7 +73,7 @@ const DOVA_CONTENT = {
         badge: "Chương 02",
         title: "Nghiên cứu composite có thành phần bã cà phê",
         description: "Không chạy theo những lời tuyên bố dễ dãi, chúng tôi tập trung vào nghiên cứu vật liệu composite có thành phần bã cà phê kết hợp nền polymer tuyển chọn. Mục tiêu là mang lại bề mặt xúc giác mịn màng, dẻo dai và vân hạt cà phê tự nhiên độc bản, đồng thời tiến hành các bài kiểm tra độ bền cơ học nghiêm ngặt.",
-        image: "assets/img/story/chapter-02.svg",
+        image: "assets/img/story/chapter-02.jpg",
         imageAlt: "Vật liệu composite chứa bã cà phê độc bản"
       },
       {
@@ -81,7 +81,7 @@ const DOVA_CONTENT = {
         badge: "Chương 03",
         title: "Tích hợp công nghệ kín đáo & tiện ích",
         description: "Một chiếc ví đương đại không chỉ cần đẹp mà còn phải giải tỏa những âu lo thường trực. DOVA nghiên cứu tích hợp lớp màng hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép (RFID Blocking) và bố trí một ngăn chuyên biệt đặt Smart Tag, giúp bạn dễ dàng định vị chiếc ví qua thiết bị tương thích.",
-        image: "assets/img/story/chapter-03.svg",
+        image: "assets/img/story/chapter-03.jpg",
         imageAlt: "Công nghệ RFID Blocking và Smart Tag kín đáo"
       },
       {
@@ -89,7 +89,7 @@ const DOVA_CONTENT = {
         badge: "Chương 04",
         title: "Tầm nhìn & Định hướng tương lai",
         description: "Chiếc ví Mini Zip và Bifold là bước khởi đầu. Định hướng dài hạn của DOVA ECOTECH là hoàn thiện dòng sản phẩm phụ kiện cá nhân, vươn tới túi xách, balo và các giải pháp phụ kiện thông minh từ vật liệu có thành phần bã cà phê, đồng hành cùng thế hệ tiêu dùng có ý thức.",
-        image: "assets/img/story/chapter-04.svg",
+        image: "assets/img/story/chapter-04.jpg",
         imageAlt: "Định hướng dài hạn với túi xách và balo DOVA"
       }
     ],
@@ -252,7 +252,7 @@ const DOVA_CONTENT = {
         headline: "Từ bã cà phê đến bề mặt phụ kiện dẻo dai",
         content: "Bã cà phê sau quá trình thu gom được sấy khô, xử lý mịn và phân tán đều trong hợp chất polymer bền chắc. Lớp composite này mang sắc nâu tự nhiên cùng những đốm vân hữu cơ không trùng lặp, gợi nhắc hương vị cà phê và cam kết tận dụng phụ phẩm.",
         note: "Ghi chú: Vật liệu hiện đang trong giai đoạn kiểm tra độ bền cơ học và lão hóa nhiệt.",
-        graphic: "assets/img/tech/tech-composite.svg"
+        graphic: "assets/img/tech/tech-composite.jpg"
       },
       {
         id: "rfid",
@@ -274,7 +274,7 @@ const DOVA_CONTENT = {
         headline: "Tích hợp với thiết bị định vị tương thích",
         content: "Chúng tôi tạo ra một khoang chứa định hình vừa vặn cho các thiết bị định vị thông minh phổ biến. Thiết kế khe mở thông minh hướng sóng ra bên ngoài lớp RFID, giúp bạn phát âm thanh tìm ví trong phòng hoặc xác định vị trí chiếc ví qua ứng dụng định vị tương thích.",
         note: "Sản phẩm không bán kèm thiết bị định vị điện tử; ngăn được thiết kế để lắp đặt thiết bị tương thích của người dùng.",
-        graphic: "assets/img/tech/tech-smarttag.svg"
+        graphic: "assets/img/tech/tech-smarttag.jpg"
       }
     ]
   },
@@ -293,7 +293,7 @@ const DOVA_CONTENT = {
         readTime: "4 phút đọc",
         status: "Bản nháp",
         featured: true,
-        image: "assets/img/journal/bai-01.svg",
+        image: "assets/img/journal/bai-01.jpg",
         category: "Vật liệu bền vững",
         excerpt: "Sau tách espresso hay ly phin đậm vị, những hạt bã cà phê thô mộc có thể đi về đâu? Cùng tìm hiểu cách các kỹ sư vật liệu biến phụ phẩm hữu cơ thành tấm composite mịn màng cho chiếc ví của bạn."
       },
@@ -317,7 +317,7 @@ const DOVA_CONTENT = {
         readTime: "5 phút đọc",
         status: "Bản nháp",
         featured: false,
-        image: "assets/img/journal/bai-03.svg",
+        image: "assets/img/journal/bai-03.jpg",
         category: "Công nghệ đời sống",
         excerpt: "Không cần màn hình nhấp nháy hay đèn LED phô trương. Công nghệ thông minh đích thực là những lớp màng bảo vệ vô hình hoạt động thầm lặng khi bạn dạo bước trên phố đông."
       },
@@ -329,7 +329,7 @@ const DOVA_CONTENT = {
         readTime: "4 phút đọc",
         status: "Bản nháp",
         featured: false,
-        image: "assets/img/journal/bai-04.svg",
+        image: "assets/img/journal/bai-04.jpg",
         category: "Hậu trường DOVA",
         excerpt: "Những ngày đầu thử nghiệm ép nhiệt, những đường may thử nghiệm đầu tiên và bài học khi kết hợp vật liệu composite bã cà phê cùng các chi tiết cơ học."
       }

@@ -7,7 +7,7 @@
 
 :root {
   /* Brand Palette - Luxury Chocolate & Fine Parchment */
-  --parchment: #EFE5CF;
+  --parchment: #EBDACB;
   --ivory: #F6EFE0;
   --aged: #D8C7A4;
   --chocolate: #2B1A12;
@@ -16,6 +16,12 @@
   --caramel: #B5712F;
   --caramel-lt: #D69A4B;
   --gold: #B08D57;
+
+  /* Accent & Warm Earth Tones */
+  --mocha: #6B4630;
+  --sand: #C9A27A;
+  --leaf: #5E8A3A;
+  --leaf-lt: #8DB45A;
 
   /* Semantic Colors */
   --bg-cream: var(--ivory);
@@ -47,7 +53,9 @@
 }
 
 /* Base Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -55,7 +63,8 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: auto; /* Handled smoothly by Lenis */
+  scroll-behavior: auto;
+  /* Handled smoothly by Lenis */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -85,7 +94,12 @@ body {
 }
 
 /* Typography Elements */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 600;
   line-height: 1.2;
@@ -107,13 +121,18 @@ a {
   transition: color var(--transition-fast);
 }
 
-img, svg, video {
+img,
+svg,
+video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
 }
@@ -153,13 +172,18 @@ button, input, select, textarea {
 
 /* Accessibility: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .particle-bean, .dust-particle {
+
+  .particle-bean,
+  .dust-particle {
     display: none !important;
   }
 }

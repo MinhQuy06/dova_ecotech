@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DOVA Bifold — Chi Tiết Ví Nam Thông Minh Từ Bã Cà Phê</title>
-  <meta name="description" content="Chi tiết ví nam DOVA Bifold: dáng gập đôi cổ điển mỏng nhẹ, vật liệu composite có thành phần bã cà phê, tích hợp RFID Blocking & ngăn chìm Smart Tag." />
+  <meta name="description"
+    content="Chi tiết ví nam DOVA Bifold: dáng gập đôi cổ điển mỏng nhẹ, vật liệu composite có thành phần bã cà phê, tích hợp RFID Blocking & ngăn chìm Smart Tag." />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 
   <meta property="og:title" content="DOVA Bifold — Ví Nam Thông Minh Từ Bã Cà Phê" />
-  <meta property="og:description" content="Dáng gập kinh điển, công nghệ ẩn sâu. Trải nghiệm mô hình 3D xoay 360 độ và đăng ký quan tâm." />
+  <meta property="og:description"
+    content="Dáng gập kinh điển, công nghệ ẩn sâu. Trải nghiệm mô hình 3D xoay 360 độ và đăng ký quan tâm." />
   <meta property="og:image" content="assets/img/products/bifold-main.svg" />
 
   <!-- Stylesheets -->
@@ -18,7 +21,9 @@
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/decor.css" />
 </head>
+
 <body class="theme-cream">
 
   <!-- Header Root -->
@@ -27,7 +32,7 @@
   <main id="main-content">
     <section class="section theme-cream" style="padding-top: clamp(7.5rem, 13vw, 10rem);">
       <div class="container">
-        
+
         <!-- Breadcrumb -->
         <nav aria-label="Đường dẫn trang" style="margin-bottom: 2rem; font-size: 0.85rem; color: var(--cocoa);">
           <a href="index.html">Trang chủ</a> <span>/</span>
@@ -36,8 +41,34 @@
         </nav>
 
         <div class="product-showcase-grid" style="align-items: start;">
-          <!-- Left: 3D 360 Viewer -->
+          <!-- Left: Ảnh Studio Thực Tế & 3D 360 Viewer -->
           <div>
+            <!-- Ảnh sản phẩm chính Studio Chụp thực tế -->
+            <div class="studio-photo-card">
+              <img
+                src="assets/img/products/bifold-photo.jpg"
+                alt="Ảnh chụp studio ví nam DOVA Bifold từ composite bã cà phê"
+                width="768"
+                height="1024"
+                loading="lazy"
+                style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;"
+              />
+              <span class="studio-concept-badge">Concept render · Hình minh họa</span>
+              <!-- Lá trang trí góc ảnh -->
+              <div class="decor-leaf-cluster" style="top: -15px; left: -15px; width: 65px; height: 65px;" aria-hidden="true">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="decor-leaf" d="M15 85 C20 50 50 25 80 15 C80 50 55 75 15 85 Z" fill="url(#leafGradBifold)" />
+                  <path class="decor-leaf" d="M15 85 Q45 50 80 15" stroke="#EBDACB" stroke-width="1.2" stroke-linecap="round" opacity="0.5" />
+                  <defs>
+                    <linearGradient id="leafGradBifold" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#8DB45A"/>
+                      <stop offset="100%" stop-color="#5E8A3A"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
             <div class="product-viewer-wrap" style="min-height: 520px;">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="badge-prototype">Prototype • Bifold</span>
@@ -56,7 +87,8 @@
             <div class="detail-photos-grid" style="margin-top: 2rem;">
               <div>
                 <div class="detail-photo-card">
-                  <img src="assets/img/products/bifold-detail-material.svg" alt="Bề mặt bã cà phê ép phẳng Bifold" loading="lazy" />
+                  <img src="assets/img/products/detail-composite.jpg" alt="Bề mặt bã cà phê ép phẳng Bifold"
+                    loading="lazy" width="600" height="600" />
                 </div>
                 <div class="detail-photo-caption">Bề mặt composite</div>
               </div>
@@ -68,7 +100,8 @@
               </div>
               <div>
                 <div class="detail-photo-card">
-                  <img src="assets/img/products/bifold-detail-slot.svg" alt="Ngăn Smart Tag chìm Bifold" loading="lazy" />
+                  <img src="assets/img/products/detail-smarttag.jpg" alt="Ngăn Smart Tag chìm Bifold"
+                    loading="lazy" width="640" height="640" style="object-fit: contain; background: #FAF7F2; padding: 0.5rem;" />
                 </div>
                 <div class="detail-photo-caption">Ngăn Smart Tag chìm</div>
               </div>
@@ -79,11 +112,14 @@
           <div class="product-info-col">
             <span class="eyebrow" style="margin-bottom: 0.5rem;">Dáng ví nam gập đôi</span>
             <h1 style="font-size: clamp(2.4rem, 4vw, 3.6rem); margin-bottom: 0.5rem;">DOVA Bifold</h1>
-            <p style="font-family: var(--font-script); font-size: 1.8rem; color: var(--caramel); margin-bottom: 1.25rem;">
+            <p
+              style="font-family: var(--font-script); font-size: 1.8rem; color: var(--caramel); margin-bottom: 1.25rem;">
               Dáng gập kinh điển, công nghệ ẩn sâu.
             </p>
             <p style="font-size: 1.05rem; line-height: 1.75; color: var(--cocoa); margin-bottom: 1.5rem;">
-              Kiểu dáng ví gập đôi truyền thống được DOVA tính toán lại với độ mỏng tối ưu. Vừa vặn trong túi quần âu hay áo vest mà không làm mất phom dáng trang phục, giữ trọn vẻ lịch lãm và an tâm tuyệt đối trên mỗi hành trình.
+              Kiểu dáng ví gập đôi truyền thống được DOVA tính toán lại với độ mỏng tối ưu. Vừa vặn trong túi quần âu
+              hay áo vest mà không làm mất phom dáng trang phục, giữ trọn vẻ lịch lãm và an tâm tuyệt đối trên mỗi hành
+              trình.
             </p>
 
             <!-- Chọn dòng Essential / Smart -->
@@ -94,10 +130,13 @@
                 <button type="button" class="tier-btn active" data-tier="smart">Dòng Smart (Có Smart Tag)</button>
               </div>
               <div class="tier-desc-essential card-cream" style="display: none; padding: 1.25rem;">
-                <strong>Phiên bản Essential:</strong> Tích hợp vật liệu composite bã cà phê + lớp che chắn RFID Blocking. Gọn gàng và thanh lịch.
+                <strong>Phiên bản Essential:</strong> Tích hợp vật liệu composite bã cà phê + lớp che chắn RFID
+                Blocking. Gọn gàng và thanh lịch.
               </div>
-              <div class="tier-desc-smart card-cream" style="display: block; padding: 1.25rem; border-color: var(--caramel-lt);">
-                <strong>Phiên bản Smart:</strong> Vật liệu composite bã cà phê + RFID Blocking + Ngăn chìm tích hợp với thiết bị định vị tương thích.
+              <div class="tier-desc-smart card-cream"
+                style="display: block; padding: 1.25rem; border-color: var(--caramel-lt);">
+                <strong>Phiên bản Smart:</strong> Vật liệu composite bã cà phê + RFID Blocking + Ngăn chìm tích hợp với
+                thiết bị định vị tương thích.
               </div>
             </div>
 
@@ -110,7 +149,8 @@
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
-                <span>Lớp chắn sóng hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép (RFID/NFC) khi ví đóng kín.</span>
+                <span>Lớp chắn sóng hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép (RFID/NFC) khi ví đóng
+                  kín.</span>
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
@@ -186,5 +226,7 @@
   <script src="assets/js/smooth-scroll.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/product-viewer.js"></script>
+  <script src="assets/js/decor.js"></script>
 </body>
+
 </html>

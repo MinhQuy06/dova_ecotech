@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DOVA Mini Zip — Chi Tiết Ví Nữ Thông Minh Từ Bã Cà Phê</title>
-  <meta name="description" content="Chi tiết ví nữ DOVA Mini Zip: thiết kế khóa kéo thanh lịch, bề mặt composite có thành phần bã cà phê, màng chắn RFID và ngăn tích hợp Smart Tag." />
+  <meta name="description"
+    content="Chi tiết ví nữ DOVA Mini Zip: thiết kế khóa kéo thanh lịch, bề mặt composite có thành phần bã cà phê, màng chắn RFID và ngăn tích hợp Smart Tag." />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 
   <meta property="og:title" content="DOVA Mini Zip — Ví Nữ Thông Minh Từ Bã Cà Phê" />
-  <meta property="og:description" content="Nhỏ gọn trong lòng bàn tay, trọn vẹn an tâm. Trải nghiệm mô hình 3D xoay 360 độ và đăng ký quan tâm." />
+  <meta property="og:description"
+    content="Nhỏ gọn trong lòng bàn tay, trọn vẹn an tâm. Trải nghiệm mô hình 3D xoay 360 độ và đăng ký quan tâm." />
   <meta property="og:image" content="assets/img/products/mini-zip-main.svg" />
 
   <!-- Stylesheets -->
@@ -18,7 +21,9 @@
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/decor.css" />
 </head>
+
 <body class="theme-cream">
 
   <!-- Header Root -->
@@ -27,7 +32,7 @@
   <main id="main-content">
     <section class="section theme-cream" style="padding-top: clamp(7.5rem, 13vw, 10rem);">
       <div class="container">
-        
+
         <!-- Breadcrumb -->
         <nav aria-label="Đường dẫn trang" style="margin-bottom: 2rem; font-size: 0.85rem; color: var(--cocoa);">
           <a href="index.html">Trang chủ</a> <span>/</span>
@@ -36,8 +41,32 @@
         </nav>
 
         <div class="product-showcase-grid" style="align-items: start;">
-          <!-- Left: 3D 360 Viewer -->
+          <!-- Left: Ảnh Studio Thực Tế & 3D 360 Viewer -->
           <div>
+            <!-- Ảnh sản phẩm chính Studio Chụp thực tế -->
+            <div class="studio-photo-card">
+              <img src="assets/img/products/mini-zip-photo.jpg"
+                alt="Ảnh chụp studio ví nữ DOVA Mini Zip từ composite bã cà phê" width="1024" height="576"
+                loading="lazy" />
+              <span class="studio-concept-badge">Concept render · Hình minh họa</span>
+              <!-- Lá trang trí góc ảnh -->
+              <div class="decor-leaf-cluster" style="top: -15px; left: -15px; width: 65px; height: 65px;"
+                aria-hidden="true">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="decor-leaf" d="M15 85 C20 50 50 25 80 15 C80 50 55 75 15 85 Z"
+                    fill="url(#leafGradZip)" />
+                  <path class="decor-leaf" d="M15 85 Q45 50 80 15" stroke="#EBDACB" stroke-width="1.2"
+                    stroke-linecap="round" opacity="0.5" />
+                  <defs>
+                    <linearGradient id="leafGradZip" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#8DB45A" />
+                      <stop offset="100%" stop-color="#5E8A3A" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
             <div class="product-viewer-wrap" style="min-height: 520px;">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="badge-prototype">Prototype • Mini Zip</span>
@@ -56,19 +85,22 @@
             <div class="detail-photos-grid" style="margin-top: 2rem;">
               <div>
                 <div class="detail-photo-card">
-                  <img src="assets/img/products/mini-zip-detail-material.svg" alt="Bề mặt bã cà phê Mini Zip" loading="lazy" />
+                  <img src="assets/img/products/detail-composite.jpg" alt="Bề mặt bã cà phê Mini Zip" loading="lazy"
+                    width="600" height="600" />
                 </div>
                 <div class="detail-photo-caption">Bề mặt composite</div>
               </div>
               <div>
                 <div class="detail-photo-card">
-                  <img src="assets/img/products/mini-zip-detail-stitch.svg" alt="Đường may tỉ mỉ Mini Zip" loading="lazy" />
+                  <img src="assets/img/products/mini-zip-detail-stitch.svg" alt="Đường may tỉ mỉ Mini Zip"
+                    loading="lazy" />
                 </div>
                 <div class="detail-photo-caption">Chỉ may gia cố</div>
               </div>
               <div>
                 <div class="detail-photo-card">
-                  <img src="assets/img/products/mini-zip-detail-slot.svg" alt="Ngăn Smart Tag Mini Zip" loading="lazy" />
+                  <img src="assets/img/products/detail-smarttag.jpg" alt="Ngăn Smart Tag Mini Zip"
+                    loading="lazy" width="640" height="640" style="object-fit: contain; background: #FAF7F2; padding: 0.5rem;" />
                 </div>
                 <div class="detail-photo-caption">Ngăn Smart Tag</div>
               </div>
@@ -79,11 +111,14 @@
           <div class="product-info-col">
             <span class="eyebrow" style="margin-bottom: 0.5rem;">Dáng ví nữ khóa kéo</span>
             <h1 style="font-size: clamp(2.4rem, 4vw, 3.6rem); margin-bottom: 0.5rem;">DOVA Mini Zip</h1>
-            <p style="font-family: var(--font-script); font-size: 1.8rem; color: var(--caramel); margin-bottom: 1.25rem;">
+            <p
+              style="font-family: var(--font-script); font-size: 1.8rem; color: var(--caramel); margin-bottom: 1.25rem;">
               Nhỏ gọn trong lòng bàn tay, trọn vẹn an tâm.
             </p>
             <p style="font-size: 1.05rem; line-height: 1.75; color: var(--cocoa); margin-bottom: 1.5rem;">
-              DOVA Mini Zip được tạo hình với các đường bo mềm mại, tôn vinh vẻ nữ tính hiện đại. Thiết kế zip-around 3 cạnh giúp bảo vệ tối đa tiền mặt, thẻ ngân hàng và giấy tờ quan trọng không bị thất lạc trong những chuyến công tác hay dạo phố.
+              DOVA Mini Zip được tạo hình với các đường bo mềm mại, tôn vinh vẻ nữ tính hiện đại. Thiết kế zip-around 3
+              cạnh giúp bảo vệ tối đa tiền mặt, thẻ ngân hàng và giấy tờ quan trọng không bị thất lạc trong những chuyến
+              công tác hay dạo phố.
             </p>
 
             <!-- Chọn dòng Essential / Smart -->
@@ -94,10 +129,13 @@
                 <button type="button" class="tier-btn active" data-tier="smart">Dòng Smart (Có Smart Tag)</button>
               </div>
               <div class="tier-desc-essential card-cream" style="display: none; padding: 1.25rem;">
-                <strong>Phiên bản Essential:</strong> Tích hợp vật liệu composite bã cà phê + lớp che chắn RFID Blocking.
+                <strong>Phiên bản Essential:</strong> Tích hợp vật liệu composite bã cà phê + lớp che chắn RFID
+                Blocking.
               </div>
-              <div class="tier-desc-smart card-cream" style="display: block; padding: 1.25rem; border-color: var(--caramel-lt);">
-                <strong>Phiên bản Smart:</strong> Vật liệu composite bã cà phê + RFID Blocking + Ngăn chìm đặt Smart Tag tương thích để định vị ví.
+              <div class="tier-desc-smart card-cream"
+                style="display: block; padding: 1.25rem; border-color: var(--caramel-lt);">
+                <strong>Phiên bản Smart:</strong> Vật liệu composite bã cà phê + RFID Blocking + Ngăn chìm đặt Smart Tag
+                tương thích để định vị ví.
               </div>
             </div>
 
@@ -106,7 +144,8 @@
             <ul class="feature-checklist">
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
-                <span>Bề mặt composite có thành phần bã cà phê mịn màng, tông nâu tự nhiên ấm áp và không trơn trượt.</span>
+                <span>Bề mặt composite có thành phần bã cà phê mịn màng, tông nâu tự nhiên ấm áp và không trơn
+                  trượt.</span>
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
@@ -114,7 +153,8 @@
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
-                <span>Dòng Smart có ngăn riêng biệt giữ thiết bị định vị tương thích (AirTag / SmartTag) chắc chắn.</span>
+                <span>Dòng Smart có ngăn riêng biệt giữ thiết bị định vị tương thích (AirTag / SmartTag) chắc
+                  chắn.</span>
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
@@ -186,5 +226,7 @@
   <script src="assets/js/smooth-scroll.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/product-viewer.js"></script>
+  <script src="assets/js/decor.js"></script>
 </body>
+
 </html>

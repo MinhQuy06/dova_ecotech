@@ -1,0 +1,260 @@
+/* =====================================================================
+   DOVA ECOTECH - RESPONSIVE.CSS
+   Mobile, tablet, desktop adaptations (360px - 1920px)
+   ===================================================================== */
+
+/* Tablet & Smaller Desktops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-wrapper::before {
+    display: none;
+  }
+
+  .hero-wrapper {
+    background-color: var(--ivory);
+    padding-top: 7rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .hero-desc {
+    max-width: 100%;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-canvas-container {
+    height: 480px;
+    background: radial-gradient(circle at center, #24140C 0%, #150B07 80%);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(176, 141, 87, 0.25);
+  }
+
+  .story-chapters-wrapper {
+    gap: 5rem;
+  }
+
+  .chapter-item,
+  .chapter-item.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 2.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid .value-card:last-child {
+    grid-column: span 2;
+  }
+
+  .product-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .tech-grid-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .journal-magazine-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .journal-hero-article {
+    grid-column: span 6;
+    grid-template-columns: 1fr;
+  }
+
+  .journal-hero-img-box {
+    min-height: 280px;
+  }
+
+  .journal-grid-item {
+    grid-column: span 3;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-brand-col {
+    grid-column: span 2;
+  }
+}
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 82%;
+    max-width: 380px;
+    height: 100vh;
+    background-color: #1A0F0A;
+    color: var(--ivory);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 2.5rem;
+    gap: 1.75rem;
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.6);
+    transition: right var(--transition-normal);
+    z-index: 905;
+  }
+
+  .main-nav.open {
+    right: 0;
+  }
+
+  .main-nav .nav-link {
+    color: var(--ivory);
+    font-size: 1.15rem;
+    letter-spacing: 0.18em;
+  }
+
+  .main-nav .nav-link:hover,
+  .main-nav .nav-link.active {
+    color: var(--caramel-lt);
+  }
+
+  .header-cta-group .btn-secondary {
+    display: none;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid .value-card:last-child {
+    grid-column: span 1;
+  }
+
+  .journal-grid-item {
+    grid-column: span 6;
+  }
+
+  .detail-photos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .detail-photo-card {
+    aspect-ratio: 16/9;
+  }
+
+  .hero-canvas-container {
+    height: 380px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-brand-col {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .footer-legal-links {
+    justify-content: center;
+  }
+
+  /* Reduce particles for mobile performance >= 30fps */
+  .particle-bean-2,
+  .particle-bean-4 {
+    display: none;
+  }
+}
+
+/* Small Smart Phones (<= 480px down to 360px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  .hero-headline {
+    font-size: 2.35rem;
+  }
+
+  .hero-slogan {
+    font-size: 1.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .tier-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .product-viewer-wrap {
+    min-height: 400px;
+    padding: 1rem;
+  }
+
+  .product-canvas-holder {
+    height: 300px;
+  }
+}
+
+/* Ultra Large Screens (>= 1600px) */
+@media (min-width: 1600px) {
+  .hero-headline {
+    font-size: 5.6rem;
+  }
+
+  .hero-canvas-container {
+    height: 750px;
+  }
+}

@@ -1,0 +1,207 @@
+/* =====================================================================
+   DOVA ECOTECH - ANIMATIONS.CSS
+   Keyframes, glow effects, floating particles, preloader
+   ===================================================================== */
+
+/* Smart Tag Wave Ping Pulse */
+@keyframes pingPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(214, 154, 75, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(214, 154, 75, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(214, 154, 75, 0);
+  }
+}
+
+/* Floating Coffee Bean Idle Motion */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(4deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-3deg);
+  }
+}
+
+/* Caramel Glow Aura Breathing */
+@keyframes caramelBreathe {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(214, 154, 75, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(214, 154, 75, 0.65));
+  }
+}
+
+/* Preloader Coffee Bean Fall & Assembly */
+@keyframes beanFall {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.6) rotate(-25deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(5px) scale(1.05) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes logoAssemble {
+  0% {
+    opacity: 0;
+    letter-spacing: 12px;
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 4px;
+    filter: blur(0px);
+  }
+}
+
+/* Preloader Screen */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background-color: #140B07;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.75s var(--ease-smooth), visibility 0.75s var(--ease-smooth);
+}
+
+#preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-icon-wrap {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  animation: beanFall 1s var(--ease-smooth) forwards;
+}
+
+.preloader-brand-text {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ivory);
+  animation: logoAssemble 1.2s var(--ease-smooth) 0.3s forwards;
+  opacity: 0;
+}
+
+.preloader-subtext {
+  font-family: var(--font-label);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--caramel-lt);
+  margin-top: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.6s forwards;
+}
+
+.preloader-skip-btn {
+  position: absolute;
+  bottom: 30px;
+  background: transparent;
+  border: 1px solid rgba(176, 141, 87, 0.35);
+  color: var(--aged);
+  font-family: var(--font-label);
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.preloader-skip-btn:hover {
+  color: var(--ivory);
+  border-color: var(--caramel-lt);
+}
+
+/* Fade In Utility */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Particle Elements */
+.particle-bean {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.55;
+  z-index: 1;
+}
+
+.particle-bean-1 {
+  top: 15%;
+  left: 8%;
+  width: 32px;
+  animation: floatGentle 7s ease-in-out infinite;
+}
+
+.particle-bean-2 {
+  top: 65%;
+  left: 12%;
+  width: 26px;
+  animation: floatReverse 8.5s ease-in-out infinite;
+}
+
+.particle-bean-3 {
+  top: 25%;
+  right: 10%;
+  width: 38px;
+  animation: floatGentle 9s ease-in-out infinite 1s;
+}
+
+.particle-bean-4 {
+  bottom: 20%;
+  right: 14%;
+  width: 24px;
+  animation: floatReverse 7.5s ease-in-out infinite 0.5s;
+}
+
+/* GSAP Ready Initial Hide Classes */
+.gsap-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  will-change: transform, opacity;
+}
+
+.gsap-reveal-left {
+  opacity: 0;
+  transform: translateX(-45px);
+  will-change: transform, opacity;
+}
+
+.gsap-reveal-right {
+  opacity: 0;
+  transform: translateX(45px);
+  will-change: transform, opacity;
+}

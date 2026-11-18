@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the Journey — Đăng Ký Đồng Hành Cùng DOVA ECOTECH</title>
+  <meta name="description" content="Khảo sát nhu cầu và đăng ký nhận thông tin sớm nhất về dự án ví thông minh từ composite bã cà phê DOVA ECOTECH." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <meta property="og:title" content="Join the Journey — Đồng Hành Cùng DOVA ECOTECH" />
+  <meta property="og:description" content="Tiếng nói của bạn định hình chiếc ví tương lai. Cùng DOVA đi những bước đầu tiên." />
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body class="theme-cream">
+
+  <!-- Header Root -->
+  <div id="site-header-root"></div>
+
+  <main id="main-content">
+    
+    <!-- Hero Header -->
+    <section class="section theme-cream" style="padding-top: clamp(8rem, 14vw, 11rem); padding-bottom: 2rem;">
+      <div class="container container-narrow">
+        <div class="join-header-center gsap-reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-bean">☕</span>
+            <span>Đồng hành cùng dự án</span>
+          </div>
+          <div class="join-slogan">Tiếng nói của bạn định hình sản phẩm tương lai.</div>
+          <h1 class="section-title" style="font-size: clamp(2.4rem, 4.5vw, 4rem);">Cùng DOVA đi những bước đầu tiên.</h1>
+          <p class="section-subtitle" style="font-size: 1.15rem; color: var(--cocoa); margin-top: 1.25rem;">
+            DOVA ECOTECH đang trong giai đoạn hoàn thiện nguyên mẫu. Những chia sẻ chân thành của bạn về nhu cầu, thói quen và mong muốn sẽ giúp chúng tôi tinh chỉnh chiếc ví ngày một tiện dụng hơn.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Divider to Dark -->
+    <div class="torn-divider to-dark" aria-hidden="true"></div>
+
+    <!-- Survey Form Section (Nền tối) -->
+    <section class="section theme-dark" id="survey-form-section">
+      <div class="container container-narrow">
+
+        <div class="form-card gsap-reveal">
+          <form id="dova-survey-form" novalidate>
+            <!-- Honeypot chống spam cho bot -->
+            <input type="text" name="_honey_trap" class="hp-field" tabindex="-1" autocomplete="off" />
+
+            <!-- Nhóm 1: Thông tin liên hệ -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="survey-name" class="form-label">Họ và tên của bạn *</label>
+                <input type="text" id="survey-name" name="name" class="form-control" placeholder="Ví dụ: Nguyễn Minh Thảo" required />
+              </div>
+              <div class="form-group">
+                <label for="survey-email" class="form-label">Địa chỉ Email nhận tin *</label>
+                <input type="email" id="survey-email" name="email" class="form-control" placeholder="name@example.com" required />
+              </div>
+            </div>
+
+            <!-- Nhóm 2: Nhóm tuổi -->
+            <div class="form-group">
+              <label class="form-label">Nhóm độ tuổi của bạn</label>
+              <div class="options-grid">
+                <label class="option-tile">
+                  <input type="radio" name="ageGroup" value="under26" />
+                  <span>Dưới 26 tuổi</span>
+                </label>
+                <label class="option-tile selected">
+                  <input type="radio" name="ageGroup" value="26-40" checked />
+                  <span>Từ 26 đến 40 tuổi</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="ageGroup" value="over40" />
+                  <span>Trên 40 tuổi</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Nhóm 3: Kiểu dáng quan tâm -->
+            <div class="form-group">
+              <label class="form-label">Kiểu dáng ví bạn quan tâm nhất</label>
+              <div class="options-grid">
+                <label class="option-tile">
+                  <input type="radio" name="productShape" value="mini-zip" />
+                  <span>DOVA Mini Zip (Nữ)</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="productShape" value="bifold" />
+                  <span>DOVA Bifold (Nam)</span>
+                </label>
+                <label class="option-tile selected">
+                  <input type="radio" name="productShape" value="both" checked />
+                  <span>Cả hai kiểu dáng</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Nhóm 4: Dòng sản phẩm -->
+            <div class="form-group">
+              <label class="form-label">Dòng phiên bản mong muốn trải nghiệm</label>
+              <div class="options-grid">
+                <label class="option-tile">
+                  <input type="radio" name="tierInterest" value="essential" />
+                  <span>Essential (RFID Blocking)</span>
+                </label>
+                <label class="option-tile selected">
+                  <input type="radio" name="tierInterest" value="smart" checked />
+                  <span>Smart (Kèm ngăn Smart Tag)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Nhóm 5: Mức giá chấp nhận được -->
+            <div class="form-group">
+              <label class="form-label">Mức giá bạn thấy hợp lý cho dòng ví này</label>
+              <div class="options-grid">
+                <label class="option-tile">
+                  <input type="radio" name="priceRange" value="p1" />
+                  <span>450.000đ - 650.000đ</span>
+                </label>
+                <label class="option-tile selected">
+                  <input type="radio" name="priceRange" value="p2" checked />
+                  <span>650.000đ - 900.000đ</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="priceRange" value="p3" />
+                  <span>900.000đ - 1.300.000đ</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="priceRange" value="p4" />
+                  <span>Trên 1.300.000đ (Bản cao cấp)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Nhóm 6: Điều khiến bạn quan tâm nhất (chọn nhiều) -->
+            <div class="form-group">
+              <label class="form-label">Điều khiến bạn quan tâm nhất ở DOVA? (Chọn nhiều)</label>
+              <div class="options-grid">
+                <label class="option-tile">
+                  <input type="checkbox" name="keyInterests" value="material" checked />
+                  <span>Vật liệu có bã cà phê</span>
+                </label>
+                <label class="option-tile">
+                  <input type="checkbox" name="keyInterests" value="rfid" checked />
+                  <span>Lớp chắn sóng RFID</span>
+                </label>
+                <label class="option-tile">
+                  <input type="checkbox" name="keyInterests" value="smarttag" checked />
+                  <span>Ngăn đặt Smart Tag</span>
+                </label>
+                <label class="option-tile">
+                  <input type="checkbox" name="keyInterests" value="design" />
+                  <span>Thiết kế tối giản, thanh lịch</span>
+                </label>
+                <label class="option-tile">
+                  <input type="checkbox" name="keyInterests" value="eco-conscious" />
+                  <span>Ý nghĩa tái sử dụng phụ phẩm</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Nhóm 7: Kênh mua sắm hay dùng -->
+            <div class="form-group">
+              <label class="form-label">Kênh mua sắm phụ kiện bạn hay sử dụng</label>
+              <div class="options-grid">
+                <label class="option-tile">
+                  <input type="radio" name="shoppingChannel" value="shopee" checked />
+                  <span>Shopee Mall</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="shoppingChannel" value="tiktok" />
+                  <span>TikTok Shop</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="shoppingChannel" value="website" />
+                  <span>Website chính hãng</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="shoppingChannel" value="store" />
+                  <span>Cửa hàng đối tác</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="shoppingChannel" value="other" />
+                  <span>Kênh khác</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Nhóm 8: Góp ý tự do -->
+            <div class="form-group">
+              <label for="survey-feedback" class="form-label">Góp ý hoặc mong muốn bổ sung cho DOVA</label>
+              <textarea id="survey-feedback" name="feedback" rows="4" class="form-control" placeholder="Hãy chia sẻ thêm về màu sắc bạn thích, kích thước mong muốn, hoặc điều bạn băn khoăn..."></textarea>
+            </div>
+
+            <!-- Nhóm 9: Đồng ý điều khoản -->
+            <div class="form-group">
+              <label class="option-tile" style="border: none; padding-left: 0; background: transparent;">
+                <input type="checkbox" id="survey-agreement" name="agreement" required checked />
+                <span style="font-size: 0.88rem; color: var(--cocoa);">
+                  Tôi đồng ý nhận thông tin cập nhật tiến độ nguyên mẫu và thư mời trải nghiệm từ DOVA ECOTECH. Thông tin được bảo mật theo chính sách quyền riêng tư.
+                </span>
+              </label>
+            </div>
+
+            <!-- Nút gửi -->
+            <div style="text-align: center; margin-top: 2.5rem;">
+              <button type="submit" class="btn btn-primary" style="min-width: 280px; width: 100%;">
+                <span>Đăng ký tham gia (Join the Journey)</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <!-- Thông báo phản hồi sau gửi -->
+            <div id="form-feedback-message" class="form-feedback" role="alert"></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Root -->
+  <div id="site-footer-root"></div>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Application Modules -->
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/smooth-scroll.js"></script>
+  <script src="assets/js/scroll-animations.js"></script>
+  <script src="assets/js/form.js"></script>
+</body>
+</html>

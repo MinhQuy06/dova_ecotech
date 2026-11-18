@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOVA ECOTECH — Ví Thông Minh Từ Bã Cà Phê • RFID Blocking • Smart Tag</title>
+  <meta name="description" content="DOVA ECOTECH tiên phong kết hợp vật liệu composite có thành phần bã cà phê, công nghệ RFID Blocking và ngăn định vị Smart Tag trong một chiếc ví tối giản, lịch lãm." />
+  <meta name="keywords" content="ví bã cà phê, dova ecotech, ví thông minh, rfid blocking, ví định vị, smart tag wallet, phụ kiện cà phê" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dova-ecotech.vn/" />
+  <meta property="og:title" content="DOVA ECOTECH — Chiếc Ví Nhỏ, Nhiều Điều Thông Minh" />
+  <meta property="og:description" content="Ví thông minh làm từ vật liệu composite có thành phần bã cà phê, tích hợp lớp RFID Blocking và ngăn riêng đặt Smart Tag tương thích." />
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="DOVA ECOTECH — Chiếc Ví Nhỏ, Nhiều Điều Thông Minh" />
+  <meta property="twitter:description" content="Ví thông minh từ composite bã cà phê tích hợp RFID Blocking & Smart Tag." />
+  <meta property="twitter:image" content="assets/img/og-cover.jpg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body class="theme-cream">
+
+  <!-- Header Root (layout.js tự động chèn vào đây) -->
+  <div id="site-header-root"></div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- ===================================================================
+         SECTION 01: HERO / BRAND INTRODUCTION
+         =================================================================== -->
+    <section class="section-hero hero-wrapper" id="hero-section" aria-label="Giới thiệu thương hiệu DOVA ECOTECH">
+      <div class="container hero-grid">
+        <!-- Cột trái: Văn bản thương hiệu & CTA -->
+        <div class="hero-content gsap-reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-bean">☕</span>
+            <span>Khởi nguyên từ phụ phẩm cà phê</span>
+          </div>
+          <span class="hero-slogan">Từ bã cà phê, đến chiếc ví thông minh.</span>
+          <h1 class="hero-headline">Chiếc ví nhỏ, nhiều điều thông minh.</h1>
+          <p class="hero-desc">
+            DOVA ECOTECH kết hợp vật liệu composite có thành phần bã cà phê cùng công nghệ RFID Blocking và ngăn định vị Smart Tag, tạo nên phụ kiện tối giản, thanh lịch và an tâm cho nhịp sống hiện đại.
+          </p>
+          <div class="hero-cta-group">
+            <a href="collection.html" class="btn btn-primary">
+              <span>Khám phá bộ sưu tập</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="story.html" class="btn btn-secondary">
+              <span>Câu chuyện DOVA</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cột phải: Khung 3D tương tác hai chiếc ví -->
+        <div class="hero-canvas-container" id="hero-3d-canvas-container">
+          <canvas id="hero-3d-canvas" aria-label="Mô hình 3D tương tác ví Mini Zip và Bifold"></canvas>
+          <div class="hero-canvas-fallback" id="hero-canvas-fallback">
+            <img src="assets/img/hero/hero-concept.svg" alt="Mô hình ý tưởng hai ví DOVA ECOTECH" width="600" height="450" />
+          </div>
+          <div class="hero-canvas-overlay-tag">
+            <span class="badge-prototype">Prototype • Bản thử nghiệm</span>
+            <span style="font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.15em; color: var(--gold);">KÉO ĐỂ XOAY 3D</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hạt cà phê trang trí lơ lửng -->
+      <div class="particle-bean particle-bean-1" aria-hidden="true">☕</div>
+      <div class="particle-bean particle-bean-2" aria-hidden="true">☕</div>
+      <div class="particle-bean particle-bean-3" aria-hidden="true">☕</div>
+    </section>
+
+    <!-- Torn Paper Divider chuyển sang nền nâu -->
+    <div class="torn-divider to-dark" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         SECTION 02: OUR STORY (Bản rút gọn)
+         =================================================================== -->
+    <section class="section theme-dark" id="story-section" aria-label="Câu chuyện thương hiệu">
+      <div class="container">
+        <div class="story-header-center gsap-reveal">
+          <div class="eyebrow" style="color: var(--caramel-lt);">
+            <span class="eyebrow-bean">☕</span>
+            <span>Hành trình khởi sinh</span>
+          </div>
+          <h2 class="section-title">Một câu chuyện bắt đầu từ ly cà phê.</h2>
+          <p class="section-subtitle">
+            Hàng triệu tách cà phê được thưởng thức mỗi ngày để lại nguồn bã cà phê dồi dào. Chúng tôi trăn trở về việc tái sinh nguồn phụ phẩm ấy thành phụ kiện thông minh, nâng niu cuộc sống thường nhật.
+          </p>
+        </div>
+
+        <!-- 3 Giá trị cốt lõi -->
+        <div class="values-grid">
+          <!-- Card 1: Reuse -->
+          <article class="value-card">
+            <div class="value-card-icon" aria-hidden="true">🌱</div>
+            <h3 class="value-card-title">Reuse — Tái sử dụng</h3>
+            <p class="value-card-desc">
+              Khai thác kết cấu sợi tự nhiên của bã cà phê sau pha chế, định hướng tạo nên vật liệu composite thẩm mỹ và giảm tải áp lực chất thải hữu cơ.
+            </p>
+          </article>
+
+          <!-- Card 2: Protect -->
+          <article class="value-card">
+            <div class="value-card-icon" aria-hidden="true">🛡️</div>
+            <h3 class="value-card-title">Protect — Hạn chế rủi ro</h3>
+            <p class="value-card-desc">
+              Tích hợp lớp màng chuyên dụng hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép (RFID Blocking), giúp bạn an tâm khi di chuyển nơi đông người.
+            </p>
+          </article>
+
+          <!-- Card 3: Find -->
+          <article class="value-card">
+            <div class="value-card-icon" aria-hidden="true">📍</div>
+            <h3 class="value-card-title">Find — Tìm kiếm dễ dàng</h3>
+            <p class="value-card-desc">
+              Bố trí một ngăn riêng biệt vừa vặn thiết bị định vị tương thích (Smart Tag), hỗ trợ bạn nhanh chóng tìm lại chiếc ví trong nháy mắt.
+            </p>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="story.html" class="btn btn-secondary">
+            <span>Đọc trọn vẹn 4 chương câu chuyện DOVA</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Divider chuyển sang nền kem -->
+    <div class="torn-divider to-cream" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         SECTION 04: PRODUCT COLLECTION (Bản rút gọn)
+         =================================================================== -->
+    <section class="section theme-cream" id="collection-section" aria-label="Bộ sưu tập sản phẩm">
+      <div class="container">
+        <div class="story-header-center gsap-reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-bean">☕</span>
+            <span>Bộ sưu tập nguyên mẫu</span>
+          </div>
+          <h2 class="section-title">Hai dáng ví. Một tinh thần.</h2>
+          <p class="section-subtitle">
+            Thiết kế tối giản cho người hiện đại từ 26-40 tuổi, đề cao bề mặt xúc giác ấm áp và công nghệ tiện ích ẩn sâu.
+          </p>
+        </div>
+
+        <!-- Sản phẩm 1: DOVA Mini Zip -->
+        <article class="collection-product-block" id="product-mini-zip">
+          <div class="product-showcase-grid">
+            <!-- 3D Viewer xoay 360 -->
+            <div class="product-viewer-wrap">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="badge-prototype">Prototype • Mini Zip</span>
+                <span class="badge-tier smart">Dòng Smart</span>
+              </div>
+              <div class="product-canvas-holder" data-product="mini-zip">
+                <!-- Three.js Canvas tự động gắn vào đây bởi product-viewer.js -->
+              </div>
+              <div class="product-viewer-controls">
+                <span class="btn-rotate-hint">⟲ Kéo xoay 360°</span>
+                <button type="button" class="btn btn-secondary btn-sm btn-toggle-tag">
+                  ✓ Ẩn ngăn Smart Tag
+                </button>
+              </div>
+            </div>
+
+            <!-- Thông tin sản phẩm -->
+            <div class="product-info-col">
+              <span class="eyebrow" style="margin-bottom: 0.5rem;">Dáng ví nữ khóa kéo</span>
+              <h3 style="font-size: clamp(2rem, 3.2vw, 2.8rem); margin-bottom: 0.75rem;">DOVA Mini Zip</h3>
+              <p style="font-size: 1.05rem; color: var(--cocoa); margin-bottom: 1.25rem;">
+                Thiết kế zip-around bo tròn thanh thoát, nhỏ gọn trong lòng bàn tay. Giữ trọn vẹn thẻ, tiền mặt và thiết bị định vị trong một ngăn chứa an toàn.
+              </p>
+
+              <!-- Switcher Essential vs Smart -->
+              <div class="tier-switcher">
+                <button type="button" class="tier-btn" data-tier="essential">Dòng Essential</button>
+                <button type="button" class="tier-btn active" data-tier="smart">Dòng Smart</button>
+              </div>
+
+              <div class="tier-desc-essential" style="display: none; margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--chocolate);">
+                <strong>Dòng Essential:</strong> Vật liệu composite có thành phần bã cà phê kết hợp lớp màng che chắn RFID Blocking.
+              </div>
+              <div class="tier-desc-smart" style="display: block; margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--chocolate);">
+                <strong>Dòng Smart:</strong> Tích hợp đầy đủ vật liệu composite bã cà phê + RFID Blocking + Ngăn riêng đặt Smart Tag.
+              </div>
+
+              <!-- Lưới 3 ảnh chi tiết -->
+              <div class="detail-photos-grid">
+                <div>
+                  <div class="detail-photo-card">
+                    <img src="assets/img/products/mini-zip-detail-material.svg" alt="Bề mặt vật liệu bã cà phê Mini Zip" loading="lazy" />
+                  </div>
+                  <div class="detail-photo-caption">Bề mặt composite</div>
+                </div>
+                <div>
+                  <div class="detail-photo-card">
+                    <img src="assets/img/products/mini-zip-detail-stitch.svg" alt="Đường may tỉ mỉ của Mini Zip" loading="lazy" />
+                  </div>
+                  <div class="detail-photo-caption">Đường may chỉ đôi</div>
+                </div>
+                <div>
+                  <div class="detail-photo-card">
+                    <img src="assets/img/products/mini-zip-detail-slot.svg" alt="Ngăn Smart Tag và RFID Blocking Mini Zip" loading="lazy" />
+                  </div>
+                  <div class="detail-photo-caption">Ngăn thẻ & Smart Tag</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="join.html?product=mini-zip" class="btn btn-primary">
+                  <span>Đăng ký nhận thông tin</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a href="mini-zip.html" class="btn btn-secondary">
+                  <span>Xem chi tiết Mini Zip</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sản phẩm 2: DOVA Bifold -->
+        <article class="collection-product-block" id="product-bifold">
+          <div class="product-showcase-grid">
+            <!-- 3D Viewer xoay 360 -->
+            <div class="product-viewer-wrap">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="badge-prototype">Prototype • Bifold</span>
+                <span class="badge-tier smart">Dòng Smart</span>
+              </div>
+              <div class="product-canvas-holder" data-product="bifold">
+                <!-- Three.js Canvas tự động gắn vào đây -->
+              </div>
+              <div class="product-viewer-controls">
+                <span class="btn-rotate-hint">⟲ Kéo xoay 360°</span>
+                <button type="button" class="btn btn-secondary btn-sm btn-toggle-tag">
+                  ✓ Ẩn ngăn Smart Tag
+                </button>
+              </div>
+            </div>
+
+            <!-- Thông tin sản phẩm -->
+            <div class="product-info-col">
+              <span class="eyebrow" style="margin-bottom: 0.5rem;">Dáng ví nam gập đôi</span>
+              <h3 style="font-size: clamp(2rem, 3.2vw, 2.8rem); margin-bottom: 0.75rem;">DOVA Bifold</h3>
+              <p style="font-size: 1.05rem; color: var(--cocoa); margin-bottom: 1.25rem;">
+                Dáng ví gập đôi kinh điển được tối ưu độ mỏng vượt trội. Không cộm túi quần âu, giữ trọn nét phong độ và an tâm với lớp che chắn sóng từ tính.
+              </p>
+
+              <!-- Switcher Essential vs Smart -->
+              <div class="tier-switcher">
+                <button type="button" class="tier-btn" data-tier="essential">Dòng Essential</button>
+                <button type="button" class="tier-btn active" data-tier="smart">Dòng Smart</button>
+              </div>
+
+              <div class="tier-desc-essential" style="display: none; margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--chocolate);">
+                <strong>Dòng Essential:</strong> Vật liệu composite có thành phần bã cà phê kết hợp lớp che chắn RFID Blocking.
+              </div>
+              <div class="tier-desc-smart" style="display: block; margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--chocolate);">
+                <strong>Dòng Smart:</strong> Vật liệu composite bã cà phê + RFID Blocking + Ngăn chìm đặt Smart Tag tương thích.
+              </div>
+
+              <!-- Lưới 3 ảnh chi tiết -->
+              <div class="detail-photos-grid">
+                <div>
+                  <div class="detail-photo-card">
+                    <img src="assets/img/products/bifold-detail-material.svg" alt="Bề mặt bã cà phê ép phẳng Bifold" loading="lazy" />
+                  </div>
+                  <div class="detail-photo-caption">Bề mặt composite</div>
+                </div>
+                <div>
+                  <div class="detail-photo-card">
+                    <img src="assets/img/products/bifold-detail-stitch.svg" alt="Mép ví may gia cố Bifold" loading="lazy" />
+                  </div>
+                  <div class="detail-photo-caption">Mép may gia cố</div>
+                </div>
+                <div>
+                  <div class="detail-photo-card">
+                    <img src="assets/img/products/bifold-detail-slot.svg" alt="Ngăn Smart Tag chìm Bifold" loading="lazy" />
+                  </div>
+                  <div class="detail-photo-caption">Ngăn Smart Tag chìm</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="join.html?product=bifold" class="btn btn-primary">
+                  <span>Đăng ký nhận thông tin</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a href="bifold.html" class="btn btn-secondary">
+                  <span>Xem chi tiết Bifold</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Torn Paper Divider chuyển sang nền nâu -->
+    <div class="torn-divider to-dark" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         SECTION 05: TECHNOLOGY & MATERIAL (Bản rút gọn)
+         =================================================================== -->
+    <section class="section theme-dark" id="technology-section" aria-label="Công nghệ và Vật liệu">
+      <div class="container">
+        <div class="story-header-center gsap-reveal">
+          <div class="eyebrow" style="color: var(--caramel-lt);">
+            <span class="eyebrow-bean">☕</span>
+            <span>Kỹ nghệ & Vật liệu</span>
+          </div>
+          <h2 class="section-title">Công nghệ nằm trong từng lớp ví.</h2>
+          <p class="section-subtitle">
+            Mỗi chiếc ví DOVA là sự kết hợp của 3 lớp cấu trúc độc lập: từ bề mặt composite chứa bã cà phê đến lớp chắn sóng và khoang định vị thông minh.
+          </p>
+        </div>
+
+        <!-- Khung tương tác tách lớp 3D Exploded View -->
+        <div class="tech-interactive-wrapper">
+          <div class="tech-grid-split">
+            <!-- 3D Canvas -->
+            <div class="tech-explode-stage" id="tech-explode-stage">
+              <canvas id="tech-explode-canvas" aria-label="Mô hình 3D ví tách lớp công nghệ"></canvas>
+            </div>
+
+            <!-- Danh sách 3 lớp tương tác -->
+            <div class="tech-layers-stack">
+              <!-- Lớp 1: Composite -->
+              <div class="layer-slice-item active" data-layer="0">
+                <div class="layer-slice-header">
+                  <span class="layer-slice-title">01. Coffee-Based Composite</span>
+                  <span class="layer-slice-tag">Vỏ ngoài</span>
+                </div>
+                <p class="layer-slice-desc">
+                  Hạt bã cà phê sấy khô phân tán trong polymer tạo bề mặt ấm áp, dẻo dai.
+                  <em style="display: block; font-size: 0.78rem; color: var(--gold); margin-top: 4px;">* Đang trong giai đoạn kiểm tra độ bền cơ học.</em>
+                </p>
+              </div>
+
+              <!-- Lớp 2: RFID Blocking -->
+              <div class="layer-slice-item" data-layer="1">
+                <div class="layer-slice-header">
+                  <span class="layer-slice-title">02. RFID Blocking Shield</span>
+                  <span class="layer-slice-tag">Lõi bảo vệ</span>
+                </div>
+                <p class="layer-slice-desc">
+                  Màng chắn hợp kim mỏng hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép khi ví đóng kín.
+                </p>
+              </div>
+
+              <!-- Lớp 3: Smart Tag -->
+              <div class="layer-slice-item" data-layer="2">
+                <div class="layer-slice-header">
+                  <span class="layer-slice-title">03. Smart Tag Integration</span>
+                  <span class="layer-slice-tag">Định vị</span>
+                </div>
+                <p class="layer-slice-desc">
+                  Khoang chứa riêng biệt tích hợp với thiết bị định vị tương thích để dễ dàng tìm kiếm ví.
+                </p>
+                <div class="layer-ping-wave" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="technology.html" class="btn btn-secondary">
+            <span>Tìm hiểu sâu về công nghệ & vật liệu</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Divider chuyển sang nền kem -->
+    <div class="torn-divider to-cream" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         SECTION 07: BRAND JOURNAL (3 bài mới nhất)
+         =================================================================== -->
+    <section class="section theme-cream" id="journal-section" aria-label="Nhật ký thương hiệu">
+      <div class="container">
+        <div class="story-header-center gsap-reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-bean">☕</span>
+            <span>Góc nhìn & Chia sẻ</span>
+          </div>
+          <h2 class="section-title">Nhật ký DOVA.</h2>
+          <p class="section-subtitle">
+            Khám phá những câu chuyện về vật liệu tuần hoàn, phong cách sống tinh gọn và nhật ký phát triển nguyên mẫu.
+          </p>
+        </div>
+
+        <div class="journal-magazine-grid">
+          <!-- Bài nổi bật (Hero Article 2 cột) -->
+          <a href="journal/bai-01-ba-ca-phe.html" class="journal-hero-article">
+            <div class="journal-hero-img-box">
+              <img src="assets/img/journal/bai-01.svg" alt="Hành trình bã cà phê trong vật liệu mới" loading="lazy" />
+            </div>
+            <div class="journal-hero-body">
+              <div class="journal-meta">
+                <span class="badge-prototype">Bản nháp</span>
+                <span>•</span>
+                <span>14/11/2026</span>
+                <span>•</span>
+                <span>4 phút đọc</span>
+              </div>
+              <h3 class="journal-hero-title">Bã cà phê và hành trình tái sinh trong vật liệu mới</h3>
+              <p class="journal-excerpt">
+                Sau tách espresso buổi sáng, những hạt bã thô mộc có thể đi về đâu? Cùng tìm hiểu cách các kỹ sư biến phụ phẩm hữu cơ thành tấm composite mịn màng cho chiếc ví của bạn.
+              </p>
+              <span class="journal-readmore">Đọc tiếp →</span>
+            </div>
+          </a>
+
+          <!-- Bài 2 -->
+          <article class="journal-grid-item">
+            <a href="journal/bai-02-toi-gian.html" class="journal-card">
+              <div class="journal-img-box">
+                <img src="assets/img/journal/bai-02.svg" alt="Triết lý sống tối giản" loading="lazy" />
+              </div>
+              <div class="journal-body">
+                <div class="journal-meta">
+                  <span class="badge-prototype">Bản nháp</span>
+                  <span>•</span>
+                  <span>3 phút đọc</span>
+                </div>
+                <h4 class="journal-title">Lối sống tối giản: Giải phóng những điều cồng kềnh</h4>
+                <p class="journal-excerpt">
+                  Khi chiếc ví chỉ giữ lại những tấm thẻ thiết yếu, bạn sẽ cảm thấy tâm trí mình trở nên nhẹ nhõm đến nhường nào.
+                </p>
+                <span class="journal-readmore">Đọc bài viết →</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Bài 3 -->
+          <article class="journal-grid-item">
+            <a href="journal/bai-03-cong-nghe-hang-ngay.html" class="journal-card">
+              <div class="journal-img-box">
+                <img src="assets/img/journal/bai-03.svg" alt="Công nghệ ẩn mình trong đời sống" loading="lazy" />
+              </div>
+              <div class="journal-body">
+                <div class="journal-meta">
+                  <span class="badge-prototype">Bản nháp</span>
+                  <span>•</span>
+                  <span>5 phút đọc</span>
+                </div>
+                <h4 class="journal-title">Công nghệ ẩn mình: Sự an tâm trong từng bước di chuyển</h4>
+                <p class="journal-excerpt">
+                  Không màn hình nhấp nháy, công nghệ hữu ích đích thực là lớp màng bảo vệ vô hình hoạt động thầm lặng mỗi ngày.
+                </p>
+                <span class="journal-readmore">Đọc bài viết →</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Bài 4 -->
+          <article class="journal-grid-item">
+            <a href="journal/bai-04-hanh-trinh-dova.html" class="journal-card">
+              <div class="journal-img-box">
+                <img src="assets/img/journal/bai-04.svg" alt="Hành trình phát triển sản phẩm DOVA" loading="lazy" />
+              </div>
+              <div class="journal-body">
+                <div class="journal-meta">
+                  <span class="badge-prototype">Bản nháp</span>
+                  <span>•</span>
+                  <span>4 phút đọc</span>
+                </div>
+                <h4 class="journal-title">Hành trình tạo tác nguyên mẫu DOVA</h4>
+                <p class="journal-excerpt">
+                  Từ những mẻ ép thử nghiệm đầu tiên đến quá trình tích hợp màng chắn RFID và ngăn Smart Tag.
+                </p>
+                <span class="journal-readmore">Đọc bài viết →</span>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="journal.html" class="btn btn-secondary">
+            <span>Xem tất cả bài viết Journal</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Divider chuyển sang nền nâu -->
+    <div class="torn-divider to-dark" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         SECTION 08: CUSTOMER INSIGHT / JOIN THE JOURNEY (Bản tóm tắt)
+         =================================================================== -->
+    <section class="section theme-dark" id="join-section" aria-label="Đăng ký quan tâm">
+      <div class="container container-narrow">
+        <div class="join-header-center gsap-reveal">
+          <div class="eyebrow" style="color: var(--caramel-lt);">
+            <span class="eyebrow-bean">☕</span>
+            <span>Đồng hành cùng dự án</span>
+          </div>
+          <div class="join-slogan">Tiếng nói của bạn định hình sản phẩm.</div>
+          <h2 class="section-title">Cùng DOVA đi những bước đầu tiên.</h2>
+          <p class="section-subtitle" style="margin-top: 1rem;">
+            Dự án đang trong giai đoạn hoàn thiện nguyên mẫu. Hãy chia sẻ nguyện vọng để chúng tôi hoàn thiện chiếc ví đáp ứng tốt nhất kỳ vọng của bạn.
+          </p>
+        </div>
+
+        <!-- Form Khảo sát Nhanh -->
+        <div class="form-card">
+          <form id="dova-survey-form" novalidate>
+            <!-- Honeypot chống bot spam -->
+            <input type="text" name="_honey_trap" class="hp-field" tabindex="-1" autocomplete="off" />
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="survey-name" class="form-label">Họ và tên của bạn *</label>
+                <input type="text" id="survey-name" name="name" class="form-control" placeholder="Ví dụ: Nguyễn Minh Thảo" required />
+              </div>
+              <div class="form-group">
+                <label for="survey-email" class="form-label">Địa chỉ Email *</label>
+                <input type="email" id="survey-email" name="email" class="form-control" placeholder="name@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Kiểu dáng bạn quan tâm nhất</label>
+              <div class="options-grid">
+                <label class="option-tile">
+                  <input type="radio" name="productShape" value="mini-zip" />
+                  <span>DOVA Mini Zip (Nữ)</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="productShape" value="bifold" />
+                  <span>DOVA Bifold (Nam)</span>
+                </label>
+                <label class="option-tile selected">
+                  <input type="radio" name="productShape" value="both" checked />
+                  <span>Quan tâm cả hai</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Dòng phiên bản mong muốn</label>
+              <div class="options-grid">
+                <label class="option-tile">
+                  <input type="radio" name="tierInterest" value="essential" />
+                  <span>Essential (RFID)</span>
+                </label>
+                <label class="option-tile selected">
+                  <input type="radio" name="tierInterest" value="smart" checked />
+                  <span>Smart (Kèm Smart Tag)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="option-tile" style="margin-top: 0.5rem; border: none; padding-left: 0;">
+                <input type="checkbox" id="survey-agreement" name="agreement" required checked />
+                <span style="font-size: 0.88rem; color: var(--cocoa);">
+                  Tôi đồng ý nhận thông tin cập nhật tiến độ nguyên mẫu và thư mời trải nghiệm từ DOVA ECOTECH.
+                </span>
+              </label>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Đăng ký đồng hành (Join the Journey)</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <!-- Hộp phản hồi trạng thái gửi -->
+            <div id="form-feedback-message" class="form-feedback" role="alert"></div>
+          </form>
+
+          <p style="text-align: center; font-size: 0.82rem; color: var(--aged); margin-top: 1.5rem;">
+            Bạn muốn đóng góp sâu hơn? <a href="join.html" style="color: var(--caramel); text-decoration: underline;">Làm bản khảo sát đầy đủ tại đây</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Root (layout.js tự động chèn vào đây) -->
+  <div id="site-footer-root"></div>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Application Modules -->
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/smooth-scroll.js"></script>
+  <script src="assets/js/scroll-animations.js"></script>
+  <script src="assets/js/hero-3d.js"></script>
+  <script src="assets/js/product-viewer.js"></script>
+  <script src="assets/js/tech-explode.js"></script>
+  <script src="assets/js/form.js"></script>
+</body>
+</html>

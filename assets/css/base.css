@@ -1,0 +1,165 @@
+/* =====================================================================
+   DOVA ECOTECH - BASE.CSS
+   Color variables, typography, reset, grain texture, foundational rules
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+:root {
+  /* Brand Palette - Luxury Chocolate & Fine Parchment */
+  --parchment: #EFE5CF;
+  --ivory: #F6EFE0;
+  --aged: #D8C7A4;
+  --chocolate: #2B1A12;
+  --espresso: #1A0F0A;
+  --cocoa: #4A2C1C;
+  --caramel: #B5712F;
+  --caramel-lt: #D69A4B;
+  --gold: #B08D57;
+
+  /* Semantic Colors */
+  --bg-cream: var(--ivory);
+  --text-dark: var(--chocolate);
+  --bg-dark: var(--espresso);
+  --text-light: var(--ivory);
+  --border-gold: var(--gold);
+  --accent-glow: var(--caramel-lt);
+
+  /* Shadows - Warm chocolate tone, no cold black */
+  --shadow-sm: 0 4px 12px rgba(43, 26, 18, 0.08);
+  --shadow-md: 0 12px 28px rgba(43, 26, 18, 0.14);
+  --shadow-lg: 0 20px 48px rgba(26, 15, 10, 0.22);
+  --shadow-glow: 0 0 30px rgba(214, 154, 75, 0.38);
+  --shadow-inner: inset 0 2px 8px rgba(26, 15, 10, 0.15);
+
+  /* Typography Stacks */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-script: 'Great Vibes', 'Allura', cursive;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-label: 'Jost', sans-serif;
+
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast: 0.25s var(--ease-smooth);
+  --transition-normal: 0.45s var(--ease-smooth);
+  --transition-slow: 0.85s var(--ease-smooth);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: auto; /* Handled smoothly by Lenis */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.68;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Subtle Paper Grain & Noise Texture */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Typography Elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* High Contrast & Accessibility Focus */
+:focus-visible {
+  outline: 2px solid var(--caramel);
+  outline-offset: 3px;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--caramel-lt);
+  color: var(--espresso);
+}
+
+/* Section Coloring Themes */
+.theme-cream {
+  background-color: var(--ivory);
+  color: var(--chocolate);
+}
+
+.theme-dark {
+  background-color: var(--espresso);
+  color: var(--ivory);
+}
+
+.theme-cocoa {
+  background-color: var(--cocoa);
+  color: var(--ivory);
+}
+
+.theme-parchment {
+  background-color: var(--parchment);
+  color: var(--chocolate);
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .particle-bean, .dust-particle {
+    display: none !important;
+  }
+}

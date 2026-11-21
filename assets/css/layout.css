@@ -96,9 +96,15 @@
 }
 
 .brand-logo-img {
-  height: 38px;
+  height: clamp(36px, 3.8vw, 40px);
   width: auto;
-  transition: transform var(--transition-fast);
+  max-width: 250px;
+  display: block;
+  transition: all var(--transition-normal);
+}
+
+.site-header.scrolled .brand-logo-img {
+  height: 34px;
 }
 
 .header-brand:hover .brand-logo-img {

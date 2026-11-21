@@ -305,7 +305,7 @@ const DOVA_CONTENT = {
         readTime: "3 phút đọc",
         status: "Bản nháp",
         featured: false,
-        image: "assets/img/journal/bai-02.svg",
+        image: "assets/img/journal/bai-02.jpg",
         category: "Phong cách sống",
         excerpt: "Khi chiếc ví của bạn chỉ giữ lại những tấm thẻ thiết yếu và một vài đồng tiền kỷ niệm, bạn sẽ ngạc nhiên khi thấy tâm trí mình trở nên nhẹ nhõm đến nhường nào."
       },

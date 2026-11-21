@@ -68,7 +68,7 @@
       <header class="site-header" id="main-header">
         <div class="container header-inner">
           <a href="${fixPath('index.html')}" class="header-brand" aria-label="${content.meta.brandName} - Trang chủ">
-            <img src="${fixPath('assets/img/logo-dova.svg')}" alt="${content.meta.brandName}" class="brand-logo-img" width="180" height="38" />
+            <img src="${fixPath('assets/img/logo-dova.svg')}" alt="${content.meta.brandName}" class="brand-logo-img" width="260" height="42" />
           </a>
 
           <nav class="main-nav" id="main-navigation" aria-label="Menu chính">
@@ -76,8 +76,9 @@
           </nav>
 
           <div class="header-cta-group">
-            <a href="${fixPath(content.navigation.ctaButton.href)}" class="btn btn-primary btn-sm">
-              ${content.navigation.ctaButton.label}
+            <a href="${fixPath(content.navigation.ctaButton.href)}" class="btn btn-primary btn-sm btn-cta-glow">
+              <span class="btn-sparkle" aria-hidden="true">✦</span>
+              <span>${content.navigation.ctaButton.label}</span>
             </a>
             <button class="menu-toggle" id="menu-toggle-btn" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="main-navigation">
               <span class="hamburger-line"></span>
@@ -139,7 +140,7 @@
             <!-- Brand Column -->
             <div class="footer-brand-col">
               <a href="${fixPath('index.html')}" aria-label="${content.meta.brandName}">
-                <img src="${fixPath('assets/img/logo-dova.svg')}" alt="${content.meta.brandName}" class="footer-logo" width="200" height="42" />
+                <img src="${fixPath('assets/img/logo-dova.svg')}" alt="${content.meta.brandName}" class="footer-logo" width="260" height="42" />
               </a>
               <div class="footer-slogan">${content.hero.slogan}</div>
               <p class="footer-summary">${content.footer.brandStatement}</p>

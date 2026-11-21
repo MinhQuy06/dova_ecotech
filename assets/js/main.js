@@ -16,20 +16,12 @@
       preloader.id = 'preloader';
       preloader.setAttribute('role', 'status');
       preloader.setAttribute('aria-label', 'Đang tải DOVA ECOTECH');
+      const isSubdir = window.location.pathname.includes('/journal/') ||
+        window.location.pathname.includes('\\journal\\');
+      const emblemPath = isSubdir ? '../assets/img/logo-emblem.png' : 'assets/img/logo-emblem.png';
       preloader.innerHTML = `
         <div class="preloader-icon-wrap">
-          <svg viewBox="0 0 80 80" width="80" height="80">
-            <defs>
-              <linearGradient id="pGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#D69A4B" />
-                <stop offset="100%" stop-color="#B5712F" />
-              </linearGradient>
-            </defs>
-            <ellipse cx="40" cy="40" rx="34" ry="30" stroke="url(#pGold)" stroke-width="2" fill="none" opacity="0.6"/>
-            <path d="M 40 12 C 24 12, 14 26, 14 40 C 14 54, 24 68, 40 68 C 36 54, 36 26, 40 12 Z" fill="url(#pGold)" />
-            <path d="M 40 12 C 56 12, 66 26, 66 40 C 66 54, 56 68, 40 68 C 44 54, 44 26, 40 12 Z" fill="url(#pGold)" />
-            <circle cx="40" cy="40" r="4.5" fill="#F6EFE0" />
-          </svg>
+          <img src="${emblemPath}" alt="DOVA ECOTECH Logo" class="preloader-logo-emblem" width="92" height="66" />
         </div>
         <div class="preloader-brand-text">DOVA ECOTECH</div>
         <div class="preloader-subtext">COFFEE COMPOSITE &bull; SMART WALLET</div>

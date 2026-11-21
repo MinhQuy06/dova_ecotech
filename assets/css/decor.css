@@ -17,6 +17,102 @@
   box-shadow: 0 14px 28px rgba(43, 26, 18, 0.24);
 }
 
+/* Glowing CTA Button Effect (Nút Đăng ký quan tâm phát sáng nhỏ gọn, tinh tế) */
+.btn-cta-glow,
+.header-cta-group .btn-primary {
+  position: relative;
+  background: linear-gradient(135deg, #E2A355 0%, #B8722C 50%, #945318 100%) !important;
+  color: #FFFDF9 !important;
+  border: 1px solid rgba(255, 235, 195, 0.55) !important;
+  box-shadow: 0 0 12px rgba(214, 154, 75, 0.5), 0 0 24px rgba(181, 113, 47, 0.25), 0 4px 14px rgba(43, 26, 18, 0.2) !important;
+  animation: ctaGlowPulse 3s ease-in-out infinite !important;
+  overflow: hidden;
+}
+
+.header-cta-group .btn-primary {
+  padding: 0.48rem 1.15rem !important;
+  font-size: 0.74rem !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 600 !important;
+}
+
+.btn-cta-glow:hover,
+.header-cta-group .btn-primary:hover {
+  background: linear-gradient(135deg, #F0B56D 0%, #C98239 50%, #A55E1F 100%) !important;
+  box-shadow: 0 0 20px rgba(214, 154, 75, 0.75), 0 0 40px rgba(214, 154, 75, 0.4), 0 6px 20px rgba(43, 26, 18, 0.3) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+}
+
+/* Tia sáng quét nhẹ qua bề mặt nút */
+.btn-cta-glow::after,
+.header-cta-group .btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(60deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0) 70%,
+      transparent 100%);
+  transform: rotate(25deg);
+  animation: shimmerSweep 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ctaGlowPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(214, 154, 75, 0.45), 0 0 22px rgba(181, 113, 47, 0.22), 0 3px 12px rgba(43, 26, 18, 0.18);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(214, 154, 75, 0.72), 0 0 34px rgba(181, 113, 47, 0.38), 0 5px 16px rgba(43, 26, 18, 0.26);
+  }
+}
+
+@keyframes shimmerSweep {
+
+  0%,
+  65% {
+    left: -60%;
+  }
+
+  85%,
+  100% {
+    left: 140%;
+  }
+}
+
+.btn-sparkle {
+  display: inline-block;
+  margin-right: 0.28rem;
+  font-size: 0.76rem;
+  color: #FFF6E0;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.85));
+  animation: sparkleTwinkle 2.5s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+@keyframes sparkleTwinkle {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(12deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px #FFFFFF);
+  }
+}
+
 .card-cream,
 .card-dark,
 .product-viewer-wrap,
@@ -134,7 +230,8 @@
   border-radius: 32px;
   padding: clamp(2.5rem, 4.5vw, 4rem) clamp(2rem, 4vw, 3.8rem);
   margin: 3.5rem 0;
-  overflow: hidden; /* Đảm bảo không tràn ảnh ra ngoài mép thẻ */
+  overflow: hidden;
+  /* Đảm bảo không tràn ảnh ra ngoài mép thẻ */
   display: grid;
   grid-template-columns: 1.05fr 1.35fr;
   gap: clamp(2rem, 3.5vw, 3.5rem);
@@ -210,26 +307,47 @@
 
 .popout-btn {
   border-radius: 999px !important;
-  padding: 0.95rem 2.4rem !important;
+  padding: 0.82rem 1.95rem !important;
   font-weight: 600;
   font-family: var(--font-label);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.88rem;
-  background: linear-gradient(135deg, var(--caramel-lt), var(--caramel)) !important;
+  font-size: 0.82rem;
+  background: linear-gradient(135deg, #F0B56D 0%, #C98239 50%, #A55E1F 100%) !important;
   color: #FFFFFF !important;
-  border: none !important;
-  box-shadow: 0 12px 28px rgba(181, 113, 47, 0.42) !important;
+  border: 1px solid rgba(255, 235, 195, 0.5) !important;
+  box-shadow: 0 0 14px rgba(214, 154, 75, 0.45), 0 0 28px rgba(181, 113, 47, 0.25), 0 6px 20px rgba(43, 26, 18, 0.25) !important;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   transition: transform 0.28s var(--ease-smooth), box-shadow 0.28s var(--ease-smooth) !important;
+  animation: ctaGlowPulse 3.5s ease-in-out infinite !important;
+  position: relative;
+  overflow: hidden;
 }
 
 .popout-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 16px 36px rgba(181, 113, 47, 0.55) !important;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 28px rgba(214, 154, 75, 0.85), 0 0 55px rgba(214, 154, 75, 0.48), 0 12px 30px rgba(43, 26, 18, 0.4) !important;
+}
+
+.popout-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(60deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0) 70%,
+      transparent 100%);
+  transform: rotate(25deg);
+  animation: shimmerSweep 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
 /* Right Visual Staging Column */

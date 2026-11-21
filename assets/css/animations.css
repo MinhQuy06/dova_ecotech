@@ -97,10 +97,20 @@
 }
 
 .preloader-icon-wrap {
-  width: 80px;
-  height: 80px;
+  width: 92px;
+  height: 66px;
   margin-bottom: 1.5rem;
-  animation: beanFall 1s var(--ease-smooth) forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: beanFall 0.8s var(--ease-smooth) forwards;
+}
+
+.preloader-logo-emblem {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 20px rgba(181, 113, 47, 0.45));
 }
 
 .preloader-brand-text {

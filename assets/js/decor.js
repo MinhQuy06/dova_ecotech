@@ -25,59 +25,58 @@
       const wallet = card.querySelector('.popout-layer-wallet');
       const front = card.querySelector('.popout-layer-front');
 
-      // 1. GSAP ScrollTrigger 3-Layer Subtle Parallax
-      if (hasGSAP && hasScrollTrigger && window.innerWidth > 800) {
-        gsap.registerPlugin(ScrollTrigger);
-
+      // 1. GSAP ScrollTrigger 3-Layer Subtle Parallax & Splash Ambient Float
+      if (hasGSAP) {
+        // Ảnh hiệu ứng cà phê phía sau: Luôn căn giữa hoàn hảo, bồng bềnh êm ái, KHÔNG bị xô lệch
         if (splash) {
-          gsap.fromTo(
-            splash,
-            { yPercent: -45 },
-            {
-              yPercent: -55,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: card,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 1.2
-              }
-            }
-          );
+          gsap.set(splash, { xPercent: -50, yPercent: -50, x: 0, y: 0 });
+          gsap.to(splash, {
+            yPercent: -53,
+            scale: 1.025,
+            rotation: 0.8,
+            duration: 4.2,
+            ease: 'sine.inOut',
+            repeat: -1,
+            yoyo: true
+          });
         }
 
-        if (wallet) {
-          gsap.fromTo(
-            wallet,
-            { y: 12 },
-            {
-              y: -12,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: card,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 0.8
-              }
-            }
-          );
-        }
+        if (hasScrollTrigger && window.innerWidth > 800) {
+          gsap.registerPlugin(ScrollTrigger);
 
-        if (front) {
-          gsap.fromTo(
-            front,
-            { y: 8 },
-            {
-              y: -8,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: card,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 0.5
+          if (wallet) {
+            gsap.fromTo(
+              wallet,
+              { y: 12 },
+              {
+                y: -12,
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: card,
+                  start: 'top bottom',
+                  end: 'bottom top',
+                  scrub: 0.8
+                }
               }
-            }
-          );
+            );
+          }
+
+          if (front) {
+            gsap.fromTo(
+              front,
+              { y: 8 },
+              {
+                y: -8,
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: card,
+                  start: 'top bottom',
+                  end: 'bottom top',
+                  scrub: 0.5
+                }
+              }
+            );
+          }
         }
       }
 
@@ -97,6 +96,7 @@
           const relY = (e.clientY - rect.top) / rect.height - 0.5; // -0.5 to 0.5
 
           if (hasGSAP) {
+            // Ví nghiêng nhẹ theo chuột
             gsap.to(wallet, {
               x: relX * 18,
               y: relY * 14,
@@ -106,25 +106,17 @@
               overwrite: 'auto'
             });
 
-            if (splash) {
-              gsap.to(splash, {
-                x: -relX * 12,
-                y: -relY * 10,
-                duration: 0.6,
-                ease: 'power2.out',
-                overwrite: 'auto'
-              });
-            }
-
+            // Lớp tiền cảnh nhích nhẹ tạo chiều sâu
             if (front) {
               gsap.to(front, {
-                x: relX * 15,
-                y: relY * 12,
+                x: relX * 14,
+                y: relY * 10,
                 duration: 0.35,
                 ease: 'power2.out',
                 overwrite: 'auto'
               });
             }
+            // KHÔNG tác động vào splash khi rê chuột để splash không bị chạy xô lệch ra góc
           } else {
             wallet.style.transform = `translate(${relX * 18}px, ${relY * 14}px) rotate(${-6 + relX * 3}deg)`;
           }
@@ -141,16 +133,6 @@
               ease: 'power2.out',
               overwrite: 'auto'
             });
-
-            if (splash) {
-              gsap.to(splash, {
-                x: 0,
-                y: 0,
-                duration: 0.8,
-                ease: 'power2.out',
-                overwrite: 'auto'
-              });
-            }
 
             if (front) {
               gsap.to(front, {

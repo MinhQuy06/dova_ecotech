@@ -345,7 +345,7 @@ const DOVA_CONTENT = {
     
     // Cấu hình form gửi dữ liệu
     formConfig: {
-      actionUrl: "[CẦN THAY NỘI DUNG]", // CẦN THAY NỘI DUNG: Điền endpoint Formspree / Google Forms / Supabase
+      actionUrl: "https://script.google.com/macros/s/AKfycbxgle4V_wQgi3YCfbJBz29TGMqE-DBYSkraSApXR1J1GWpfeZDCNxEojRsQW-VgQ9SkNg/exec",
       method: "POST"
     },
 

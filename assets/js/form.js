@@ -118,6 +118,8 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgle4V_wQgi3YCfbJBz
       }
 
       try {
+        console.log('[DOVA Form] Bắt đầu gửi payload tới Google Apps Script:', payload);
+
         // Gửi dữ liệu bằng fetch POST với mode "no-cors", header Content-Type "text/plain"
         await fetch(SCRIPT_URL, {
           method: 'POST',
@@ -128,6 +130,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgle4V_wQgi3YCfbJBz
           body: JSON.stringify(payload)
         });
 
+        console.log('[DOVA Form] Gửi thành công tới Google Apps Script!');
         // Hiện thông báo cảm ơn khi xong
         handleSuccess(form, feedbackBox);
       } catch (err) {

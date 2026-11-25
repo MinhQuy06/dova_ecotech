@@ -7,10 +7,7 @@
   <title>DOVA Mini Zip — Chi Tiết Ví Nữ Thông Minh Từ Bã Cà Phê</title>
   <meta name="description"
     content="Chi tiết ví nữ DOVA Mini Zip: thiết kế khóa kéo thanh lịch, bề mặt composite có thành phần bã cà phê, màng chắn RFID và ngăn tích hợp Smart Tag." />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png?v=3" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?v=3" />
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg?v=3" />
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 
   <meta property="og:title" content="DOVA Mini Zip — Ví Nữ Thông Minh Từ Bã Cà Phê" />
   <meta property="og:description"
@@ -20,7 +17,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20261125d" />
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -50,7 +47,7 @@
             <div class="studio-photo-card">
               <img src="assets/img/products/mini-zip-photo.jpg"
                 alt="Ảnh chụp studio ví nữ DOVA Mini Zip từ composite bã cà phê" width="1024" height="576"
-                loading="lazy" />
+                loading="lazy" data-color-target="mini-zip" />
               <span class="studio-concept-badge">Concept render · Hình minh họa</span>
               <!-- Lá trang trí góc ảnh -->
               <div class="decor-leaf-cluster" style="top: -15px; left: -15px; width: 65px; height: 65px;"
@@ -89,14 +86,14 @@
               <div>
                 <div class="detail-photo-card">
                   <img src="assets/img/products/detail-composite.jpg" alt="Bề mặt bã cà phê Mini Zip" loading="lazy"
-                    width="600" height="600" />
+                    width="600" height="600" data-color-composite="mini-zip" />
                 </div>
                 <div class="detail-photo-caption">Bề mặt composite</div>
               </div>
               <div>
                 <div class="detail-photo-card">
-                  <img src="assets/img/products/detail-stitch.jpg" alt="Đường chỉ may thủ công tinh xảo"
-                    loading="lazy" width="600" height="600" />
+                  <img src="assets/img/products/detail-stitch.jpg" alt="Đường chỉ may thủ công tinh xảo" loading="lazy"
+                    width="600" height="600" />
                 </div>
                 <div class="detail-photo-caption">Chỉ may tinh xảo</div>
               </div>
@@ -124,21 +121,28 @@
               công tác hay dạo phố.
             </p>
 
+            <!-- Chọn màu sắc -->
+            <div class="color-selector-wrap" data-color-product="mini-zip"></div>
+
             <!-- Chọn dòng Essential / Smart -->
             <div style="margin-bottom: 1.5rem;">
               <span class="form-label">Chọn phiên bản trải nghiệm:</span>
               <div class="tier-switcher" style="margin-bottom: 1rem;">
                 <button type="button" class="tier-btn" data-tier="essential">Dòng Essential</button>
-                <button type="button" class="tier-btn active" data-tier="smart">Dòng Smart (Có Smart Tag)</button>
+                <button type="button" class="tier-btn active" data-tier="smart">Dòng Smart</button>
               </div>
               <div class="tier-desc-essential card-cream" style="display: none; padding: 1.25rem;">
-                <strong>Phiên bản Essential:</strong> Tích hợp vật liệu composite bã cà phê + lớp che chắn RFID
-                Blocking.
+                <strong>Phiên bản Essential (DOVA-ES-MZ):</strong> Vật liệu composite bã cà phê + Khoang tích hợp Smart Tag (không
+                kèm lớp RFID Blocking).
               </div>
               <div class="tier-desc-smart card-cream"
                 style="display: block; padding: 1.25rem; border-color: var(--caramel-lt);">
-                <strong>Phiên bản Smart:</strong> Vật liệu composite bã cà phê + RFID Blocking + Ngăn chìm đặt Smart Tag
-                tương thích để định vị ví.
+                <strong>Phiên bản Smart (DOVA-SM-MZ):</strong> Vật liệu composite bã cà phê + Lớp chắn sóng RFID Blocking + Khoang
+                tích hợp Smart Tag.
+              </div>
+              <div data-ios-notice class="ios-notice-banner">
+                <strong>Lưu ý tương thích:</strong> Smart Tag hiện tương thích với iPhone/iOS (Apple Find My). Chưa hỗ
+                trợ Android.
               </div>
             </div>
 
@@ -152,12 +156,13 @@
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
-                <span>Tích hợp lớp lót hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép (RFID Blocking).</span>
+                <span data-rfid-feature><strong>Dòng Smart</strong> tích hợp thêm lớp vải dẫn điện hỗ trợ hạn chế khả năng đọc thông tin
+                  thẻ không tiếp xúc từ bên ngoài (13,56 MHz). Hiệu quả sẽ được kiểm tra trên nguyên mẫu.</span>
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
-                <span>Dòng Smart có ngăn riêng biệt giữ thiết bị định vị tương thích (AirTag / SmartTag) chắc
-                  chắn.</span>
+                <span>Khoang riêng đặt thiết bị định vị Bluetooth (Apple Find My trên iOS), tháo lắp được và bố trí
+                  tách biệt lớp RFID.</span>
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
@@ -165,33 +170,46 @@
               </li>
             </ul>
 
-            <!-- Bảng Thông số Kỹ thuật (Đang hoàn thiện) -->
-            <h3 style="font-size: 1.35rem; margin-top: 2.25rem; margin-bottom: 1rem;">Thông số kỹ thuật dự kiến:</h3>
-            <table class="specs-table">
+            <!-- Bảng Thông số mục tiêu thiết kế -->
+            <div data-specs-heading>
+              <div class="specs-heading-wrap">
+                <div class="specs-heading-title">Thông số mục tiêu thiết kế</div>
+                <p class="tech-specs-note">Có thể điều chỉnh khi hoàn thiện nguyên mẫu</p>
+              </div>
+            </div>
+            <table class="specs-table" data-product-specs="mini-zip">
               <tbody>
                 <tr>
-                  <td>Kích thước</td>
-                  <td><span class="badge-pending">Đang hoàn thiện</span></td>
+                  <td>Kích thước mục tiêu</td>
+                  <td>~11 × 8,5 × 2 cm</td>
                 </tr>
                 <tr>
                   <td>Trọng lượng</td>
-                  <td><span class="badge-pending">Đang hoàn thiện</span></td>
+                  <td><span class="badge-pending">Đang hoàn thiện trên nguyên mẫu</span></td>
                 </tr>
                 <tr>
-                  <td>Sức chứa</td>
-                  <td><span class="badge-pending">Đang hoàn thiện (Dự kiến 6-8 thẻ + tiền mặt gấp)</span></td>
+                  <td>Sức chứa mục tiêu</td>
+                  <td>Ngăn thẻ/tiền gấp, 1 khe ẩn lắp Smart Tag</td>
                 </tr>
                 <tr>
-                  <td>Chất liệu vỏ</td>
-                  <td>Composite có thành phần bã cà phê</td>
+                  <td>Màu sắc đề xuất</td>
+                  <td>Nâu Espresso &amp; Đen Than (hoặc tùy chỉnh)</td>
+                </tr>
+                <tr>
+                  <td>Vỏ ngoài (Lớp 1)</td>
+                  <td>Composite bã cà phê (độ dày mục tiêu 1,0–1,3 mm)</td>
+                </tr>
+                <tr>
+                  <td>RFID (Chỉ dòng Smart)</td>
+                  <td>Vải dẫn điện nền polyester (mục tiêu đồng-niken, 0,08–0,12 mm), thử nghiệm 13,56 MHz</td>
+                </tr>
+                <tr>
+                  <td>Smart Tag (Lớp 3)</td>
+                  <td>Bluetooth BLE • Apple Find My (iOS), tháo lắp được, tách biệt lớp RFID</td>
                 </tr>
                 <tr>
                   <td>Khóa kéo</td>
-                  <td>Kim loại mạ đồng mờ chống gỉ</td>
-                </tr>
-                <tr>
-                  <td>Tính năng thông minh</td>
-                  <td>Hỗ trợ hạn chế đọc trộm RFID & Ngăn Smart Tag</td>
+                  <td>Kim loại mạ đồng mờ chống oxy hóa</td>
                 </tr>
               </tbody>
             </table>
@@ -223,12 +241,12 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <!-- Application Modules -->
-  <script src="assets/js/content.js"></script>
+  <script src="assets/js/content.js?v=20261125d"></script>
   <script src="assets/js/layout.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20261125d"></script>
   <script src="assets/js/smooth-scroll.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
-  <script src="assets/js/product-viewer.js"></script>
+  <script src="assets/js/product-viewer.js?v=20261125d"></script>
   <script src="assets/js/decor.js"></script>
 </body>
 

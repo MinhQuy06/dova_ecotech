@@ -354,7 +354,8 @@
 .popout-visual-col {
   position: relative;
   width: 100%;
-  min-height: 380px;
+  min-height: 350px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,9 +391,15 @@
   transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
 
+.popout-card--bifold .popout-layer-wallet {
+  max-width: 390px;
+}
+
 .popout-layer-wallet img {
   width: 100%;
   height: auto;
+  max-height: 300px;
+  object-fit: contain;
   display: block;
 }
 
@@ -517,7 +524,8 @@
   }
 
   .popout-visual-col {
-    min-height: 270px;
+    min-height: 260px;
+    height: auto;
     margin-top: 0.5rem;
   }
 
@@ -531,6 +539,14 @@
     max-width: 310px;
     transform: translate(0, 0) rotate(-4deg) !important;
     filter: drop-shadow(0 20px 32px rgba(18, 10, 6, 0.65));
+  }
+
+  .popout-card--bifold .popout-layer-wallet {
+    max-width: 260px;
+  }
+
+  .popout-layer-wallet img {
+    max-height: 230px;
   }
 
   .popout-layer-front {

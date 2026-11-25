@@ -563,3 +563,471 @@
   color: #8C2518;
   border: 1px solid #F5C7C0;
 }
+
+/* Bảng "Thông số mục tiêu thiết kế" dạng bấm mở ra nhỏ gọn */
+.tech-specs-accordion {
+  margin-top: 1.25rem;
+  border: 1px solid rgba(181, 113, 47, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 253, 248, 0.72);
+  overflow: hidden;
+}
+
+.theme-dark .tech-specs-accordion {
+  background: rgba(34, 21, 14, 0.65);
+  border-color: rgba(214, 154, 75, 0.32);
+}
+
+.tech-specs-accordion > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  user-select: none;
+}
+
+.tech-specs-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+
+.tech-specs-accordion > summary::after {
+  content: 'Bấm mở +';
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(181, 113, 47, 0.45);
+  line-height: 1.2;
+}
+
+.tech-specs-accordion[open] > summary::after {
+  content: 'Thu gọn −';
+}
+
+.tech-specs-body {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid rgba(176, 141, 87, 0.2);
+}
+
+.tech-specs-note {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--cocoa);
+  opacity: 0.85;
+  margin: 0.55rem 0 0.35rem;
+}
+
+.theme-dark .tech-specs-note {
+  color: var(--aged);
+}
+
+.tech-specs-accordion .specs-table {
+  margin: 0.4rem 0 0;
+  font-size: 0.86rem;
+}
+
+.tech-specs-accordion .specs-table td {
+  padding: 0.48rem 0;
+  vertical-align: top;
+}
+
+.tech-specs-accordion .specs-table td:first-child {
+  font-size: 0.73rem;
+  letter-spacing: 0.1em;
+  width: 40%;
+  padding-right: 0.75rem;
+}
+
+/* Tiêu đề & ghi chú nhỏ cho mọi bảng thông số */
+.specs-heading-wrap {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.specs-heading-title {
+  font-family: var(--font-label);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin: 0;
+}
+
+.theme-dark .specs-heading-title {
+  color: var(--caramel-lt);
+}
+
+/* Khối lưu ý nổi bật tương thích iPhone/iOS (Apple Find My) */
+.ios-notice-banner {
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1.05rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--caramel);
+  background: rgba(181, 113, 47, 0.12);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--espresso);
+}
+
+.theme-dark .ios-notice-banner {
+  background: rgba(214, 154, 75, 0.14);
+  border-left-color: var(--caramel-lt);
+  color: var(--ivory);
+}
+
+.tier-price-line {
+  margin-top: 0.65rem;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #8F4D12;
+  letter-spacing: 0.01em;
+}
+
+.theme-dark .tier-price-line {
+  color: #F2B463;
+}
+
+/* Thẻ hiển thị cấu hình Essential / Smart nổi bật, gọn gàng */
+.tier-detail-card {
+  position: relative;
+  max-width: 62ch;
+  padding: 1.15rem 1.35rem;
+  border-radius: 14px;
+  border: 1px solid rgba(181, 113, 47, 0.35);
+  background: rgba(255, 252, 245, 0.92);
+  box-shadow: 0 8px 22px rgba(43, 26, 18, 0.06);
+  margin-bottom: 1.25rem;
+}
+
+.theme-dark .tier-detail-card {
+  background: rgba(34, 21, 14, 0.72);
+  border-color: rgba(214, 154, 75, 0.38);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+}
+
+.tier-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.65rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(176, 141, 87, 0.22);
+}
+
+.tier-card-title {
+  font-family: var(--font-label);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--espresso);
+}
+
+.theme-dark .tier-card-title {
+  color: var(--ivory);
+}
+
+.tier-sku-pill {
+  font-family: var(--font-label);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(181, 113, 47, 0.14);
+  color: #7A3E0C;
+  border: 1px solid rgba(181, 113, 47, 0.32);
+}
+
+.theme-dark .tier-sku-pill {
+  background: rgba(214, 154, 75, 0.18);
+  color: var(--caramel-lt);
+  border-color: rgba(214, 154, 75, 0.4);
+}
+
+.tier-bullets-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.tier-bullets-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--chocolate);
+}
+
+.theme-dark .tier-bullets-list li {
+  color: var(--ivory);
+}
+
+.tier-line-icon {
+  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  margin-top: 0.18rem;
+  color: var(--caramel);
+}
+
+.theme-dark .tier-line-icon {
+  color: var(--caramel-lt);
+}
+
+.tier-card-footer {
+  margin-top: 0.85rem;
+  padding-top: 0.7rem;
+  border-top: 1px dashed rgba(176, 141, 87, 0.3);
+}
+
+.tier-warranty-line {
+  margin-top: 0.3rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #2A180F;
+}
+
+.theme-dark .tier-warranty-line {
+  color: #EFE5D3;
+}
+
+/* Riêng khối Bifold ở Collection (theo yêu cầu tinh chỉnh chi tiết) */
+.bifold-collection-info {
+  position: relative;
+}
+
+.bifold-collection-info .bifold-measure-copy {
+  max-width: 62ch;
+}
+
+.bifold-corner-sku {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(181, 113, 47, 0.14);
+  color: #6E3B10;
+  border: 1px solid rgba(181, 113, 47, 0.35);
+}
+
+.bifold-collection-info .tier-sku-pill {
+  display: none;
+}
+
+.bifold-switcher-heading {
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6E3B10;
+  margin-bottom: 0.55rem;
+}
+
+.bifold-collection-info .detail-photo-card {
+  position: relative;
+}
+
+.detail-photo-tag {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.45rem;
+  z-index: 2;
+  font-family: var(--font-label);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(29, 17, 11, 0.78);
+  color: #FAF6ED;
+  pointer-events: none;
+}
+
+.bifold-collection-info .detail-photo-caption {
+  color: #5C2F0A;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  opacity: 1;
+}
+
+/* Bộ chọn màu sắc (Nâu Espresso / Đen Than) */
+.color-selector-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.color-selector-label {
+  font-family: var(--font-label);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cocoa);
+}
+
+.theme-dark .color-selector-label {
+  color: var(--aged);
+}
+
+.color-swatch-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.color-swatch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.36rem 0.8rem 0.36rem 0.48rem;
+  border-radius: 999px;
+  border: 1px solid rgba(176, 141, 87, 0.35);
+  background: rgba(255, 252, 245, 0.85);
+  color: var(--espresso);
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.color-swatch-btn:hover {
+  border-color: var(--caramel);
+  transform: translateY(-1px);
+}
+
+.color-swatch-btn.active {
+  border-color: var(--caramel);
+  background: #FFFDF9;
+  box-shadow: 0 0 0 2px rgba(181, 113, 47, 0.22);
+  color: #5C2F0A;
+}
+
+.theme-dark .color-swatch-btn {
+  background: rgba(34, 21, 14, 0.75);
+  color: var(--ivory);
+  border-color: rgba(214, 154, 75, 0.35);
+}
+
+.theme-dark .color-swatch-btn.active {
+  border-color: var(--caramel-lt);
+  background: rgba(58, 36, 23, 0.95);
+  box-shadow: 0 0 0 2px rgba(214, 154, 75, 0.28);
+  color: #FFFDF9;
+}
+
+.color-swatch-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.popout-card-left .color-selector-wrap {
+  margin-bottom: 1.1rem;
+  gap: 0.45rem 0.7rem;
+}
+
+.popout-card-left .color-selector-label {
+  color: rgba(246, 239, 224, 0.82);
+  font-size: 0.68rem;
+}
+
+.popout-card-left .color-swatch-btn {
+  background: rgba(28, 17, 11, 0.65);
+  color: #F6EFE0;
+  border-color: rgba(214, 154, 75, 0.4);
+  padding: 0.28rem 0.68rem 0.28rem 0.4rem;
+  font-size: 0.68rem;
+}
+
+.popout-card-left .color-swatch-btn.active {
+  border-color: #E8BA72;
+  background: rgba(74, 46, 28, 0.92);
+  box-shadow: 0 0 0 2px rgba(214, 154, 75, 0.32);
+  color: #FFFFFF;
+}
+
+.studio-photo-card img,
+.detail-photo-card img,
+.popout-layer-wallet img {
+  transition: opacity 0.22s ease, transform var(--transition-normal);
+}
+
+/* Cột ảnh sản phẩm + 3D chạy theo nội dung (Sticky) trên trang Collection */
+.product-showcase-grid.has-sticky-media {
+  align-items: start;
+}
+
+.collection-sticky-media {
+  position: sticky;
+  top: 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  z-index: 4;
+}
+
+.collection-sticky-media .studio-photo-card {
+  margin-bottom: 0;
+}
+
+.collection-sticky-media .studio-photo-card img {
+  width: 100%;
+  height: auto;
+  max-height: 270px;
+  object-fit: cover;
+  display: block;
+}
+
+.collection-sticky-media .product-viewer-wrap {
+  min-height: 340px;
+  padding: 1.1rem 1.25rem;
+}
+
+.collection-sticky-media .product-canvas-holder {
+  height: 250px;
+}
+
+@media (max-width: 900px) {
+  .collection-sticky-media {
+    position: static;
+  }
+}

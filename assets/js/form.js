@@ -12,6 +12,7 @@
  * - price: Mức giá mong muốn (string, chữ hiển thị trên form)
  * - features: Điều quan tâm nhất (mảng các chuỗi hiển thị trên form)
  * - channel: Kênh mua sắm hay dùng (string, chữ hiển thị trên form)
+ * - phoneOs: Điện thoại đang sử dụng (string, chữ hiển thị trên form)
  * - feedback: Góp ý hoặc mong muốn bổ sung (string)
  * - consent: Đồng ý điều khoản nhận tin (string, chữ hiển thị trên form)
  * =====================================================================
@@ -82,11 +83,12 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgle4V_wQgi3YCfbJBz
       const priceVal = getRadioDisplayText(form, 'price', 'priceRange');
       const featuresVal = getCheckboxesDisplayText(form, 'features', 'keyInterests');
       const channelVal = getRadioDisplayText(form, 'channel', 'shoppingChannel');
+      const phoneOsVal = getRadioDisplayText(form, 'phoneOs');
       const feedbackVal = feedbackInput ? feedbackInput.value.trim() : '';
       const consentVal = consentInput && consentInput.checked ? getDisplayText(consentInput) : '';
 
       // Đóng gói JSON payload có đúng các key theo yêu cầu:
-      // name, email, age, shape, version, price, features (mảng), channel, feedback, consent
+      // name, email, age, shape, version, price, features (mảng), channel, phoneOs, feedback, consent
       const payload = {
         name: nameVal,
         email: emailVal,
@@ -96,6 +98,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgle4V_wQgi3YCfbJBz
         price: priceVal,
         features: featuresVal,
         channel: channelVal,
+        phoneOs: phoneOsVal,
         feedback: feedbackVal,
         consent: consentVal
       };

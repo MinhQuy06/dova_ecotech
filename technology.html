@@ -20,7 +20,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20261125b" />
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -84,14 +84,14 @@
               <div class="layer-slice-item" data-layer="1">
                 <div class="layer-slice-header">
                   <span class="layer-slice-title">02. RFID Blocking Shield</span>
-                  <span class="layer-slice-tag">Lõi Bảo Vệ</span>
+                  <span class="layer-slice-tag">Chỉ có trên dòng Smart</span>
                 </div>
                 <p class="layer-slice-desc">
-                  Lớp màng hợp kim đặc chế giúp cản các bước sóng quét không tiếp xúc trái phép (13.56 MHz), bảo vệ
-                  thông tin thẻ ngân hàng và căn cước.
+                  Tại khu vực chứa thẻ thanh toán của dòng Smart, lớp vải dẫn điện hỗ trợ hạn chế khả năng đọc thông tin
+                  thẻ không tiếp xúc từ bên ngoài (13,56 MHz).
                 </p>
                 <span style="display:block; font-size:0.75rem; color:var(--caramel-lt); margin-top:4px;">
-                  * Tách biệt độc lập khỏi ngăn Smart Tag để không làm suy giảm sóng định vị.
+                  * Hiệu quả sẽ được kiểm tra trên nguyên mẫu. Tách biệt độc lập khỏi ngăn Smart Tag.
                 </span>
               </div>
 
@@ -102,8 +102,8 @@
                   <span class="layer-slice-tag">Ngăn Định Vị</span>
                 </div>
                 <p class="layer-slice-desc">
-                  Khoang chứa âm bản vừa vặn thiết bị định vị tương thích, mở hướng sóng thông suốt để tìm kiếm ví dễ
-                  dàng qua điện thoại.
+                  Khoang riêng đặt thiết bị định vị Bluetooth, tháo lắp được và bố trí tách biệt lớp RFID. Tương thích
+                  iPhone/iOS (Apple Find My).
                 </p>
                 <div class="layer-ping-wave" aria-hidden="true"></div>
               </div>
@@ -139,11 +139,32 @@
               phẩm khổng lồ tại Việt Nam — thủ phủ cà phê của thế giới.
             </p>
             <div class="card-cream" style="border-left: 3px solid var(--caramel); margin-top: 1.5rem;">
-              <p style="font-size: 0.9rem; margin: 0; color: var(--cocoa);">
-                <strong>Ghi chú kỹ thuật:</strong> Vật liệu composite có thành phần bã cà phê của DOVA hiện đang trong
-                giai đoạn kiểm tra độ bền cơ học, độ co giãn và khả năng kháng mài mòn trước khi đưa vào sản xuất thương
-                mại.
+              <p style="font-size: 0.9rem; margin: 0; color: var(--cocoa);" data-layer-value="composite">
+                <strong>Giá trị:</strong> Tận dụng phụ phẩm cà phê, hạn chế lãng phí tài nguyên, gia tăng giá trị cho
+                nguyên liệu sau sử dụng.
               </p>
+            </div>
+            <div data-specs-layer="composite">
+              <details class="tech-specs-accordion">
+                <summary>Thông số mục tiêu thiết kế</summary>
+                <div class="tech-specs-body">
+                  <p class="tech-specs-note">Có thể điều chỉnh khi hoàn thiện nguyên mẫu</p>
+                  <table class="specs-table">
+                    <tbody>
+                      <tr><td>Dạng vật liệu</td><td>Tấm hoặc cuộn composite mềm</td></tr>
+                      <tr><td>Thành phần</td><td>Bã cà phê đã qua sử dụng kết hợp polymer/chất kết dính phù hợp</td></tr>
+                      <tr><td>Tỷ lệ bã cà phê</td><td>Theo công bố của nhà cung cấp (% khối lượng) [CẦN THAY NỘI DUNG]</td></tr>
+                      <tr><td>Độ dày</td><td>1,0–1,3 mm</td></tr>
+                      <tr><td>Màu sắc</td><td>Nâu cà phê, nâu đất hoặc màu tùy chỉnh</td></tr>
+                      <tr><td>Độ linh hoạt</td><td>Gấp, uốn theo cấu trúc ví</td></tr>
+                      <tr><td>Bề mặt</td><td>Hạn chế bong tróc, nứt, bám bẩn</td></tr>
+                      <tr><td>Gia công</td><td>Cắt, dập, may, ép hoặc dán</td></tr>
+                      <tr><td>Chống thấm</td><td>Cần kiểm nghiệm trong điều kiện sử dụng thực tế</td></tr>
+                      <tr><td>Độ bền</td><td>Không nứt, biến dạng bất thường khi dùng</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
             </div>
           </div>
         </article>
@@ -154,22 +175,42 @@
             <img src="assets/img/tech/tech-rfid.svg" alt="Lớp chắn sóng RFID Blocking" loading="lazy" />
           </div>
           <div class="chapter-text-box gsap-reveal-left">
-            <span class="eyebrow">Lớp 02 • Bảo vệ thầm lặng</span>
-            <h2 class="chapter-title">RFID Blocking: Hỗ trợ hạn chế đọc trộm thẻ trái phép</h2>
+            <span class="eyebrow">Lớp 02 • Chỉ có trên dòng Smart</span>
+            <h2 class="chapter-title">RFID Blocking: Hỗ trợ hạn chế đọc trộm thẻ từ bên ngoài</h2>
             <p class="chapter-desc">
-              Thẻ thanh toán chạm và thẻ căn cước ngày nay giao tiếp qua sóng vô tuyến tần số 13.56 MHz. Điều này mang
-              lại sự tiện lợi, nhưng cũng tiềm ẩn rủi ro bị các thiết bị đọc di động tiếp cận quét thông tin khi bạn ở
-              chốn đông người hoặc trên phương tiện công cộng.
+              Thẻ thanh toán chạm và thẻ căn cước ngày nay giao tiếp qua sóng vô tuyến tần số 13,56 MHz. Chỉ trang bị
+              trên dòng Smart, lớp vải dẫn điện tại khu vực ngăn chứa thẻ thanh toán hỗ trợ hạn chế khả năng đọc thông
+              tin thẻ không tiếp xúc từ bên ngoài.
             </p>
             <p class="chapter-desc" style="color: var(--cocoa);">
-              Lớp màng chắn sóng mỏng nhẹ của DOVA được lồng ghép kín đáo bên trong cấu trúc ví. Khi ví đóng, lớp màng
-              này hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép, bảo vệ thông tin tài chính của bạn an toàn.
+              Lớp vật liệu chắn EMI dạng mềm nền polyester với lớp dẫn điện tham khảo đồng-niken (độ dày mục tiêu
+              0,08–0,12 mm) được lồng ghép kín đáo khi gia công ví.
             </p>
             <div class="card-cream" style="border-left: 3px solid var(--gold); margin-top: 1.5rem;">
               <p style="font-size: 0.9rem; margin: 0; color: var(--cocoa);">
-                <strong>Lưu ý:</strong> Cơ chế RFID Blocking giúp giảm thiểu đáng kể nguy cơ đọc trộm trong phạm vi hoạt
-                động của ví khi đóng kín, đồng hành cùng thói quen bảo mật cẩn trọng của người dùng.
+                <strong>Ghi chú:</strong> Hiệu quả sẽ được kiểm tra trên nguyên mẫu. Lớp chắn được bố trí tách biệt
+                khỏi ngăn Smart Tag để không cản trở tín hiệu Bluetooth.
               </p>
+            </div>
+            <div data-specs-layer="rfid">
+              <details class="tech-specs-accordion">
+                <summary>Thông số mục tiêu thiết kế</summary>
+                <div class="tech-specs-body">
+                  <p class="tech-specs-note">Có thể điều chỉnh khi hoàn thiện nguyên mẫu</p>
+                  <table class="specs-table">
+                    <tbody>
+                      <tr><td>Loại vật liệu</td><td>Vải dẫn điện hoặc vật liệu chắn EMI dạng mềm</td></tr>
+                      <tr><td>Vật liệu nền</td><td>Polyester</td></tr>
+                      <tr><td>Lớp dẫn điện tham khảo</td><td>Đồng-niken (mục tiêu)</td></tr>
+                      <tr><td>Độ dày mục tiêu</td><td>0,08–0,12 mm</td></tr>
+                      <tr><td>Tần số thử nghiệm chính</td><td>13,56 MHz</td></tr>
+                      <tr><td>Độ linh hoạt</td><td>Gấp, uốn, may được</td></tr>
+                      <tr><td>Độ bền</td><td>Hạn chế bong lớp phủ sau khi uốn và may</td></tr>
+                      <tr><td>Vị trí</td><td>Ngăn chứa thẻ thanh toán (chỉ trang bị ở dòng Smart)</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
             </div>
           </div>
         </article>
@@ -181,22 +222,38 @@
           </div>
           <div class="chapter-text-box gsap-reveal-right">
             <span class="eyebrow">Lớp 03 • Định vị tiện lợi</span>
-            <h2 class="chapter-title">Smart Tag Integration: Tích hợp với thiết bị định vị tương thích</h2>
+            <h2 class="chapter-title">Smart Tag Integration: Khoang riêng tách biệt lớp RFID</h2>
             <p class="chapter-desc">
-              Một trong những điều phiền toái nhất là vô tình bỏ quên ví ở quán cà phê, trên bàn làm việc hay ghế sau xe
-              taxi. Với ngăn chuyên dụng dành cho Smart Tag, chiếc ví của bạn kết nối liền mạch với hệ sinh thái tìm
-              kiếm thông minh.
+              Một trong những điều phiền toái nhất là vô tình bỏ quên ví ở quán cà phê, trên bàn làm việc hay ghế sau xe.
+              Ngăn Smart Tag là một khoang riêng đặt thiết bị định vị Bluetooth, có thể tháo lắp khi cần thiết.
             </p>
             <p class="chapter-desc" style="color: var(--cocoa);">
-              Khoang chứa được thiết kế tinh xảo với độ dày và độ khít chuẩn xác, giữ thiết bị định vị ổn định mà không
-              làm cộm dày ví. Đặc biệt, khu vực này được thiết kế thoát sóng ra ngoài phạm vi lớp RFID để tín hiệu
-              Bluetooth / UWB truyền phát thông suốt.
+              Khoang chứa được bố trí tách biệt hoàn toàn khỏi lớp RFID Blocking nhằm hạn chế ảnh hưởng đến khả năng
+              truyền tín hiệu Bluetooth Low Energy (BLE), hỗ trợ phát âm thanh tìm gần và tìm kiếm khi thất lạc qua
+              mạng định vị Apple Find My.
             </p>
-            <div class="card-cream" style="border-left: 3px solid var(--caramel); margin-top: 1.5rem;">
-              <p style="font-size: 0.9rem; margin: 0; color: var(--cocoa);">
-                <strong>Thông báo:</strong> DOVA cung cấp cấu trúc ngăn chứa định hình; sản phẩm không bao gồm sẵn thiết
-                bị định vị điện tử của bên thứ ba.
-              </p>
+            <div data-ios-notice class="ios-notice-banner">
+              <strong>Lưu ý tương thích:</strong> Smart Tag hiện tương thích với iPhone/iOS (Apple Find My). Chưa hỗ trợ Android.
+            </div>
+            <div data-specs-layer="smarttag">
+              <details class="tech-specs-accordion">
+                <summary>Thông số mục tiêu thiết kế</summary>
+                <div class="tech-specs-body">
+                  <p class="tech-specs-note">Có thể điều chỉnh khi hoàn thiện nguyên mẫu</p>
+                  <table class="specs-table">
+                    <tbody>
+                      <tr><td>Công nghệ kết nối</td><td>Bluetooth Low Energy (BLE)</td></tr>
+                      <tr><td>Hệ sinh thái</td><td>Apple Find My</td></tr>
+                      <tr><td>Hệ điều hành</td><td>iOS</td></tr>
+                      <tr><td>Kích thước &amp; Trọng lượng</td><td>Nhỏ gọn, nhẹ, không làm cộm ví</td></tr>
+                      <tr><td>Tìm gần</td><td>Phát âm thanh</td></tr>
+                      <tr><td>Tìm khi thất lạc</td><td>Hỗ trợ mạng định vị Find My</td></tr>
+                      <tr><td>Pin</td><td>Có thể thay thế hoặc sạc lại [CẦN THAY NỘI DUNG: chốt loại pin]</td></tr>
+                      <tr><td>Thời lượng pin</td><td>Theo công bố của nhà sản xuất</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
             </div>
           </div>
         </article>
@@ -223,9 +280,9 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <!-- Application Modules -->
-  <script src="assets/js/content.js"></script>
+  <script src="assets/js/content.js?v=20261125b"></script>
   <script src="assets/js/layout.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20261125b"></script>
   <script src="assets/js/smooth-scroll.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/tech-explode.js"></script>

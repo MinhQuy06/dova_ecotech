@@ -20,7 +20,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20261125b" />
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -123,11 +123,30 @@
               <div class="options-grid">
                 <label class="option-tile">
                   <input type="radio" name="version" value="essential" />
-                  <span>Essential (RFID Blocking)</span>
+                  <span>Essential (Vật liệu bã cà phê + Ngăn Smart Tag)</span>
                 </label>
                 <label class="option-tile selected">
                   <input type="radio" name="version" value="smart" checked />
-                  <span>Smart (Kèm ngăn Smart Tag)</span>
+                  <span>Smart (Bã cà phê + RFID Blocking + Ngăn Smart Tag)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Nhóm 4b: Điện thoại đang dùng (đo nhu cầu iOS / Android) -->
+            <div class="form-group">
+              <label class="form-label">Điện thoại bạn đang dùng?</label>
+              <div class="options-grid">
+                <label class="option-tile selected">
+                  <input type="radio" name="phoneOs" value="ios" checked />
+                  <span>iPhone/iOS</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="phoneOs" value="android" />
+                  <span>Android</span>
+                </label>
+                <label class="option-tile">
+                  <input type="radio" name="phoneOs" value="other" />
+                  <span>Khác</span>
                 </label>
               </div>
             </div>
@@ -255,12 +274,12 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <!-- Application Modules -->
-  <script src="assets/js/content.js"></script>
+  <script src="assets/js/content.js?v=20261125b"></script>
   <script src="assets/js/layout.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20261125b"></script>
   <script src="assets/js/smooth-scroll.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
-  <script src="assets/js/form.js?v=2.2"></script>
+  <script src="assets/js/form.js?v=20261125"></script>
   <script src="assets/js/decor.js"></script>
 </body>
 

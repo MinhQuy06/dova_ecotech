@@ -202,7 +202,11 @@
     window.addEventListener('touchend', onPointerUp);
 
     // 6. Nút Bật / Tắt xem vị trí Smart Tag
-    const parentBlock = container.closest('.collection-product-block') || container.closest('.product-detail-section') || container.parentElement;
+    const parentBlock =
+      container.closest('.collection-product-block') ||
+      container.closest('.product-showcase-grid') ||
+      container.closest('.product-detail-section') ||
+      container.parentElement;
     const toggleTagBtn = parentBlock ? parentBlock.querySelector('.btn-toggle-tag') : null;
 
     let showTagSlot = true;
@@ -215,29 +219,23 @@
       });
     }
 
-    // 7. Nút chuyển đổi dòng Essential / Smart
+    // 7. Đồng bộ Smart Tag trên 3D khi đổi dòng Essential / Smart (cả Essential & Smart đều có ngăn Smart Tag)
     const tierButtons = parentBlock ? parentBlock.querySelectorAll('.tier-btn') : [];
     tierButtons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        tierButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const tier = btn.getAttribute('data-tier');
-        
-        // Cập nhật hiển thị tính năng theo dòng
-        const descEssential = parentBlock.querySelector('.tier-desc-essential');
-        const descSmart = parentBlock.querySelector('.tier-desc-smart');
-        if (tier === 'essential') {
-          if (descEssential) descEssential.style.display = 'block';
-          if (descSmart) descSmart.style.display = 'none';
-          smartTagMarker.visible = false;
-          if (toggleTagBtn) toggleTagBtn.style.opacity = '0.4';
-        } else {
-          if (descEssential) descEssential.style.display = 'none';
-          if (descSmart) descSmart.style.display = 'block';
-          smartTagMarker.visible = showTagSlot;
-          if (toggleTagBtn) toggleTagBtn.style.opacity = '1';
-        }
+      btn.addEventListener('click', () => {
+        smartTagMarker.visible = showTagSlot;
+        if (toggleTagBtn) toggleTagBtn.style.opacity = '1';
       });
+    });
+
+    // 7b. Đổi màu vật liệu 3D theo sự kiện chọn màu (Nâu Espresso / Đen Than)
+    container.addEventListener('dova:colorchange', (e) => {
+      const hex = e.detail && e.detail.hex;
+      if (!hex) return;
+      bodyMat.color.set(hex);
+      if (bodyMat.map) bodyMat.map.dispose();
+      bodyMat.map = createTexture(hex);
+      bodyMat.needsUpdate = true;
     });
 
     // 8. Resize Handler

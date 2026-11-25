@@ -155,32 +155,89 @@ const DOVA_CONTENT = {
           }
         ],
         specs: {
-          dimensions: "Đang hoàn thiện", // Không tự bịa số
-          weight: "Đang hoàn thiện",
-          capacity: "Đang hoàn thiện (Dự kiến 6-8 thẻ + tiền mặt gấp gọn)",
-          material: "Vật liệu composite có thành phần bã cà phê kết hợp lớp lót chuyên dụng",
-          rfidShield: "Hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép",
-          smartTagCompatibility: "Tương thích với thiết bị định vị phổ biến (AirTag / SmartTag)",
+          dimensions: "~11 × 8,5 × 2 cm (mục tiêu)",
+          weight: "Đang hoàn thiện trên nguyên mẫu",
+          capacity: "Ngăn thẻ/tiền gấp, 1 khe ẩn lắp Smart Tag",
+          colors: "Nâu Espresso & Đen Than (hoặc tùy chỉnh)",
+          material: "Vật liệu composite có thành phần bã cà phê (độ dày mục tiêu 1,0–1,3 mm)",
+          rfidShield: "Chỉ có trên dòng Smart — Vải dẫn điện nền polyester (mục tiêu đồng-niken, 0,08–0,12 mm), thử nghiệm 13,56 MHz",
+          smartTagCompatibility: "Bluetooth Low Energy (BLE) • Tương thích iPhone/iOS (Apple Find My), tháo lắp được, tách biệt lớp RFID",
           zipper: "Kim loại mạ đồng mờ chống oxy hóa"
         },
+        targetSpecsRows: [
+          { label: "Mã SKU", value: "<span data-tier-spec=\"sku\">DOVA-SM-MZ</span>" },
+          { label: "Giá tham khảo", value: "<span data-tier-spec=\"price\">Trực tiếp Web/FB: 599.000đ (Sàn TMĐT: 659.000đ)</span>" },
+          { label: "Kích thước mục tiêu", value: "~11 × 8,5 × 2 cm" },
+          { label: "Trọng lượng", value: "<span class=\"badge-pending\">Đang hoàn thiện trên nguyên mẫu</span>" },
+          { label: "Sức chứa mục tiêu", value: "Ngăn thẻ/tiền gấp, 1 khe ẩn lắp Smart Tag" },
+          { label: "Màu sắc đề xuất", value: "Nâu Espresso & Đen Than (hoặc tùy chỉnh)" },
+          { label: "Vỏ ngoài (Lớp 1)", value: "Composite bã cà phê (độ dày mục tiêu 1,0–1,3 mm)" },
+          { label: "Bảo vệ RFID", value: "<span data-tier-spec=\"rfid\">Vải dẫn điện nền polyester (mục tiêu đồng-niken, 0,08–0,12 mm), thử nghiệm 13,56 MHz</span>" },
+          { label: "Smart Tag (Lớp 3)", value: "Bluetooth BLE • Apple Find My (iOS), tháo lắp được, tách biệt lớp RFID" },
+          { label: "Khóa kéo", value: "Kim loại mạ đồng mờ chống oxy hóa" },
+          { label: "Bao bì & Bảo hành", value: "Hộp cứng thương hiệu + thiệp tái chế; đổi mới 1–1 trong 15 ngày, BH Smart Tag 06 tháng, BH may/khóa kéo/bề mặt 12 tháng" }
+        ],
         features: [
           "Bề mặt composite có thành phần bã cà phê mịn màng, màu nâu cà phê ấm áp.",
-          "Tích hợp lớp lót hỗ trợ hạn chế đọc thẻ không tiếp xúc trái phép (RFID Blocking).",
-          "Dòng Smart có ngăn riêng biệt giữ thiết bị định vị tương thích chắc chắn.",
+          "Dòng Smart tích hợp thêm lớp vải dẫn điện hỗ trợ hạn chế đọc thẻ không tiếp xúc trái phép (RFID Blocking).",
+          "Khoang chứa Smart Tag thiết kế riêng biệt, tháo lắp được và tách lớp khỏi RFID.",
           "Khóa kéo trơn tru, bảo vệ đồ đạc không rơi rớt khi di chuyển."
         ],
         tiers: {
           essential: {
-            title: "Dòng Essential",
-            desc: "Vật liệu composite bã cà phê + Công nghệ RFID Blocking.",
-            note: "Dành cho người yêu thích sự gọn gàng thuần túy."
+            sku: "DOVA-ES-MZ",
+            badge: "Dòng Essential",
+            title: "Phiên bản Essential (DOVA-ES-MZ)",
+            desc: "Vật liệu composite bã cà phê (1,0–1,3 mm mục tiêu) + Khoang tích hợp Smart Tag (Bluetooth BLE • Apple Find My trên iOS) + Hộp cứng thương hiệu. Không đi kèm lớp RFID Blocking.",
+            bullets: [
+              { icon: "layers", text: "Vật liệu composite bã cà phê (1,0–1,3 mm mục tiêu)" },
+              { icon: "pin", text: "Khoang Smart Tag tách biệt (Bluetooth BLE • Apple Find My iOS)" },
+              { icon: "ruler", text: "Gấp gọn ~11 × 8,5 × 2 cm • Màu: Nâu Espresso, Đen Than • Hộp cứng thương hiệu" }
+            ],
+            price: "Trực tiếp Web/FB: 459.000đ (Sàn TMĐT: 499.000đ)",
+            warranty: "Bảo hành dự kiến: Đổi mới 1–1 trong 15 ngày • Smart Tag 06 tháng • Đường may, khóa kéo & bề mặt 12 tháng.",
+            note: "Dành cho người yêu thích sự gọn gàng thuần túy kèm tiện ích định vị.",
+            rfidFeatureText: "<strong>Phiên bản Essential</strong> tập trung vào composite bã cà phê + khoang tích hợp Smart Tag (chưa tích hợp lớp RFID Blocking; chọn dòng Smart để có thêm bảo vệ RFID).",
+            rfidSpecValue: "Không đi kèm trên dòng Essential (chỉ trang bị ở dòng Smart)"
           },
           smart: {
-            title: "Dòng Smart",
-            desc: "Vật liệu composite bã cà phê + RFID Blocking + Ngăn Smart Tag.",
-            note: "Hỗ trợ định vị ví qua thiết bị tương thích."
+            sku: "DOVA-SM-MZ",
+            badge: "Dòng Smart",
+            title: "Phiên bản Smart (DOVA-SM-MZ)",
+            desc: "Vật liệu composite bã cà phê (1,0–1,3 mm mục tiêu) + Lớp vải dẫn điện chắn sóng RFID Blocking (13,56 MHz) tại ngăn thẻ + Khoang Smart Tag tách lớp hoàn toàn + Hộp cứng thương hiệu.",
+            bullets: [
+              { icon: "layers", text: "Vật liệu composite bã cà phê (1,0–1,3 mm mục tiêu)" },
+              { icon: "shield", text: "Lớp vải dẫn điện chắn sóng RFID Blocking tại ngăn thẻ" },
+              { icon: "pin", text: "Khoang Smart Tag tách biệt (Bluetooth BLE • Apple Find My iOS)" },
+              { icon: "ruler", text: "Gấp gọn ~11 × 8,5 × 2 cm • Màu: Nâu Espresso, Đen Than • Hộp cứng thương hiệu" }
+            ],
+            price: "Trực tiếp Web/FB: 599.000đ (Sàn TMĐT: 659.000đ)",
+            warranty: "Bảo hành dự kiến: Đổi mới 1–1 trong 15 ngày • Smart Tag 06 tháng • Đường may, khóa kéo & bề mặt 12 tháng.",
+            note: "Hỗ trợ hạn chế đọc trộm thẻ từ bên ngoài và định vị ví qua Apple Find My.",
+            rfidFeatureText: "<strong>Dòng Smart</strong> tích hợp thêm lớp vải dẫn điện hỗ trợ hạn chế khả năng đọc thông tin thẻ không tiếp xúc từ bên ngoài (13,56 MHz). Hiệu quả sẽ được kiểm tra trên nguyên mẫu.",
+            rfidSpecValue: "Vải dẫn điện nền polyester (mục tiêu đồng-niken, 0,08–0,12 mm), thử nghiệm 13,56 MHz"
           }
         },
+        colors: [
+          {
+            id: "espresso",
+            label: "Nâu Espresso",
+            swatch: "#4E2F20",
+            threeHex: "#382015",
+            studioImage: "assets/img/products/mini-zip-photo.jpg",
+            popoutImage: "assets/img/products/mini-zip-popout.png",
+            compositeImage: "assets/img/products/detail-composite.jpg"
+          },
+          {
+            id: "charcoal",
+            label: "Đen Than",
+            swatch: "#22201F",
+            threeHex: "#1E1D1C",
+            studioImage: "assets/img/products/mini-zip-black.jpg",
+            popoutImage: "assets/img/products/mini-zip-popout-black.png",
+            compositeImage: "assets/img/products/detail-composite-black.jpg"
+          }
+        ],
         cta: "Đăng ký nhận thông tin Mini Zip"
       },
       {
@@ -205,35 +262,119 @@ const DOVA_CONTENT = {
           }
         ],
         specs: {
-          dimensions: "Đang hoàn thiện",
-          weight: "Đang hoàn thiện",
-          capacity: "Đang hoàn thiện (Dự kiến 8-10 thẻ + ngăn tiền thẳng)",
-          material: "Vật liệu composite có thành phần bã cà phê kết hợp lớp lót chuyên dụng",
-          rfidShield: "Hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép",
-          smartTagCompatibility: "Tương thích với thiết bị định vị phổ biến (AirTag / SmartTag)",
+          dimensions: "Gấp ~11,5 × 9,5 × 1,5 cm (mở ~23 × 9,5 cm, mục tiêu)",
+          weight: "Đang hoàn thiện trên nguyên mẫu",
+          capacity: "2 ngăn tiền mặt, 4–6 khe thẻ ATM, 1 khe ẩn lắp Smart Tag",
+          colors: "Nâu Espresso & Đen Than (hoặc tùy chỉnh)",
+          material: "Vật liệu composite có thành phần bã cà phê (độ dày mục tiêu 1,0–1,3 mm)",
+          rfidShield: "Chỉ có trên dòng Smart — Vải dẫn điện nền polyester (mục tiêu đồng-niken, 0,08–0,12 mm), thử nghiệm 13,56 MHz",
+          smartTagCompatibility: "Bluetooth Low Energy (BLE) • Tương thích iPhone/iOS (Apple Find My), tháo lắp được, tách biệt lớp RFID",
           closure: "Dạng gập hai cánh thanh thoát"
         },
+        targetSpecsRows: [
+          { label: "Mã SKU", value: "<span data-tier-spec=\"sku\">DOVA-SM-BF</span>" },
+          { label: "Giá tham khảo", value: "<span data-tier-spec=\"price\">Giá dự kiến: 639.000đ</span>" },
+          { label: "Kích thước mục tiêu", value: "Gấp khoảng 11,5 × 9,5 × 1,5 cm (mở ~23 × 9,5 cm)" },
+          { label: "Trọng lượng", value: "<span class=\"badge-pending\">Đang hoàn thiện trên nguyên mẫu</span>" },
+          { label: "Sức chứa mục tiêu", value: "2 ngăn tiền mặt, 4–6 khe thẻ ATM, 1 khe ẩn lắp Smart Tag" },
+          { label: "Màu sắc đề xuất", value: "Nâu Espresso, Đen Than" },
+          { label: "Vỏ ngoài (Lớp 1)", value: "Composite bã cà phê (độ dày mục tiêu 1,0–1,3 mm)" },
+          { label: "Bảo vệ RFID", value: "<span data-tier-spec=\"rfid\">Vải dẫn điện nền polyester (mục tiêu đồng-niken, 0,08–0,12 mm), tần số mục tiêu 13,56 MHz</span>" },
+          { label: "Smart Tag (Lớp 3)", value: "Bluetooth BLE • Apple Find My (iOS), tháo lắp được, tách biệt lớp RFID" },
+          { label: "Kiểu đóng mở", value: "Dạng gập hai cánh cổ điển" },
+          { label: "Bao bì & Bảo hành", value: "Hộp cứng thương hiệu + thiệp tái chế; bảo hành dự kiến: đổi mới 1–1 trong 15 ngày, Smart Tag 06 tháng, đường may & bề mặt 12 tháng" }
+        ],
         features: [
           "Vật liệu composite chứa bã cà phê nhẹ, bền bỉ và tạo ấn tượng độc đáo.",
-          "Lớp chắn sóng hỗ trợ hạn chế việc đọc trộm thông tin thẻ RFID/NFC trái phép.",
-          "Ngăn ẩn chuyên biệt cho Smart Tag với độ mỏng được tính toán tỉ mỉ.",
+          "Dòng Smart tích hợp thêm lớp vải dẫn điện hỗ trợ hạn chế việc đọc trộm thông tin thẻ từ bên ngoài.",
+          "Khoang ẩn chuyên biệt cho Smart Tag có thể tháo lắp, tách biệt lớp RFID.",
           "Cấu trúc rãnh thẻ vát nghiêng giúp thao tác rút và cất thẻ dễ dàng."
         ],
         tiers: {
           essential: {
-            title: "Dòng Essential",
-            desc: "Vật liệu composite bã cà phê + Công nghệ RFID Blocking.",
-            note: "Phong cách tối giản cho nhu cầu hàng ngày."
+            sku: "DOVA-ES-BF",
+            badge: "Dòng Essential",
+            switcherHeading: "DOVA Bifold · Essential",
+            leadDesc: "Dáng ví gập đôi kinh điển, tối ưu độ mỏng. Có khoang đặt Smart Tag để hỗ trợ tìm ví.",
+            title: "Phiên bản Essential",
+            desc: "Composite bã cà phê + Khoang Smart Tag tách biệt + Hộp cứng thương hiệu.",
+            bullets: [
+              { icon: "layers", text: "Vật liệu composite bã cà phê (1,0–1,3 mm mục tiêu)" },
+              { icon: "pin", text: "Khoang Smart Tag tách biệt (Bluetooth BLE • Apple Find My)" },
+              { icon: "ruler", text: "Gấp khoảng 11,5 x 9,5 x 1,5 cm • Màu: Nâu Espresso, Đen Than • Hộp cứng thương hiệu" }
+            ],
+            price: "Giá dự kiến: 489.000đ",
+            warranty: "Bảo hành dự kiến: Đổi mới 1–1 trong 15 ngày • Smart Tag 06 tháng • Đường may & bề mặt 12 tháng.",
+            note: "Phong cách tối giản kèm tiện ích định vị cho nhu cầu hàng ngày.",
+            rfidFeatureText: "<strong>Phiên bản Essential</strong> tập trung vào composite bã cà phê + khoang tích hợp Smart Tag (chưa tích hợp lớp RFID Blocking; chọn dòng Smart để có thêm bảo vệ RFID).",
+            rfidSpecValue: "Không đi kèm trên dòng Essential (chỉ trang bị ở dòng Smart)"
           },
           smart: {
-            title: "Dòng Smart",
-            desc: "Vật liệu composite bã cà phê + RFID Blocking + Ngăn Smart Tag.",
-            note: "Tích hợp ngăn tìm ví thông minh."
+            sku: "DOVA-SM-BF",
+            badge: "Dòng Smart",
+            switcherHeading: "DOVA Bifold · Smart",
+            leadDesc: "Dáng ví gập đôi kinh điển, tối ưu độ mỏng. Có khoang đặt Smart Tag để hỗ trợ tìm ví. Lớp RFID Blocking hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép.",
+            title: "Phiên bản Smart",
+            desc: "Composite bã cà phê + Lớp RFID Blocking + Khoang Smart Tag tách biệt + Hộp cứng thương hiệu.",
+            bullets: [
+              { icon: "layers", text: "Vật liệu composite bã cà phê (1,0–1,3 mm mục tiêu)" },
+              { icon: "shield", text: "Lớp vải dẫn điện chắn sóng RFID Blocking tại ngăn thẻ" },
+              { icon: "pin", text: "Khoang Smart Tag tách biệt (Bluetooth BLE • Apple Find My)" },
+              { icon: "ruler", text: "Gấp khoảng 11,5 x 9,5 x 1,5 cm • Màu: Nâu Espresso, Đen Than • Hộp cứng thương hiệu" }
+            ],
+            price: "Giá dự kiến: 639.000đ",
+            warranty: "Bảo hành dự kiến: Đổi mới 1–1 trong 15 ngày • Smart Tag 06 tháng • Đường may & bề mặt 12 tháng.",
+            note: "Hỗ trợ hạn chế đọc trộm thẻ từ bên ngoài và định vị ví qua Apple Find My.",
+            rfidFeatureText: "<strong>Dòng Smart</strong> tích hợp thêm lớp vải dẫn điện hỗ trợ hạn chế khả năng đọc thông tin thẻ không tiếp xúc từ bên ngoài (tần số mục tiêu 13,56 MHz). Hiệu quả sẽ được kiểm tra trên nguyên mẫu.",
+            rfidSpecValue: "Vải dẫn điện nền polyester (mục tiêu đồng-niken, 0,08–0,12 mm), tần số mục tiêu 13,56 MHz"
           }
         },
+        collectionGallery: [
+          {
+            currentSrc: "assets/img/products/detail-composite.jpg",
+            techReplaceSrc: "assets/img/tech/tech-composite.jpg", // [CẦN THAY NỘI DUNG]: thay ảnh tại assets/img/tech/ nếu muốn dùng ảnh riêng
+            tag: "Ảnh minh họa",
+            caption: "Minh họa bề mặt vật liệu"
+          },
+          {
+            currentSrc: "assets/img/products/detail-stitch.jpg",
+            techReplaceSrc: "assets/img/tech/[CẦN THAY NỘI DUNG: anh-duong-may.jpg]", // [CẦN THAY NỘI DUNG]
+            tag: "Ảnh minh họa",
+            caption: "Minh họa đường may"
+          },
+          {
+            currentSrc: "assets/img/products/detail-smarttag.jpg",
+            techReplaceSrc: "assets/img/tech/tech-smarttag.jpg", // [CẦN THAY NỘI DUNG]: thay ảnh tại assets/img/tech/ nếu muốn dùng ảnh riêng
+            tag: "Ảnh minh họa",
+            caption: "Minh họa thiết bị Smart Tag"
+          }
+        ],
+        colors: [
+          {
+            id: "espresso",
+            label: "Nâu Espresso",
+            swatch: "#4E2F20",
+            threeHex: "#2D190F",
+            studioImage: "assets/img/products/bifold-photo.jpg",
+            popoutImage: "assets/img/products/bifold-popout.png",
+            compositeImage: "assets/img/products/detail-composite.jpg"
+          },
+          {
+            id: "charcoal",
+            label: "Đen Than",
+            swatch: "#22201F",
+            threeHex: "#1E1D1C",
+            studioImage: "assets/img/products/bifold-black.jpg",
+            popoutImage: "assets/img/products/bifold-popout-black.png",
+            compositeImage: "assets/img/products/detail-composite-black.jpg"
+          }
+        ],
         cta: "Đăng ký nhận thông tin Bifold"
       }
-    ]
+    ],
+    specsHeading: "Thông số mục tiêu thiết kế",
+    specsNote: "Có thể điều chỉnh khi hoàn thiện nguyên mẫu",
+    iosNotice: "Smart Tag hiện tương thích với iPhone/iOS (Apple Find My). Chưa hỗ trợ Android."
   },
 
   // SECTION 05 - TECHNOLOGY & MATERIAL
@@ -241,6 +382,9 @@ const DOVA_CONTENT = {
     eyebrow: "Kỹ nghệ & Vật liệu",
     headline: "Công nghệ nằm trong từng lớp ví.", // CẦN THAY NỘI DUNG
     subtitle: "Mỗi chiếc ví DOVA là sự đúc kết của 3 lớp cấu trúc riêng biệt, kết nối hài hòa giữa phụ phẩm tự nhiên và công nghệ an toàn đời thường.",
+    specsHeading: "Thông số mục tiêu thiết kế",
+    specsNote: "Có thể điều chỉnh khi hoàn thiện nguyên mẫu",
+    iosNotice: "Smart Tag hiện tương thích với iPhone/iOS (Apple Find My). Chưa hỗ trợ Android.",
     
     layers: [
       {
@@ -250,20 +394,43 @@ const DOVA_CONTENT = {
         vietnameseName: "Vật liệu composite chứa bã cà phê",
         tag: "Lớp vỏ ngoài",
         headline: "Từ bã cà phê đến bề mặt phụ kiện dẻo dai",
-        content: "Bã cà phê sau quá trình thu gom được sấy khô, xử lý mịn và phân tán đều trong hợp chất polymer bền chắc. Lớp composite này mang sắc nâu tự nhiên cùng những đốm vân hữu cơ không trùng lặp, gợi nhắc hương vị cà phê và cam kết tận dụng phụ phẩm.",
-        note: "Ghi chú: Vật liệu hiện đang trong giai đoạn kiểm tra độ bền cơ học và lão hóa nhiệt.",
-        graphic: "assets/img/tech/tech-composite.jpg"
+        content: "Vật liệu được tạo ra bằng cách kết hợp bã cà phê đã qua sử dụng với polymer hoặc chất kết dính phù hợp. Lớp composite này mang sắc nâu tự nhiên cùng những đốm vân hữu cơ không trùng lặp.",
+        valueHighlight: "Giá trị: Tận dụng phụ phẩm cà phê, hạn chế lãng phí tài nguyên, gia tăng giá trị cho nguyên liệu sau sử dụng.",
+        note: "Có thể điều chỉnh khi hoàn thiện nguyên mẫu.",
+        graphic: "assets/img/tech/tech-composite.jpg",
+        specsRows: [
+          { label: "Dạng vật liệu", value: "Tấm hoặc cuộn composite mềm" },
+          { label: "Thành phần", value: "Bã cà phê đã qua sử dụng kết hợp polymer/chất kết dính phù hợp" },
+          { label: "Tỷ lệ bã cà phê", value: "Theo công bố của nhà cung cấp (% khối lượng) [CẦN THAY NỘI DUNG]" },
+          { label: "Độ dày", value: "1,0–1,3 mm" },
+          { label: "Màu sắc", value: "Nâu cà phê, nâu đất hoặc màu tùy chỉnh" },
+          { label: "Độ linh hoạt", value: "Gấp, uốn theo cấu trúc ví" },
+          { label: "Bề mặt", value: "Hạn chế bong tróc, nứt, bám bẩn" },
+          { label: "Gia công", value: "Cắt, dập, may, ép hoặc dán" },
+          { label: "Chống thấm", value: "Cần kiểm nghiệm trong điều kiện sử dụng thực tế" },
+          { label: "Độ bền", value: "Không nứt, biến dạng bất thường khi dùng" }
+        ]
       },
       {
         id: "rfid",
         index: "02",
         name: "RFID Blocking Shield",
         vietnameseName: "Lớp chắn sóng RFID",
-        tag: "Lớp lõi bảo vệ",
-        headline: "Hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép",
-        content: "Nằm kẹp giữa các lớp vật liệu là lớp màng hợp kim mỏng nhẹ có khả năng phản xạ và suy giảm các dải tần số vô tuyến quét qua (13.56 MHz). Lớp chắn này hỗ trợ hạn chế việc các máy đọc từ xa cố tình quét dữ liệu thẻ tín dụng, căn cước hoặc thẻ ra vào khi ví đang đóng kín.",
-        note: "Lưu ý kỹ thuật: Lớp màng được tính toán để không cản trở tín hiệu liên lạc của ngăn Smart Tag riêng biệt.",
-        graphic: "assets/img/tech/tech-rfid.svg"
+        tag: "Chỉ có trên dòng Smart",
+        headline: "Hỗ trợ hạn chế khả năng đọc thông tin thẻ không tiếp xúc từ bên ngoài",
+        content: "Chỉ hiển thị là tính năng của dòng Smart: tại khu vực chứa thẻ thanh toán, ví tích hợp một lớp vải dẫn điện nhằm hỗ trợ hạn chế khả năng đọc thông tin thẻ không tiếp xúc từ bên ngoài.",
+        note: "Hiệu quả sẽ được kiểm tra trên nguyên mẫu. Bố trí tách biệt khỏi ngăn Smart Tag để không cản trở tín hiệu Bluetooth.",
+        graphic: "assets/img/tech/tech-rfid.svg",
+        specsRows: [
+          { label: "Loại vật liệu", value: "Vải dẫn điện hoặc vật liệu chắn EMI dạng mềm" },
+          { label: "Vật liệu nền", value: "Polyester" },
+          { label: "Lớp dẫn điện tham khảo", value: "Đồng-niken (mục tiêu)" },
+          { label: "Độ dày mục tiêu", value: "0,08–0,12 mm" },
+          { label: "Tần số thử nghiệm chính", value: "13,56 MHz" },
+          { label: "Độ linh hoạt", value: "Gấp, uốn, may được" },
+          { label: "Độ bền", value: "Hạn chế bong lớp phủ sau khi uốn và may" },
+          { label: "Vị trí", value: "Ngăn chứa thẻ thanh toán (chỉ trang bị ở dòng Smart)" }
+        ]
       },
       {
         id: "smarttag",
@@ -271,10 +438,20 @@ const DOVA_CONTENT = {
         name: "Smart Tag Integration",
         vietnameseName: "Ngăn định vị Smart Tag chuyên dụng",
         tag: "Tiện ích thông minh",
-        headline: "Tích hợp với thiết bị định vị tương thích",
-        content: "Chúng tôi tạo ra một khoang chứa định hình vừa vặn cho các thiết bị định vị thông minh phổ biến. Thiết kế khe mở thông minh hướng sóng ra bên ngoài lớp RFID, giúp bạn phát âm thanh tìm ví trong phòng hoặc xác định vị trí chiếc ví qua ứng dụng định vị tương thích.",
-        note: "Sản phẩm không bán kèm thiết bị định vị điện tử; ngăn được thiết kế để lắp đặt thiết bị tương thích của người dùng.",
-        graphic: "assets/img/tech/tech-smarttag.jpg"
+        headline: "Khoang riêng đặt thiết bị định vị Bluetooth tách biệt lớp RFID",
+        content: "Khoang chứa riêng đặt thiết bị định vị Bluetooth có thể tháo lắp khi cần thiết, được bố trí tách biệt hoàn toàn với lớp RFID Blocking nhằm hạn chế ảnh hưởng đến khả năng truyền tín hiệu.",
+        note: "Smart Tag hiện tương thích với iPhone/iOS (Apple Find My). Chưa hỗ trợ Android.",
+        graphic: "assets/img/tech/tech-smarttag.jpg",
+        specsRows: [
+          { label: "Công nghệ kết nối", value: "Bluetooth Low Energy (BLE)" },
+          { label: "Hệ sinh thái", value: "Apple Find My" },
+          { label: "Hệ điều hành", value: "iOS" },
+          { label: "Kích thước & Trọng lượng", value: "Nhỏ gọn, nhẹ, không làm cộm ví" },
+          { label: "Tìm gần", value: "Phát âm thanh" },
+          { label: "Tìm khi thất lạc", value: "Hỗ trợ mạng định vị Find My" },
+          { label: "Pin", value: "Có thể thay thế hoặc sạc lại [CẦN THAY NỘI DUNG: chốt loại pin]" },
+          { label: "Thời lượng pin", value: "Theo công bố của nhà sản xuất" }
+        ]
       }
     ]
   },
@@ -380,8 +557,16 @@ const DOVA_CONTENT = {
       tierInterest: {
         label: "Dòng phiên bản bạn muốn trải nghiệm",
         options: [
-          { value: "essential", label: "Essential (Vật liệu bã cà phê + RFID Blocking)" },
-          { value: "smart", label: "Smart (Thêm ngăn tích hợp Smart Tag)", checked: true }
+          { value: "essential", label: "Essential (Vật liệu bã cà phê + Ngăn Smart Tag)" },
+          { value: "smart", label: "Smart (Bã cà phê + RFID Blocking + Ngăn Smart Tag)", checked: true }
+        ]
+      },
+      phoneOs: {
+        label: "Điện thoại bạn đang dùng?",
+        options: [
+          { value: "ios", label: "iPhone/iOS", checked: true },
+          { value: "android", label: "Android" },
+          { value: "other", label: "Khác" }
         ]
       },
       priceRange: {

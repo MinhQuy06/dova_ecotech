@@ -20,7 +20,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20261125d" />
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -54,6 +54,7 @@
                 width="768"
                 height="1024"
                 loading="lazy"
+                data-color-target="bifold"
                 style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;"
               />
               <span class="studio-concept-badge">Concept render · Hình minh họa</span>
@@ -91,7 +92,7 @@
               <div>
                 <div class="detail-photo-card">
                   <img src="assets/img/products/detail-composite.jpg" alt="Bề mặt bã cà phê ép phẳng Bifold"
-                    loading="lazy" width="600" height="600" />
+                    loading="lazy" width="600" height="600" data-color-composite="bifold" />
                 </div>
                 <div class="detail-photo-caption">Bề mặt composite</div>
               </div>
@@ -122,25 +123,29 @@
             </p>
             <p style="font-size: 1.05rem; line-height: 1.75; color: var(--cocoa); margin-bottom: 1.5rem;">
               Kiểu dáng ví gập đôi truyền thống được DOVA tính toán lại với độ mỏng tối ưu. Vừa vặn trong túi quần âu
-              hay áo vest mà không làm mất phom dáng trang phục, giữ trọn vẻ lịch lãm và an tâm tuyệt đối trên mỗi hành
+              hay áo vest mà không làm mất phom dáng trang phục, giữ trọn vẻ lịch lãm và an tâm trên mỗi hành
               trình.
             </p>
+
+            <!-- Chọn màu sắc -->
+            <div class="color-selector-wrap" data-color-product="bifold"></div>
 
             <!-- Chọn dòng Essential / Smart -->
             <div style="margin-bottom: 1.5rem;">
               <span class="form-label">Chọn phiên bản trải nghiệm:</span>
               <div class="tier-switcher" style="margin-bottom: 1rem;">
                 <button type="button" class="tier-btn" data-tier="essential">Dòng Essential</button>
-                <button type="button" class="tier-btn active" data-tier="smart">Dòng Smart (Có Smart Tag)</button>
+                <button type="button" class="tier-btn active" data-tier="smart">Dòng Smart</button>
               </div>
               <div class="tier-desc-essential card-cream" style="display: none; padding: 1.25rem;">
-                <strong>Phiên bản Essential:</strong> Tích hợp vật liệu composite bã cà phê + lớp che chắn RFID
-                Blocking. Gọn gàng và thanh lịch.
+                <strong>Phiên bản Essential (DOVA-ES-BF):</strong> Vật liệu composite bã cà phê + Khoang tích hợp Smart Tag (không kèm lớp RFID Blocking). Gọn gàng và thanh lịch.
               </div>
               <div class="tier-desc-smart card-cream"
                 style="display: block; padding: 1.25rem; border-color: var(--caramel-lt);">
-                <strong>Phiên bản Smart:</strong> Vật liệu composite bã cà phê + RFID Blocking + Ngăn chìm tích hợp với
-                thiết bị định vị tương thích.
+                <strong>Phiên bản Smart (DOVA-SM-BF):</strong> Vật liệu composite bã cà phê + Lớp chắn sóng RFID Blocking + Khoang tích hợp Smart Tag.
+              </div>
+              <div data-ios-notice class="ios-notice-banner">
+                <strong>Lưu ý tương thích:</strong> Smart Tag hiện tương thích với iPhone/iOS (Apple Find My). Chưa hỗ trợ Android.
               </div>
             </div>
 
@@ -153,12 +158,13 @@
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
-                <span>Lớp chắn sóng hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép (RFID/NFC) khi ví đóng
-                  kín.</span>
+                <span data-rfid-feature><strong>Dòng Smart</strong> tích hợp thêm lớp vải dẫn điện hỗ trợ hạn chế khả năng đọc thông tin
+                  thẻ không tiếp xúc từ bên ngoài (13,56 MHz). Hiệu quả sẽ được kiểm tra trên nguyên mẫu.</span>
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
-                <span>Ngăn chìm thông minh dành cho Smart Tag, không làm cộm dày ví và dễ dàng thay pin thiết bị.</span>
+                <span>Khoang riêng đặt thiết bị định vị Bluetooth (Apple Find My trên iOS), tháo lắp dễ dàng và tách
+                  biệt khỏi lớp RFID.</span>
               </li>
               <li class="feature-check-item">
                 <span class="feature-check-icon">✓</span>
@@ -166,33 +172,46 @@
               </li>
             </ul>
 
-            <!-- Bảng Thông số Kỹ thuật (Đang hoàn thiện) -->
-            <h3 style="font-size: 1.35rem; margin-top: 2.25rem; margin-bottom: 1rem;">Thông số kỹ thuật dự kiến:</h3>
-            <table class="specs-table">
+            <!-- Bảng Thông số mục tiêu thiết kế -->
+            <div data-specs-heading>
+              <div class="specs-heading-wrap">
+                <div class="specs-heading-title">Thông số mục tiêu thiết kế</div>
+                <p class="tech-specs-note">Có thể điều chỉnh khi hoàn thiện nguyên mẫu</p>
+              </div>
+            </div>
+            <table class="specs-table" data-product-specs="bifold">
               <tbody>
                 <tr>
-                  <td>Kích thước</td>
-                  <td><span class="badge-pending">Đang hoàn thiện</span></td>
+                  <td>Kích thước mục tiêu</td>
+                  <td>Gấp ~11,5 × 9,5 × 1,5 cm (mở ~23 × 9,5 cm)</td>
                 </tr>
                 <tr>
                   <td>Trọng lượng</td>
-                  <td><span class="badge-pending">Đang hoàn thiện</span></td>
+                  <td><span class="badge-pending">Đang hoàn thiện trên nguyên mẫu</span></td>
                 </tr>
                 <tr>
-                  <td>Sức chứa</td>
-                  <td><span class="badge-pending">Đang hoàn thiện (Dự kiến 8-10 thẻ + ngăn tiền thẳng)</span></td>
+                  <td>Sức chứa mục tiêu</td>
+                  <td>2 ngăn tiền mặt, 4–6 khe thẻ ATM, 1 khe ẩn lắp Smart Tag</td>
                 </tr>
                 <tr>
-                  <td>Chất liệu vỏ</td>
-                  <td>Composite có thành phần bã cà phê</td>
+                  <td>Màu sắc đề xuất</td>
+                  <td>Nâu Espresso &amp; Đen Than (hoặc tùy chỉnh)</td>
+                </tr>
+                <tr>
+                  <td>Vỏ ngoài (Lớp 1)</td>
+                  <td>Composite bã cà phê (độ dày mục tiêu 1,0–1,3 mm)</td>
+                </tr>
+                <tr>
+                  <td>RFID (Chỉ dòng Smart)</td>
+                  <td>Vải dẫn điện nền polyester (mục tiêu đồng-niken, 0,08–0,12 mm), thử nghiệm 13,56 MHz</td>
+                </tr>
+                <tr>
+                  <td>Smart Tag (Lớp 3)</td>
+                  <td>Bluetooth BLE • Apple Find My (iOS), tháo lắp được, tách biệt lớp RFID</td>
                 </tr>
                 <tr>
                   <td>Kiểu đóng mở</td>
-                  <td>Gập đôi hai cánh cổ điển</td>
-                </tr>
-                <tr>
-                  <td>Tính năng an toàn</td>
-                  <td>Hạn chế đọc trộm thẻ RFID & Ngăn định vị tương thích</td>
+                  <td>Dạng gập hai cánh cổ điển</td>
                 </tr>
               </tbody>
             </table>
@@ -224,12 +243,12 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <!-- Application Modules -->
-  <script src="assets/js/content.js"></script>
+  <script src="assets/js/content.js?v=20261125d"></script>
   <script src="assets/js/layout.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20261125d"></script>
   <script src="assets/js/smooth-scroll.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
-  <script src="assets/js/product-viewer.js"></script>
+  <script src="assets/js/product-viewer.js?v=20261125d"></script>
   <script src="assets/js/decor.js"></script>
 </body>
 

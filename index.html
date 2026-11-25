@@ -32,11 +32,11 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20261125d" />
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
-  <link rel="stylesheet" href="assets/css/decor.css" />
+  <link rel="stylesheet" href="assets/css/decor.css?v=20261125e" />
 </head>
 
 <body class="theme-cream">
@@ -225,6 +225,7 @@
                 Thiết kế zip-around bo tròn tinh tế, tối ưu cho phụ kiện cầm tay thanh lịch. Chứa trọn vẹn thẻ, tiền mặt
                 và thiết bị định vị trong kích thước nhỏ gọn.
               </p>
+              <div class="color-selector-wrap" data-color-product="mini-zip"></div>
               <a href="join.html?product=mini-zip" class="btn btn-primary popout-btn">
                 <span class="btn-sparkle" aria-hidden="true">✦</span>
                 <span>Register Interest</span>
@@ -241,7 +242,7 @@
               <!-- Layer 2: Pop-out Cutout Wallet (Transparent PNG) -->
               <div class="popout-layer-wallet">
                 <img src="assets/img/products/mini-zip-popout.png" alt="Ví nữ DOVA Mini Zip từ bã cà phê" width="1024"
-                  height="576" loading="lazy" />
+                  height="576" loading="lazy" data-color-target="mini-zip" />
               </div>
 
               <!-- Layer 3: Foreground Decor (Coffee bean / Leaf sticking out) -->
@@ -286,6 +287,7 @@
                 Dáng ví gập đôi kinh điển được tối ưu độ mỏng vượt trội. Không cộm túi âu phục, giữ trọn nét phong độ
                 cùng khả năng bảo vệ sóng từ tính RFID và ngăn định vị.
               </p>
+              <div class="color-selector-wrap" data-color-product="bifold"></div>
               <a href="join.html?product=bifold" class="btn btn-primary popout-btn">
                 <span class="btn-sparkle" aria-hidden="true">✦</span>
                 <span>Register Interest</span>
@@ -302,7 +304,7 @@
               <!-- Layer 2: Pop-out Cutout Wallet (Transparent PNG) -->
               <div class="popout-layer-wallet">
                 <img src="assets/img/products/bifold-popout.png" alt="Ví nam DOVA Bifold từ bã cà phê" width="503"
-                  height="403" loading="lazy" />
+                  height="403" loading="lazy" data-color-target="bifold" />
               </div>
 
               <!-- Layer 3: Foreground Decor (Coffee bean / Leaf sticking out) -->
@@ -369,6 +371,9 @@
                 bị định vị trong một ngăn chứa an toàn.
               </p>
 
+              <!-- Chọn màu sắc -->
+              <div class="color-selector-wrap" data-color-product="mini-zip"></div>
+
               <!-- Switcher Essential vs Smart -->
               <div class="tier-switcher">
                 <button type="button" class="tier-btn" data-tier="essential">Dòng Essential</button>
@@ -377,13 +382,16 @@
 
               <div class="tier-desc-essential"
                 style="display: none; margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--chocolate);">
-                <strong>Dòng Essential:</strong> Vật liệu composite có thành phần bã cà phê kết hợp lớp màng che chắn
-                RFID Blocking.
+                <strong>Dòng Essential:</strong> Vật liệu composite có thành phần bã cà phê + Khoang tích hợp Smart Tag
+                (không kèm lớp RFID Blocking).
               </div>
               <div class="tier-desc-smart"
                 style="display: block; margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--chocolate);">
-                <strong>Dòng Smart:</strong> Tích hợp đầy đủ vật liệu composite bã cà phê + RFID Blocking + Ngăn riêng
-                đặt Smart Tag.
+                <strong>Dòng Smart:</strong> Tích hợp đầy đủ vật liệu composite bã cà phê + Lớp chắn sóng RFID Blocking
+                + Khoang tích hợp Smart Tag.
+              </div>
+              <div data-ios-notice class="ios-notice-banner">
+                <strong>Lưu ý tương thích:</strong> Smart Tag hiện tương thích với iPhone/iOS (Apple Find My). Chưa hỗ trợ Android.
               </div>
 
               <!-- Lưới 3 ảnh chi tiết -->
@@ -391,7 +399,7 @@
                 <div>
                   <div class="detail-photo-card">
                     <img src="assets/img/products/detail-composite.jpg" alt="Bề mặt vật liệu bã cà phê Mini Zip"
-                      loading="lazy" width="600" height="600" />
+                      loading="lazy" width="600" height="600" data-color-composite="mini-zip" />
                   </div>
                   <div class="detail-photo-caption">Bề mặt composite</div>
                 </div>
@@ -453,6 +461,9 @@
                 an tâm với lớp che chắn sóng từ tính.
               </p>
 
+              <!-- Chọn màu sắc -->
+              <div class="color-selector-wrap" data-color-product="bifold"></div>
+
               <!-- Switcher Essential vs Smart -->
               <div class="tier-switcher">
                 <button type="button" class="tier-btn" data-tier="essential">Dòng Essential</button>
@@ -461,13 +472,16 @@
 
               <div class="tier-desc-essential"
                 style="display: none; margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--chocolate);">
-                <strong>Dòng Essential:</strong> Vật liệu composite có thành phần bã cà phê kết hợp lớp che chắn RFID
-                Blocking.
+                <strong>Dòng Essential:</strong> Vật liệu composite có thành phần bã cà phê + Khoang tích hợp Smart Tag
+                (không kèm lớp RFID Blocking).
               </div>
               <div class="tier-desc-smart"
                 style="display: block; margin-bottom: 1.25rem; font-size: 0.95rem; color: var(--chocolate);">
-                <strong>Dòng Smart:</strong> Vật liệu composite bã cà phê + RFID Blocking + Ngăn chìm đặt Smart Tag
-                tương thích.
+                <strong>Dòng Smart:</strong> Vật liệu composite bã cà phê + Lớp chắn sóng RFID Blocking + Khoang chìm
+                tích hợp Smart Tag.
+              </div>
+              <div data-ios-notice class="ios-notice-banner">
+                <strong>Lưu ý tương thích:</strong> Smart Tag hiện tương thích với iPhone/iOS (Apple Find My). Chưa hỗ trợ Android.
               </div>
 
               <!-- Lưới 3 ảnh chi tiết -->
@@ -475,7 +489,7 @@
                 <div>
                   <div class="detail-photo-card">
                     <img src="assets/img/products/detail-composite.jpg" alt="Bề mặt bã cà phê ép phẳng Bifold"
-                      loading="lazy" width="600" height="600" />
+                      loading="lazy" width="600" height="600" data-color-composite="bifold" />
                   </div>
                   <div class="detail-photo-caption">Bề mặt composite</div>
                 </div>
@@ -557,10 +571,12 @@
               <div class="layer-slice-item" data-layer="1">
                 <div class="layer-slice-header">
                   <span class="layer-slice-title">02. RFID Blocking Shield</span>
-                  <span class="layer-slice-tag">Lõi bảo vệ</span>
+                  <span class="layer-slice-tag">Chỉ có trên dòng Smart</span>
                 </div>
                 <p class="layer-slice-desc">
-                  Màng chắn hợp kim mỏng hỗ trợ hạn chế việc đọc thẻ không tiếp xúc trái phép khi ví đóng kín.
+                  Lớp vải dẫn điện hỗ trợ hạn chế khả năng đọc thông tin thẻ không tiếp xúc từ bên ngoài (13,56 MHz).
+                  <em style="display: block; font-size: 0.78rem; color: var(--gold); margin-top: 4px;">* Hiệu quả sẽ
+                    được kiểm tra trên nguyên mẫu.</em>
                 </p>
               </div>
 
@@ -571,7 +587,7 @@
                   <span class="layer-slice-tag">Định vị</span>
                 </div>
                 <p class="layer-slice-desc">
-                  Khoang chứa riêng biệt tích hợp với thiết bị định vị tương thích để dễ dàng tìm kiếm ví.
+                  Khoang riêng đặt thiết bị định vị Bluetooth tách biệt lớp RFID, tương thích iPhone/iOS (Apple Find My).
                 </p>
                 <div class="layer-ping-wave" aria-hidden="true"></div>
               </div>
@@ -770,11 +786,11 @@
               <div class="options-grid">
                 <label class="option-tile">
                   <input type="radio" name="version" value="essential" />
-                  <span>Essential (RFID)</span>
+                  <span>Essential (Bã cà phê + Smart Tag)</span>
                 </label>
                 <label class="option-tile selected">
                   <input type="radio" name="version" value="smart" checked />
-                  <span>Smart (Kèm Smart Tag)</span>
+                  <span>Smart (Bã cà phê + RFID + Smart Tag)</span>
                 </label>
               </div>
             </div>
@@ -819,13 +835,13 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <!-- Application Modules -->
-  <script src="assets/js/content.js"></script>
+  <script src="assets/js/content.js?v=20261125d"></script>
   <script src="assets/js/layout.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20261125d"></script>
   <script src="assets/js/smooth-scroll.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/hero-3d.js"></script>
-  <script src="assets/js/product-viewer.js"></script>
+  <script src="assets/js/product-viewer.js?v=20261125d"></script>
   <script src="assets/js/tech-explode.js"></script>
   <script src="assets/js/form.js?v=2.2"></script>
   <script src="assets/js/decor.js"></script>

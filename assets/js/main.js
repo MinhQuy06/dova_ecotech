@@ -110,6 +110,13 @@
       });
     }
 
+    // Đổ tiêu đề phụ bộ sưu tập từ content.js
+    if (col && col.subtitle) {
+      document.querySelectorAll('[data-collection-subtitle]').forEach((el) => {
+        el.textContent = col.subtitle;
+      });
+    }
+
     // Đổ tiêu đề + ghi chú nhỏ & bảng thông số sản phẩm từ content.js
     if (col && col.specsHeading) {
       document.querySelectorAll('[data-specs-heading]').forEach((el) => {
@@ -336,6 +343,16 @@
 
         const rfidSpecEl = block.querySelector('[data-tier-spec="rfid"]');
         if (rfidSpecEl && activeData) rfidSpecEl.textContent = activeData.rfidSpecValue;
+
+        const weightSpecEl = block.querySelector('[data-tier-spec="weight"]');
+        if (weightSpecEl && activeData && activeData.weightSpecValue) {
+          weightSpecEl.textContent = activeData.weightSpecValue;
+        }
+
+        const smarttagSpecEl = block.querySelector('[data-tier-spec="smarttag"]');
+        if (smarttagSpecEl && activeData && activeData.smarttagSpecValue) {
+          smarttagSpecEl.textContent = activeData.smarttagSpecValue;
+        }
       }
 
       if (descEssential) descEssential.style.display = tier === 'essential' ? 'block' : 'none';

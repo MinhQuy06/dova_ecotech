@@ -272,6 +272,19 @@
   color: var(--aged);
   margin-bottom: 0.85rem;
   line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact-link {
+  color: var(--ivory);
+  opacity: 0.9;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.footer-contact-link:hover {
+  color: var(--caramel-lt);
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .footer-contact-icon {

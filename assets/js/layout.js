@@ -67,7 +67,7 @@
       <!-- Main Navigation Header -->
       <header class="site-header" id="main-header">
         <div class="container header-inner">
-          <a href="${fixPath('index.html')}" class="header-brand" aria-label="${content.meta.brandName} - Trang chủ">
+          <a href="${fixPath('index.html')}" class="header-brand" aria-label="${content.meta.brandName} - Home">
             <img src="${fixPath('assets/img/logo-dova.svg')}" alt="${content.meta.brandName}" class="brand-logo-img" width="260" height="42" />
           </a>
 
@@ -114,12 +114,14 @@
     }).join('');
 
     // Xử lý thông tin liên hệ và mạng xã hội (ẩn hoặc hiện gọn gàng nếu là placeholder)
-    const emailText = content.footer.contact.email.includes('CẦN THAY') 
-      ? 'Đang cập nhật kênh chính thức' 
-      : content.footer.contact.email;
+    const emailRaw = content.footer.contact.email || '';
+    const isEmailPending = emailRaw.includes('CẦN THAY') || !emailRaw.includes('@');
+    const emailHtml = isEmailPending
+      ? '<span>Đang cập nhật kênh chính thức</span>'
+      : `<a href="mailto:${emailRaw}" class="footer-contact-link">${emailRaw}</a>`;
 
     const addressText = content.footer.contact.address.includes('CẦN THAY')
-      ? 'Hà Nội, Việt Nam'
+      ? 'TP. Hồ Chí Minh, Việt Nam'
       : content.footer.contact.address;
 
     const socialIconsHtml = content.footer.socials.map(s => {
@@ -167,7 +169,7 @@
               <h3 class="footer-col-title">${content.footer.contact.title}</h3>
               <div class="footer-contact-item">
                 <span class="footer-contact-icon">✉</span>
-                <span>${emailText}</span>
+                ${emailHtml}
               </div>
               <div class="footer-contact-item">
                 <span class="footer-contact-icon">📍</span>

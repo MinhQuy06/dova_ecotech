@@ -30,13 +30,13 @@
   <meta property="twitter:image" content="assets/img/og-cover.jpg" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20261125d" />
-  <link rel="stylesheet" href="assets/css/sections.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
-  <link rel="stylesheet" href="assets/css/decor.css?v=20261125e" />
+  <link rel="stylesheet" href="assets/css/base.css?v=20261126k" />
+  <link rel="stylesheet" href="assets/css/layout.css?v=20261126k" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20261126k" />
+  <link rel="stylesheet" href="assets/css/sections.css?v=20261126k" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=20261126k" />
+  <link rel="stylesheet" href="assets/css/responsive.css?v=20261126k" />
+  <link rel="stylesheet" href="assets/css/decor.css?v=20261126k" />
 </head>
 
 <body class="theme-cream">
@@ -75,18 +75,122 @@
           </div>
         </div>
 
-        <!-- Cột phải: Khung 3D tương tác hai chiếc ví -->
+        <!-- Cột phải: Không gian trưng bày sản phẩm thực tế cùng khiên RFID Blocking & Smart Tag -->
         <div class="hero-canvas-container" id="hero-3d-canvas-container">
-          <canvas id="hero-3d-canvas" aria-label="Mô hình 3D tương tác ví Mini Zip và Bifold"></canvas>
-          <div class="hero-canvas-fallback" id="hero-canvas-fallback">
-            <img src="assets/img/hero/hero-concept.svg" alt="Mô hình ý tưởng hai ví DOVA ECOTECH" width="600"
-              height="450" />
+          <canvas id="hero-3d-canvas" aria-hidden="true"></canvas>
+
+          <div class="hero-showcase-stage" id="hero-showcase-stage"
+            aria-label="Ví thông minh DOVA ECOTECH từ bã cà phê tích hợp khiên chắn RFID Blocking và ngăn định vị Smart Tag">
+            <div class="hero-stage-aura" aria-hidden="true"></div>
+
+            <!-- Pod định vị Smart Tag + Find My nổi góc trên bên phải -->
+            <div class="hero-smarttag-pod" data-depth="22">
+              <div class="hero-smarttag-thumb-wrap">
+                <span class="hero-radar-ring hero-radar-ring-1" aria-hidden="true"></span>
+                <span class="hero-radar-ring hero-radar-ring-2" aria-hidden="true"></span>
+                <img src="assets/img/products/detail-smarttag.jpg?v=20261126c"
+                  alt="Thiết bị định vị Smart Tag tương thích Apple Find My" width="44" height="44" />
+              </div>
+              <div class="hero-smarttag-meta">
+                <span class="hero-pod-kicker">
+                  <span class="hero-pod-dot" aria-hidden="true"></span>
+                  ĐỊNH VỊ SMART TAG
+                </span>
+                <span class="hero-pod-title">Apple Find My (iOS)</span>
+              </div>
+            </div>
+
+            <!-- Cụm chính: Sóng RFID bị chặn bên trái + Khiên bảo vệ + Sản phẩm thật bên trong -->
+            <div class="hero-rfid-assembly" data-depth="12">
+              <!-- Sóng vô tuyến đọc trộm bị khiên RFID bật ngược ra ngoài -->
+              <svg class="hero-rfid-waves" viewBox="-8 0 120 240" fill="none" aria-hidden="true">
+                <!-- Sóng trên (đỏ san hô bị dội ngược) -->
+                <g class="rfid-wave-group rfid-wave-top">
+                  <circle cx="38" cy="48" r="4.2" fill="#EF6B5B" />
+                  <path d="M27 35C20 42 20 54 27 61" stroke="#EF6B5B" stroke-width="4" stroke-linecap="round" />
+                  <path d="M18 25C7 37 7 59 18 71" stroke="#EF6B5B" stroke-width="4" stroke-linecap="round" />
+                  <path d="M9 15C-6 33 -6 63 9 81" stroke="#EF6B5B" stroke-width="4" stroke-linecap="round" opacity="0.85" />
+                  <path d="M72 30L94 48L68 68" stroke="#F87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.92" />
+                  <path d="M72 24L65 31L74 37" stroke="#F87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.92" />
+                  <path d="M53 43L61 51M61 43L53 51" stroke="#FCA5A5" stroke-width="2.6" stroke-linecap="round" />
+                </g>
+
+                <!-- Sóng giữa (xám bạc bị chặn đứng) -->
+                <g class="rfid-wave-group rfid-wave-mid">
+                  <circle cx="48" cy="120" r="4.2" fill="#CBD5E1" />
+                  <path d="M36 106C28 113 28 127 36 134" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round" />
+                  <path d="M26 96C15 108 15 132 26 144" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" />
+                  <path d="M16 86C2 104 2 136 16 154" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" opacity="0.78" />
+                  <path d="M68 113L79 124M79 113L68 124" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" />
+                </g>
+
+                <!-- Sóng dưới (đỏ san hô bị bật lại) -->
+                <g class="rfid-wave-group rfid-wave-bot">
+                  <circle cx="38" cy="192" r="4.2" fill="#EF6B5B" />
+                  <path d="M27 179C20 186 20 198 27 205" stroke="#EF6B5B" stroke-width="4" stroke-linecap="round" />
+                  <path d="M18 169C7 181 7 203 18 215" stroke="#EF6B5B" stroke-width="4" stroke-linecap="round" />
+                  <path d="M9 159C-6 177 -6 207 9 225" stroke="#EF6B5B" stroke-width="4" stroke-linecap="round" opacity="0.85" />
+                  <path d="M72 210L94 192L68 172" stroke="#F87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.92" />
+                  <path d="M72 216L65 209L74 203" stroke="#F87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.92" />
+                  <path d="M53 189L61 197M61 189L53 197" stroke="#FCA5A5" stroke-width="2.6" stroke-linecap="round" />
+                </g>
+              </svg>
+
+              <!-- Tấm khiên bảo vệ RFID ôm quanh chiếc ví thực tế -->
+              <div class="hero-rfid-shield-frame">
+                <svg class="hero-rfid-shield-svg" viewBox="0 0 360 400" fill="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="heroShieldGlass" x1="180" y1="8" x2="180" y2="392" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#93E5FE" stop-opacity="0.28" />
+                      <stop offset="52%" stop-color="#38BDF8" stop-opacity="0.14" />
+                      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.22" />
+                    </linearGradient>
+                    <linearGradient id="heroShieldStroke" x1="36" y1="20" x2="324" y2="375" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#BAE6FD" stop-opacity="0.9" />
+                      <stop offset="50%" stop-color="#7DD3FC" stop-opacity="0.55" />
+                      <stop offset="100%" stop-color="#D69A4B" stop-opacity="0.72" />
+                    </linearGradient>
+                    <linearGradient id="heroShieldHalf" x1="180" y1="10" x2="340" y2="380" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#E0F2FE" stop-opacity="0.14" />
+                      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.03" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M180 12L332 68V190C332 287 266 355 180 388C94 355 28 287 28 190V68L180 12Z"
+                    fill="url(#heroShieldGlass)" stroke="url(#heroShieldStroke)" stroke-width="3" />
+                  <path
+                    d="M180 24L320 75V189C320 278 259 341 180 373V24Z"
+                    fill="url(#heroShieldHalf)" />
+                  <path
+                    d="M180 24L320 75V189C320 279 258 342 180 374C102 342 40 279 40 189V75L180 24Z"
+                    stroke="rgba(186, 230, 253, 0.35)" stroke-width="1.2" stroke-dasharray="6 6" />
+                </svg>
+
+                <!-- Sản phẩm thật: Ví DOVA Bifold bã cà phê cùng thẻ & ngăn Smart Tag -->
+                <div class="hero-wallet-frame" data-depth="18">
+                  <img src="assets/img/products/bifold-popout.png?v=20261126"
+                    alt="Ví DOVA Bifold thực tế từ composite bã cà phê với ngăn thẻ RFID Blocking và Smart Tag"
+                    class="hero-product-img" width="700" height="466" />
+                  <span class="hero-wallet-tag-beacon" aria-hidden="true" title="Vị trí ngăn Smart Tag"></span>
+                </div>
+
+                <!-- Huy hiệu ổ khóa RFID BLOCKING ở chân khiên -->
+                <div class="hero-shield-badge">
+                  <svg class="hero-shield-lock-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="4" y="10" width="12" height="10" rx="2.5" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M7 10V7.5C7 5.57 8.57 4 10.5 4C12.43 4 14 5.57 14 7.5V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    <circle cx="10" cy="15" r="1.3" fill="currentColor" />
+                    <path d="M18.5 11.5L22 15M22 11.5L18.5 15" stroke="#7DD3FC" stroke-width="1.7" stroke-linecap="round" />
+                  </svg>
+                  <span>RFID BLOCKING • 13,56 MHz</span>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="hero-canvas-overlay-tag">
-            <span class="badge-prototype">Prototype • Bản thử nghiệm</span>
-            <span
-              style="font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.15em; color: var(--gold);">KÉO
-              ĐỂ XOAY 3D</span>
+            <span class="badge-prototype">Sản phẩm mẫu • Prototype</span>
+            <span class="hero-overlay-sub">COMPOSITE BÃ CÀ PHÊ • RFID • SMART TAG</span>
           </div>
         </div>
       </div>
@@ -204,9 +308,8 @@
             <span>Bộ sưu tập nguyên mẫu</span>
           </div>
           <h2 class="section-title">Hai dáng ví. Một tinh thần.</h2>
-          <p class="section-subtitle">
-            Thiết kế tối giản cho người hiện đại từ 26-40 tuổi, đề cao bề mặt xúc giác ấm áp và công nghệ tiện ích ẩn
-            sâu.
+          <p class="section-subtitle" data-collection-subtitle>
+            Tối giản từ đường nét, ấm áp từ chất liệu bã cà phê và thầm lặng bảo vệ bạn trên mọi hành trình.
           </p>
         </div>
 
@@ -241,8 +344,8 @@
 
               <!-- Layer 2: Pop-out Cutout Wallet (Transparent PNG) -->
               <div class="popout-layer-wallet">
-                <img src="assets/img/products/mini-zip-popout.png" alt="Ví nữ DOVA Mini Zip từ bã cà phê" width="1024"
-                  height="576" loading="lazy" data-color-target="mini-zip" />
+                <img src="assets/img/products/mini-zip-popout.png?v=20261126b" alt="Ví nữ DOVA Mini Zip từ bã cà phê" width="700"
+                  height="460" loading="lazy" data-color-target="mini-zip" />
               </div>
 
               <!-- Layer 3: Foreground Decor (Coffee bean / Leaf sticking out) -->
@@ -303,8 +406,8 @@
 
               <!-- Layer 2: Pop-out Cutout Wallet (Transparent PNG) -->
               <div class="popout-layer-wallet">
-                <img src="assets/img/products/bifold-popout.png" alt="Ví nam DOVA Bifold từ bã cà phê" width="503"
-                  height="403" loading="lazy" data-color-target="bifold" />
+                <img src="assets/img/products/bifold-popout.png?v=20261126" alt="Ví nam DOVA Bifold từ bã cà phê" width="700"
+                  height="460" loading="lazy" data-color-target="bifold" />
               </div>
 
               <!-- Layer 3: Foreground Decor (Coffee bean / Leaf sticking out) -->
@@ -412,8 +515,8 @@
                 </div>
                 <div>
                   <div class="detail-photo-card">
-                    <img src="assets/img/products/detail-smarttag.jpg"
-                      alt="Ngăn Smart Tag và RFID Blocking Mini Zip" loading="lazy" width="640" height="640" style="object-fit: contain; background: #FAF7F2; padding: 0.5rem;" />
+                    <img src="assets/img/products/detail-smarttag.jpg?v=20261126c"
+                      alt="Ngăn Smart Tag và RFID Blocking Mini Zip" loading="lazy" width="640" height="640" />
                   </div>
                   <div class="detail-photo-caption">Ngăn thẻ & Smart Tag</div>
                 </div>
@@ -502,8 +605,8 @@
                 </div>
                 <div>
                   <div class="detail-photo-card">
-                    <img src="assets/img/products/detail-smarttag.jpg" alt="Ngăn Smart Tag chìm Bifold"
-                      loading="lazy" width="640" height="640" style="object-fit: contain; background: #FAF7F2; padding: 0.5rem;" />
+                    <img src="assets/img/products/detail-smarttag.jpg?v=20261126c" alt="Ngăn Smart Tag chìm Bifold"
+                      loading="lazy" width="640" height="640" />
                   </div>
                   <div class="detail-photo-caption">Ngăn Smart Tag chìm</div>
                 </div>
@@ -674,7 +777,7 @@
           <article class="journal-grid-item">
             <a href="journal/bai-03-cong-nghe-hang-ngay.html" class="journal-card">
               <div class="journal-img-box">
-                <img src="assets/img/journal/bai-03.jpg" alt="Công nghệ ẩn mình trong đời sống" loading="lazy" width="640" height="640" style="object-fit: contain; background: #FAF7F2; padding: 1rem;" />
+                <img src="assets/img/journal/bai-03.jpg?v=20261126f" alt="Công nghệ ẩn mình trong đời sống" loading="lazy" width="640" height="640" />
               </div>
               <div class="journal-body">
                 <div class="journal-meta">
@@ -835,16 +938,16 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <!-- Application Modules -->
-  <script src="assets/js/content.js?v=20261125d"></script>
-  <script src="assets/js/layout.js"></script>
-  <script src="assets/js/main.js?v=20261125d"></script>
-  <script src="assets/js/smooth-scroll.js"></script>
-  <script src="assets/js/scroll-animations.js"></script>
-  <script src="assets/js/hero-3d.js"></script>
-  <script src="assets/js/product-viewer.js?v=20261125d"></script>
-  <script src="assets/js/tech-explode.js"></script>
-  <script src="assets/js/form.js?v=2.2"></script>
-  <script src="assets/js/decor.js"></script>
+  <script src="assets/js/content.js?v=20261126k"></script>
+  <script src="assets/js/layout.js?v=20261126k"></script>
+  <script src="assets/js/main.js?v=20261126k"></script>
+  <script src="assets/js/smooth-scroll.js?v=20261126k"></script>
+  <script src="assets/js/scroll-animations.js?v=20261126k"></script>
+  <script src="assets/js/hero-3d.js?v=20261126k"></script>
+  <script src="assets/js/product-viewer.js?v=20261126k"></script>
+  <script src="assets/js/tech-explode.js?v=20261126k"></script>
+  <script src="assets/js/form.js?v=20261126k"></script>
+  <script src="assets/js/decor.js?v=20261126k"></script>
 </body>
 
 </html>

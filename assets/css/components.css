@@ -405,7 +405,8 @@
 .journal-meta {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
   font-family: var(--font-label);
   font-size: 0.78rem;
   letter-spacing: 0.12em;

@@ -73,7 +73,7 @@ const DOVA_CONTENT = {
         badge: "Chương 02",
         title: "Nghiên cứu composite có thành phần bã cà phê",
         description: "Không chạy theo những lời tuyên bố dễ dãi, chúng tôi tập trung vào nghiên cứu vật liệu composite có thành phần bã cà phê kết hợp nền polymer tuyển chọn. Mục tiêu là mang lại bề mặt xúc giác mịn màng, dẻo dai và vân hạt cà phê tự nhiên độc bản, đồng thời tiến hành các bài kiểm tra độ bền cơ học nghiêm ngặt.",
-        image: "assets/img/story/chapter-02.jpg",
+        image: "assets/img/story/chapter-02.jpg?v=20261126l",
         imageAlt: "Vật liệu composite chứa bã cà phê độc bản"
       },
       {
@@ -230,7 +230,7 @@ const DOVA_CONTENT = {
             threeHex: "#382015",
             studioImage: "assets/img/products/mini-zip-photo.jpg?v=20261126b",
             popoutImage: "assets/img/products/mini-zip-popout.png?v=20261126b",
-            compositeImage: "assets/img/products/detail-composite.jpg?v=20261126"
+            compositeImage: "assets/img/products/detail-composite.jpg?v=20261126l"
           },
           {
             id: "charcoal",
@@ -339,8 +339,8 @@ const DOVA_CONTENT = {
         },
         collectionGallery: [
           {
-            currentSrc: "assets/img/products/detail-composite.jpg",
-            techReplaceSrc: "assets/img/tech/tech-composite.jpg", // [CẦN THAY NỘI DUNG]: thay ảnh tại assets/img/tech/ nếu muốn dùng ảnh riêng
+            currentSrc: "assets/img/products/detail-composite.jpg?v=20261126l",
+            techReplaceSrc: "assets/img/tech/tech-composite.jpg?v=20261126l",
             tag: "Ảnh minh họa",
             caption: "Minh họa bề mặt vật liệu"
           },
@@ -365,7 +365,7 @@ const DOVA_CONTENT = {
             threeHex: "#2D190F",
             studioImage: "assets/img/products/bifold-photo.jpg?v=20261126",
             popoutImage: "assets/img/products/bifold-popout.png?v=20261126",
-            compositeImage: "assets/img/products/detail-composite.jpg?v=20261126"
+            compositeImage: "assets/img/products/detail-composite.jpg?v=20261126l"
           },
           {
             id: "charcoal",
@@ -405,7 +405,7 @@ const DOVA_CONTENT = {
         content: "Vật liệu được tạo ra bằng cách kết hợp bã cà phê đã qua sử dụng với polymer hoặc chất kết dính phù hợp. Lớp composite này mang sắc nâu tự nhiên cùng những đốm vân hữu cơ không trùng lặp.",
         valueHighlight: "Giá trị: Tận dụng phụ phẩm cà phê, hạn chế lãng phí tài nguyên, gia tăng giá trị cho nguyên liệu sau sử dụng.",
         note: "Có thể điều chỉnh khi hoàn thiện nguyên mẫu.",
-        graphic: "assets/img/tech/tech-composite.jpg",
+        graphic: "assets/img/tech/tech-composite.jpg?v=20261126l",
         specsRows: [
           { label: "Dạng vật liệu", value: "Tấm hoặc cuộn composite mềm" },
           { label: "Thành phần", value: "Bã cà phê đã qua sử dụng kết hợp polymer/chất kết dính phù hợp" },
